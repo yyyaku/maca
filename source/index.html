@@ -21,9 +21,65 @@
   <div class="wrapper">
     <main>
       <h1 class="visually-hidden">Masa</h1>
-      <section class="intro intro--caucasus">
-        <div class="intro__wrapper">
-          <div class="intro-header"></div>
+      <section class="hero">
+        <div class="hero__wrapper">
+          <div class="hero-header">
+            <div class="hero-header__wrapper">
+              <a class="hero-header__logo logo" href="index.html">
+                <svg width="28" height="28">
+                  <use href="img/sprite.svg#logo"></use>
+                </svg>
+              </a>
+            </div>
+          </div>
+          <nav class="main-nav main-nav--closed">
+            <h2>Меню</h2>
+            <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть
+                меню.</span></button>
+            <ul class="site-list">
+              <li class="site-list__item">
+                <a class="site-list__link" href="#">
+                  О проекте
+                </a>
+              </li>
+              <li class="site-list__item">
+                <a class="site-list__link" href="#">
+                  Программы
+                </a>
+              </li>
+              <li class="site-list__item">
+                <a class="site-list__link" href="#">
+                  Как поехать
+                </a>
+              </li>
+              <li class="site-list__item">
+                <a class="site-list__link" href="#">
+                  Отзывы
+                </a>
+              </li>
+              <li class="site-list__item">
+                <a class="site-list__link" href="#">
+                  Новости
+                </a>
+              </li>
+              <li class="site-list__item">
+                <a class="site-list__link" href="#">
+                  Контакты
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </section>
+
+      <section class="intro">
+        <div class="container">
+          <h1>Тестовая страница.</h1>
+          <p>На данной странице показан пример модальных окон.</p>
+          <p>Перед началом разработки не забудьте удалить всё содержимое &#8249;main&#8250;&#8249;&#8260;main&#8250;.
+          </p>
+          <p><a class="btn" href="#" data-open-modal="feedback">modal--feedback link</a></p>
+          <p><a class="btn" href="#" data-open-modal="success">modal--success link</a></p>
         </div>
       </section>
     </main>
