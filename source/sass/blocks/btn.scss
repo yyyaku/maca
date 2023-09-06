@@ -2,25 +2,11 @@
   display: inline-flex;
   padding: 10px 20px;
 
-  color: $color-default-white;
-
-  background-color: $color-neon-blue;
-  border: none;
+  color: $color-default-blue;
+  background-color: $color-default-white;
+  border: 1px solid $color-default-blue;
+  border-radius: 30px;
   cursor: pointer;
 
   transition: opacity $trans-default;
-
-  &--red {
-    background-color: $color-torch-red;
-  }
-
-  &:disabled {
-    opacity: 0.5;
-
-    pointer-events: none;
-  }
-
-  @include hover-focus {
-    opacity: 0.8;
-  }
 }
