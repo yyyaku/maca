@@ -9,6 +9,7 @@ const navButtonClick = () => {
   navButton.addEventListener('click', function () {
     nav.classList.toggle('main-nav--closed');
     nav.classList.toggle('main-nav--opened');
+    navButton.classList.toggle('btn--blue');
   });
 
   programsButton.addEventListener('click', function () {

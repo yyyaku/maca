@@ -21,6 +21,7 @@
   min-width: 286px;
   background-color: $color-default-blue;
   border-radius: 16px;
+  z-index: 2;
 }
 
 .main-nav--opened .site-list__link {
@@ -30,12 +31,12 @@
   text-transform: uppercase;
 }
 
-// ЗАКРЫТОЕ ПОДМЕНЮ
+// ЗАКРЫТЫЙ СПИСОК ПОДМЕНЮ
 .site-list__button .site-list__secondary {
   display: none;
 }
 
-// ОТКРЫТОЕ ПОДМЕНЮ
+// ОТКРЫТЫЙ СПИСОК ПОДМЕНЮ
 .site-list__button--opened .site-list__secondary {
   display: flex;
   flex-direction: column;
@@ -56,13 +57,11 @@
   color: $color-default-white-opacity70;
   background-color: transparent;
   border: none;
-  font-size: 16px;
-  font-weight: 400;
   line-height: 16px;
   letter-spacing: 0.32px;
   text-transform: uppercase;
 }
-
+// СТРЕЛКА КНОПКИ
 .site-list__toggle-arrow {
   display: inline-flex;
   margin: 0 0 0 10px;
@@ -79,7 +78,7 @@
   margin: 0 0 20px;
   color: $color-default-white;
 }
-
+// СТРЕЛКА КНОПКИ
 .site-list__button--opened .site-list__toggle-arrow {
   border-top: 3px solid $color-default-white;
   border-right: 3px solid $color-default-white;

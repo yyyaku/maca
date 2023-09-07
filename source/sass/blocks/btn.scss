@@ -1,12 +1,51 @@
 .btn {
-  display: inline-flex;
-  padding: 10px 20px;
-
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 22px 20px;
+  height: 54px;
   color: $color-default-blue;
   background-color: $color-default-white;
   border: 1px solid $color-default-blue;
   border-radius: 30px;
-  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 14px;
+  letter-spacing: 0.28px;
+  text-transform: uppercase;
 
-  transition: opacity $trans-default;
+  &--blue {
+    color: $color-default-white;
+    background-color: $color-default-blue;
+    border: 1px solid $color-default-blue;
+  }
+}
+// КРУГ
+.btn span {
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 4px;
+    width: 46px;
+    height: 46px;
+    background-color: $color-default-blue;
+    border-radius: 50%;
+  }
+}
+
+.btn--blue span {
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 4px;
+    width: 46px;
+    height: 46px;
+    background-color: $color-default-white;
+    border-radius: 50%;
+  }
 }

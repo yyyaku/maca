@@ -2,28 +2,9 @@
   position: relative;
 }
 
-// КНОПКА МЕНЮ
-.main-nav .main-nav__toggle {
-  position: relative;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  padding: 22px 20px;
-  height: 54px;
-  border-radius: 30px;
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 14px;
-  letter-spacing: 0.28px;
-  text-transform: uppercase;
-}
-
 // КНОПКА ЗАКРЫТОГО МЕНЮ
 .main-nav--closed .main-nav__toggle {
   width: 134px;
-  color: $color-default-blue;
-  background-color: $color-default-white;
-  border: 1px solid $color-default-blue;
   // БУРГЕР
   &::after {
     content: "";
@@ -37,27 +18,9 @@
   }
 }
 
-.main-nav--closed .main-nav__toggle-circle {
-  // СИНИЙ КРУГ ВОКРУГ БУРГЕРА
-  &::before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    right: 4px;
-    width: 46px;
-    height: 46px;
-    background-color: $color-default-blue;
-    border-radius: 50%;
-  }
-}
-
 // КНОПКА ОТКРЫТОЕ МЕНЮ
 .main-nav--opened .main-nav__toggle {
   width: 286px;
-  color: $color-default-white;
-  background-color: $color-default-blue;
-  border: 1px solid $color-default-blue;
   // КРЕСТИК
   &::before,
   &::after {
@@ -78,20 +41,5 @@
 
   &::after {
     transform: rotate(-45deg);
-  }
-}
-
-.main-nav--opened .main-nav__toggle-circle {
-  // БЕЛЫЙ КРУГ ВОКРУГ КРЕСТИКА
-  &::before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    right: 4px;
-    width: 46px;
-    height: 46px;
-    background-color: $color-default-white;
-    border-radius: 50%;
   }
 }
