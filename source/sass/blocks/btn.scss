@@ -15,37 +15,57 @@
   letter-spacing: 0.28px;
   text-transform: uppercase;
 
+  //СИНИЙ КРУГ
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 4px;
+    width: 46px;
+    height: 46px;
+    background-color: $color-default-blue;
+    border-radius: 50%;
+  }
+
   &--blue {
     color: $color-default-white;
     background-color: $color-default-blue;
     border: 1px solid $color-default-blue;
-  }
-}
-// КРУГ
-.btn span {
-  &::before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    right: 4px;
-    width: 46px;
-    height: 46px;
-    background-color: $color-default-blue;
-    border-radius: 50%;
+
+    //БЕЛЫЙ КРУГ
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 4px;
+      width: 46px;
+      height: 46px;
+      background-color: $color-default-white;
+      border-radius: 50%;
+    }
   }
 }
 
+.btn span {
+  display: inline-flex;
+  margin: 0 0 0 10px;
+  width: 10px;
+  height: 10px;
+  cursor: pointer;
+  border-top: 3px solid $color-default-white;
+  border-right: 3px solid $color-default-white;
+  transform: rotate(45deg);
+}
+
 .btn--blue span {
-  &::before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    right: 4px;
-    width: 46px;
-    height: 46px;
-    background-color: $color-default-white;
-    border-radius: 50%;
-  }
+  display: inline-flex;
+  margin: 0 0 0 10px;
+  width: 10px;
+  height: 10px;
+  cursor: pointer;
+  border-top: 3px solid $color-default-white;
+  border-right: 3px solid $color-default-white;
+  transform: rotate(45deg);
 }
