@@ -1,3 +1,4 @@
+const overlay = document.querySelector('.overlay');
 const nav = document.querySelector('.main-nav');
 const navButton = document.querySelector('.main-nav__toggle');
 const programsList = document.querySelector('.site-list__button--programs');
@@ -8,6 +9,12 @@ const newsButton = document.querySelector('.site-list__toggle--news');
 const navButtonClick = () => {
   navButton.addEventListener('click', function () {
     nav.classList.toggle('main-nav--opened');
+    overlay.classList.toggle('overlay--opened');
+  });
+
+  overlay.addEventListener('click', function () {
+    nav.classList.toggle('main-nav--opened');
+    overlay.classList.toggle('overlay--opened');
   });
 
   programsButton.addEventListener('click', function () {
