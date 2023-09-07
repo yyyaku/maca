@@ -7,7 +7,6 @@ const newsButton = document.querySelector('.site-list__toggle--news');
 
 const navButtonClick = () => {
   navButton.addEventListener('click', function () {
-    nav.classList.toggle('main-nav--closed');
     nav.classList.toggle('main-nav--opened');
   });
 

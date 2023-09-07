@@ -2,13 +2,17 @@
   position: relative;
 }
 
-// КНОПКА МЕНЮ
+// КНОПКА ЗАКРЫТОГО МЕНЮ
 .main-nav .main-nav__toggle {
   display: flex;
   justify-content: flex-start;
   align-items: center;
   padding: 22px 20px;
+  width: 134px;
   height: 54px;
+  color: $color-default-blue;
+  background-color: $color-default-white;
+  border: 1px solid $color-default-blue;
   border-radius: 30px;
   font-size: 14px;
   font-weight: 500;
@@ -17,27 +21,9 @@
   text-transform: uppercase;
   cursor: pointer;
 }
-// КРУГ ВОКРУГ БУРГЕРА
-.main-nav .main-nav__toggle-circle {
-  &::before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    right: 4px;
-    width: 46px;
-    height: 46px;
-    border-radius: 50%;
-  }
-}
 
-// КНОПКА ЗАКРЫТОГО МЕНЮ
-.main-nav--closed .main-nav__toggle {
-  width: 134px;
-  color: $color-default-blue;
-  background-color: $color-default-white;
-  border: 1px solid $color-default-blue;
-  // БУРГЕР
+// БУРГЕР КНОПКА ЗАКРЫТОГО МЕНЮ
+.main-nav__toggle {
   &::after {
     content: "";
     position: absolute;
@@ -50,10 +36,18 @@
   }
 }
 
-.main-nav--closed .main-nav__toggle-circle {
-  // СИНИЙ КРУГ ВОКРУГ БУРГЕРА
+//СИНИЙ КРУГ ВОКРУГ БУРГЕРА
+.main-nav .main-nav__toggle-circle {
   &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 4px;
+    width: 46px;
+    height: 46px;
     background-color: $color-default-blue;
+    border-radius: 50%;
   }
 }
 
@@ -63,6 +57,7 @@
   color: $color-default-white;
   background-color: $color-default-blue;
   border: 1px solid $color-default-blue;
+
   // КРЕСТИК
   &::before,
   &::after {
@@ -85,6 +80,7 @@
     transform: rotate(-45deg);
   }
 }
+
 // БЕЛЫЙ КРУГ ВОКРУГ КРЕСТИКА
 .main-nav--opened .main-nav__toggle-circle {
   &::before {

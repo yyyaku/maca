@@ -593,41 +593,8 @@ button,
   background-color: #316dc2;
   border-radius: 50%;
 }
-.btn--blue {
-  color: #ffffff;
-  background-color: #316dc2;
-  border: 1px solid #316dc2;
-}
-.btn--blue::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-      -ms-transform: translateY(-50%);
-          transform: translateY(-50%);
-  right: 4px;
-  width: 46px;
-  height: 46px;
-  background-color: #ffffff;
-  border-radius: 50%;
-}
 
 .btn span {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  margin: 0 0 0 10px;
-  width: 10px;
-  height: 10px;
-  cursor: pointer;
-  border-top: 3px solid #ffffff;
-  border-right: 3px solid #ffffff;
-  -webkit-transform: rotate(45deg);
-      -ms-transform: rotate(45deg);
-          transform: rotate(45deg);
-}
-
-.btn--blue span {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -686,7 +653,11 @@ button,
       -ms-flex-align: center;
           align-items: center;
   padding: 22px 20px;
+  width: 134px;
   height: 54px;
+  color: #316dc2;
+  background-color: #ffffff;
+  border: 1px solid #316dc2;
   border-radius: 30px;
   font-size: 14px;
   font-weight: 500;
@@ -694,6 +665,18 @@ button,
   letter-spacing: 0.28px;
   text-transform: uppercase;
   cursor: pointer;
+}
+
+.main-nav__toggle::after {
+  content: "";
+  position: absolute;
+  top: 23px;
+  right: 18px;
+  width: 18px;
+  height: 1px;
+  background-color: #ffffff;
+  -webkit-box-shadow: 0 4px 0 0 #ffffff, 0 8px 0 0 #ffffff;
+          box-shadow: 0 4px 0 0 #ffffff, 0 8px 0 0 #ffffff;
 }
 
 .main-nav .main-nav__toggle-circle::before {
@@ -706,29 +689,8 @@ button,
   right: 4px;
   width: 46px;
   height: 46px;
-  border-radius: 50%;
-}
-
-.main-nav--closed .main-nav__toggle {
-  width: 134px;
-  color: #316dc2;
-  background-color: #ffffff;
-  border: 1px solid #316dc2;
-}
-.main-nav--closed .main-nav__toggle::after {
-  content: "";
-  position: absolute;
-  top: 23px;
-  right: 18px;
-  width: 18px;
-  height: 1px;
-  background-color: #ffffff;
-  -webkit-box-shadow: 0 4px 0 0 #ffffff, 0 8px 0 0 #ffffff;
-          box-shadow: 0 4px 0 0 #ffffff, 0 8px 0 0 #ffffff;
-}
-
-.main-nav--closed .main-nav__toggle-circle::before {
   background-color: #316dc2;
+  border-radius: 50%;
 }
 
 .main-nav--opened .main-nav__toggle {
@@ -765,13 +727,41 @@ button,
 }
 
 .site-list {
+  display: none;
   margin: 0;
   padding: 0;
   list-style-type: none;
 }
 
-.main-nav--closed .site-list {
+.site-list__secondary {
   display: none;
+}
+
+.site-list__toggle {
+  position: relative;
+  padding: 0;
+  color: rgba(255, 255, 255, 0.7);
+  background-color: transparent;
+  border: none;
+  line-height: 16px;
+  letter-spacing: 0.32px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.site-list__toggle-arrow {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  margin: 0 0 0 10px;
+  width: 10px;
+  height: 10px;
+  cursor: pointer;
+  border-top: 3px solid rgba(255, 255, 255, 0.7);
+  border-right: 3px solid rgba(255, 255, 255, 0.7);
+  -webkit-transform: rotate(135deg);
+      -ms-transform: rotate(135deg);
+          transform: rotate(135deg);
 }
 
 .main-nav--opened .site-list {
@@ -802,10 +792,6 @@ button,
   text-transform: uppercase;
 }
 
-.site-list__button .site-list__secondary {
-  display: none;
-}
-
 .site-list__button--opened .site-list__secondary {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -822,33 +808,6 @@ button,
 
 .site-list__button--opened .site-list__link-secondary {
   color: rgba(255, 255, 255, 0.7);
-}
-
-.site-list__toggle {
-  position: relative;
-  padding: 0;
-  color: rgba(255, 255, 255, 0.7);
-  background-color: transparent;
-  border: none;
-  line-height: 16px;
-  letter-spacing: 0.32px;
-  text-transform: uppercase;
-  cursor: pointer;
-}
-
-.site-list__toggle-arrow {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  margin: 0 0 0 10px;
-  width: 10px;
-  height: 10px;
-  cursor: pointer;
-  border-top: 3px solid rgba(255, 255, 255, 0.7);
-  border-right: 3px solid rgba(255, 255, 255, 0.7);
-  -webkit-transform: rotate(135deg);
-      -ms-transform: rotate(135deg);
-          transform: rotate(135deg);
 }
 
 .site-list__button--opened .site-list__toggle {
