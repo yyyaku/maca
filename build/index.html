@@ -21,54 +21,158 @@
   <div class="wrapper">
     <main>
       <h1 class="visually-hidden">Masa</h1>
-      <section class="hero">
-        <div class="hero__wrapper">
-          <div class="hero-header">
-            <div class="hero-header__wrapper">
+      <section class="hero hero--internship">
+        <div class="container">
+          <div class="hero__wrapper">
+            <div class="hero-header">
               <a class="hero-header__logo logo" href="index.html">
                 <svg width="28" height="28">
                   <use href="img/sprite.svg#logo"></use>
                 </svg>
               </a>
+              <nav class="main-nav">
+                <button class="main-nav__toggle" type="button">Меню<span
+                    class="main-nav__toggle-circle"></span></button>
+                <ul class="site-list">
+                  <li class="site-list__item">
+                    <a class="site-list__link" href="#">
+                      О проекте
+                    </a>
+                  </li>
+                  <li class="site-list__button site-list__button--programs">
+                    <!-- ПОДМЕНЮ программы -->
+                    <button class="site-list__toggle site-list__toggle--programs" type="button">Программы<span
+                        class="site-list__toggle-arrow"></span></button>
+                    <ul class="site-list__secondary">
+                      <li class="site-list__item-secondary">
+                        <a href="#" class="site-list__link-secondary">
+                          Стажировки
+                        </a>
+                      </li>
+                      <li class="site-list__item-secondary">
+                        <a href="#" class="site-list__link-secondary">
+                          Волонтёрство
+                        </a>
+                      </li>
+                      <li class="site-list__item-secondary">
+                        <a href="#" class="site-list__link-secondary">
+                          Учеба
+                        </a>
+                      </li>
+                      <li class="site-list__item-secondary">
+                        <a href="#" class="site-list__link-secondary">
+                          Религия
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="site-list__item">
+                    <a class="site-list__link" href="#">
+                      Как поехать
+                    </a>
+                  </li>
+                  <li class="site-list__item">
+                    <a class="site-list__link" href="#">
+                      Отзывы
+                    </a>
+                  </li>
+                  <li class="site-list__button site-list__button--news">
+                    <!-- ПОДМЕНЮ новости -->
+                    <button class="site-list__toggle site-list__toggle--news" type="button">Новости<span
+                        class="site-list__toggle-arrow"></span></button>
+                    <ul class="site-list__secondary">
+                      <li class="site-list__item-secondary">
+                        <a href="#" class="site-list__link-secondary">
+                          Общее
+                        </a>
+                      </li>
+                      <li class="site-list__item-secondary">
+                        <a href="#" class="site-list__link-secondary">
+                          Волонтёрство
+                        </a>
+                      </li>
+                      <li class="site-list__item-secondary">
+                        <a href="#" class="site-list__link-secondary">
+                          Стажировки
+                        </a>
+                      </li>
+                      <li class="site-list__item-secondary">
+                        <a href="#" class="site-list__link-secondary">
+                          Карьера
+                        </a>
+                      </li>
+                      <li class="site-list__item-secondary">
+                        <a href="#" class="site-list__link-secondary">
+                          Путешествия
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="site-list__item">
+                    <a class="site-list__link" href="#">
+                      Контакты
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+            <div class="hero__swiper swiper">
+              <ul class="hero__list swiper-wrapper">
+                <li class="hero__item hero__item--internship swiper-slide" tabindex="0">
+                  <div class="hero-main">
+                    <div class="swiper-pagination"></div>
+                    <div class="hero-main__heading">
+                      <h2>Программы стажировок в&nbsp;крупнейших компаниях Израиля</h2>
+                    </div>
+                    <div class="hero-main__info">
+                      <div class="hero-main__description">
+                        <p>Получите незаменимый опыт работы в&nbsp;ведущих израильских компаниях и&nbsp;государственных
+                          организациях.</p>
+                      </div>
+                      <div class="hero-main__link">
+                        <a href="#" class="btn">Подробнее<span></span></a>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="hero__item hero__item--volunteer swiper-slide" tabindex="0">
+                  <div class="hero-main">
+                    <div class="swiper-pagination"></div>
+                    <div class="hero-main__heading">
+                      <h2>Волонтёрские программы &mdash;
+                        внесите свой вклад в&nbsp;общество</h2>
+                    </div>
+                    <div class="hero-main__info">
+                      <div class="hero-main__description">
+                        <p>Возможности для преподавания, органического сельского хозяйства, устойчивого образа жизни
+                          и&nbsp;другое.</p>
+                      </div>
+                      <div class="hero-main__link">
+                        <a href="#" class="btn">Подробнее<span></span></a>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="hero__item hero__item--experience swiper-slide" tabindex="0">
+                  <div class="hero-main">
+                    <div class="swiper-pagination"></div>
+                    <div class="hero-main__heading">
+                      <h2>Глобальный профессиональный опыт обучения за&nbsp;рубежом</h2>
+                    </div>
+                    <div class="hero-main__info">
+                      <div class="hero-main__description">
+                        <p>Погрузитесь в&nbsp;академическую программу, проходя практику в&nbsp;Тель-Авиве и&nbsp;ощущая
+                          настоящий израильский стиль жизни!</p>
+                      </div>
+                      <div class="hero-main__link">
+                        <a href="#" class="btn">Подробнее<span></span></a>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
             </div>
           </div>
-          <nav class="main-nav main-nav--closed">
-            <h2>Меню</h2>
-            <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть
-                меню.</span></button>
-            <ul class="site-list">
-              <li class="site-list__item">
-                <a class="site-list__link" href="#">
-                  О проекте
-                </a>
-              </li>
-              <li class="site-list__item">
-                <a class="site-list__link" href="#">
-                  Программы
-                </a>
-              </li>
-              <li class="site-list__item">
-                <a class="site-list__link" href="#">
-                  Как поехать
-                </a>
-              </li>
-              <li class="site-list__item">
-                <a class="site-list__link" href="#">
-                  Отзывы
-                </a>
-              </li>
-              <li class="site-list__item">
-                <a class="site-list__link" href="#">
-                  Новости
-                </a>
-              </li>
-              <li class="site-list__item">
-                <a class="site-list__link" href="#">
-                  Контакты
-                </a>
-              </li>
-            </ul>
-          </nav>
         </div>
       </section>
 

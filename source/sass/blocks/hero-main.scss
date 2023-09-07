@@ -1,0 +1,125 @@
+.hero-main {
+  position: relative;
+  text-align: start;
+}
+
+.hero__swiper .swiper-pagination {
+  position: absolute;
+  top: -38px;
+  left: 0;
+  display: flex;
+  gap: 5px;
+  padding: 16px;
+  width: 94px;
+  height: 38px;
+  background-color: $color-default-white;
+  border-radius: 20px 20px 0 0;
+
+  @include vp-767 {
+    top: -28px;
+    padding: 12px;
+    width: 80px;
+    height: 28px;
+    border-radius: 12px 12px 0 0;
+  }
+}
+
+.intro__swiper .swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  background-color: transparent;
+  border: 1px solid $color-default-blue;
+  opacity: 1;
+}
+
+.hero-main__heading {
+  padding: 40px 50px 30px 50px;
+  width: 78.06%;
+  color: $color-default-blue;
+  background-color: $color-default-white;
+  border-radius: 0 30px 30px 0;
+
+  @include vp-1199 {
+    padding: 30px 40px 24px 40px;
+    width: 97.2%;
+  }
+
+  @include vp-767 {
+    padding: 20px 14px 16px 14px;
+    border-radius: 0 16px 16px 0;
+    width: 100%;
+  }
+}
+
+.hero-main__heading h2 {
+  margin: 0;
+  font-size: 54px;
+  font-weight: 400;
+  line-height: 62px;
+
+  @include vp-1199 {
+    font-size: 36px;
+    line-height: 44px;
+  }
+
+  @include vp-767 {
+    font-size: 22px;
+    line-height: 26px;
+  }
+}
+
+.hero-main__info {
+  display: flex;
+  gap: 30px;
+  padding: 0 50px 35px 50px;
+  width: 62.26%;
+  color: $color-default-profect;
+  background-color: $color-default-white;
+  border-radius: 0 0 30px 30px;
+
+  @include vp-1199 {
+    padding: 0 40px 35px 40px;
+    width: 87.2%;
+  }
+
+  @include vp-767 {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0;
+    padding: 0;
+    width: 90%;
+    background-color: transparent;
+  }
+}
+
+.hero-main__description {
+  @include vp-767 {
+    padding: 0 14px 15px;
+    background-color: $color-default-white;
+    border-radius: 0 0 14px 0;
+  }
+}
+
+.hero-main__description p {
+  margin: 0;
+
+  @include vp-1199 {
+    margin: -5px 0 -5px;
+    line-height: 20px;
+
+    @include vp-767 {
+      font-size: 14px;
+    }
+  }
+}
+
+.hero-main__link {
+  min-width: 196px;
+
+  @include vp-767 {
+    padding: 10px 15px;
+    min-width: 182px;
+    background-color: $color-default-white;
+    border-radius: 0 0 14px 14px;
+  }
+}

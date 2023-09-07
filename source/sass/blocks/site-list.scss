@@ -1,0 +1,94 @@
+// ЗАКРЫТЫЙ СПИСОК МЕНЮ
+.site-list {
+  display: none;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+// ЗАКРЫТАЯ КНОПКА ПОДМЕНЮ
+.site-list__toggle {
+  position: relative;
+  padding: 0;
+  color: $color-default-white-opacity70;
+  background-color: transparent;
+  border: none;
+  line-height: 16px;
+  letter-spacing: 0.32px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+//ЗАКРЫТАЯ СТРЕЛКА КНОПКИ ПОДМЕНЮ
+.site-list__toggle-arrow {
+  display: inline-flex;
+  margin: 0 0 0 10px;
+  width: 10px;
+  height: 10px;
+  cursor: pointer;
+  border-top: 3px solid $color-default-white-opacity70;
+  border-right: 3px solid $color-default-white-opacity70;
+  transform: rotate(135deg);
+}
+
+// ЗАКРЫТЫЙ СПИСОК ПОДМЕНЮ
+.site-list__secondary {
+  display: none;
+}
+
+// ОТКРЫТЫЙ СПИСОК МЕНЮ
+.main-nav--opened .site-list {
+  position: absolute;
+  top: 58px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 28px;
+  padding: 35px 25px;
+  min-width: 286px;
+  background-color: $color-default-blue;
+  border-radius: 16px;
+  z-index: 2;
+}
+
+.main-nav--opened .site-list__link {
+  color: $color-default-white-opacity70;
+  line-height: 16px;
+  letter-spacing: 0.32px;
+  text-transform: uppercase;
+}
+
+// ОТКРЫТАЯ КНОПКА И СПИСОК ПОДМЕНЮ
+.site-list__button--opened {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+// ОТКРЫТАЯ КНОПКА ПОДМЕНЮ
+.site-list__button--opened .site-list__toggle {
+  color: $color-default-white;
+}
+
+//ОТКРЫТАЯ СТРЕЛКА КНОПКИ
+.site-list__button--opened .site-list__toggle-arrow {
+  border-top: 3px solid $color-default-white;
+  border-right: 3px solid $color-default-white;
+  transform: rotate(-45deg);
+}
+
+// ОТКРЫТЫЙ СПИСОК ПОДМЕНЮ
+.site-list__button--opened .site-list__secondary {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  margin: 0 0 0 16px;
+  padding: 0;
+  list-style-type: none;
+}
+
+.site-list__button--opened .site-list__link-secondary {
+  color: $color-default-white-opacity70;
+}
