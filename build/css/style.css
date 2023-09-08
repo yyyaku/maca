@@ -1338,6 +1338,10 @@ button,
   /* stylelint-enable */
 }
 
+.menu--opened {
+  overflow: hidden;
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;
