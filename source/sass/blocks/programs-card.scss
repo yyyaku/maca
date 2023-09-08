@@ -1,0 +1,115 @@
+.programs-card {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: $color-default-blue;
+
+  &--internships {
+    background-image: url("../img/programs/internships.jpg");
+
+    @include vp-1199 {
+      background-image: url("../img/programs/internships-tablet.jpg");
+    }
+
+    @include vp-767 {
+      background-image: url("../img/programs/internships-mobile.jpg");
+    }
+  }
+
+  &--volunteer {
+    background-image: url("../img/programs/volunteer.jpg");
+
+    @include vp-1199 {
+      background-image: url("../img/programs/volunteer-tablet.jpg");
+    }
+
+    @include vp-767 {
+      background-image: url("../img/programs/volunteer-mobile.jpg");
+    }
+  }
+
+  &--studies {
+    background-image: url("../img/programs/studies.jpg");
+
+    @include vp-1199 {
+      background-image: url("../img/programs/studies-tablet.jpg");
+    }
+
+    @include vp-767 {
+      background-image: url("../img/programs/studies-mobile.jpg");
+    }
+  }
+}
+
+.programs-card__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 20px;
+  min-height: 420px;
+  background-color: $color-default-blue-opacity20;
+
+  @include vp-1199 {
+    min-width: 324px;
+    min-height: 420px;
+    aspect-ratio: 324/420;
+  }
+
+  @include vp-767 {
+    padding: 18px 10px;
+    min-width: 290px;
+    min-height: 400px;
+    aspect-ratio: 290/400;
+  }
+}
+
+.programs-card__header {
+  padding: 18px 18px 6px 18px;
+  width: 194px;
+  background-color: $color-default-white;
+  border-radius: 12px 12px 0 0;
+}
+
+.programs-card__header h3 {
+  margin: 0;
+  color: $color-default-blue;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 26px;
+
+  @include vp-1199 {
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  @include vp-767 {
+    font-size: 16px;
+    line-height: 18px;
+  }
+}
+
+.programs-card__info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 64px;
+  padding: 12px 18px 15px 18px;
+  background-color: $color-default-white;
+  border-radius: 0 12px 12px 12px;
+}
+
+.programs-card__info p {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+
+  @include vp-1199 {
+    line-height: 20px;
+  }
+
+  @include vp-767 {
+    font-size: 12px;
+    line-height: 14px;
+  }
+}
