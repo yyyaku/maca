@@ -49,6 +49,10 @@
   background-color: $color-default-blue;
   border-radius: 16px;
   z-index: 2;
+
+  @include vp-767 {
+    min-width: 100%;
+  }
 }
 
 .main-nav--opened .site-list__link {

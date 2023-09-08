@@ -169,6 +169,7 @@
 }
 
 .about__item h3 {
+  flex-shrink: 1;
   margin: 0;
   color: $color-default-white;
   font-size: 26px;
@@ -191,16 +192,13 @@
 }
 
 .about__item p {
+  flex-shrink: 1;
   margin: 0;
-  width: 250px;
+  width: 100%;
   color: $color-timber-wolf;
   font-size: 16px;
   font-weight: 300;
   line-height: 20px;
-
-  @include vp-1199 {
-    width: 100%;
-  }
 
   @include vp-767 {
     font-size: 14px;
