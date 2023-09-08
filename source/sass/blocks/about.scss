@@ -169,6 +169,7 @@
 }
 
 .about__item h3 {
+  flex-shrink: 1;
   margin: 0;
   color: $color-default-white;
   font-size: 26px;
@@ -191,6 +192,7 @@
 }
 
 .about__item p {
+  flex-shrink: 1;
   margin: 0;
   width: 100%;
   color: $color-timber-wolf;
