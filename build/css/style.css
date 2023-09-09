@@ -1965,41 +1965,30 @@ button,
   opacity: 1;
 }
 
-.hero-main__header {
+.hero-main h2 {
+  margin: 0;
   padding: 40px 50px 30px 50px;
   width: 78.06%;
   color: #316dc2;
   background-color: #ffffff;
   border-radius: 0 30px 30px 0;
-}
-@media (max-width: 1199px) {
-  .hero-main__header {
-    padding: 30px 40px 24px 40px;
-    width: 97.2%;
-  }
-}
-@media (max-width: 767px) {
-  .hero-main__header {
-    padding: 20px 14px 16px 14px;
-    border-radius: 0 16px 16px 0;
-    width: 100%;
-  }
-}
-
-.hero-main__header h2 {
-  margin: 0;
   font-size: 54px;
   font-weight: 400;
   line-height: 62px;
 }
 @media (max-width: 1199px) {
-  .hero-main__header h2 {
+  .hero-main h2 {
+    padding: 30px 40px 24px 40px;
+    width: 97.2%;
     font-size: 36px;
     line-height: 44px;
   }
 }
 @media (max-width: 767px) {
-  .hero-main__header h2 {
+  .hero-main h2 {
+    padding: 20px 14px 16px 14px;
+    border-radius: 0 16px 16px 0;
+    width: 100%;
     font-size: 22px;
     line-height: 26px;
   }
@@ -2038,34 +2027,29 @@ button,
   }
 }
 
-@media (max-width: 767px) {
-  .hero-main__description {
-    padding: 0 14px 15px;
-    background-color: #ffffff;
-    border-radius: 0 0 14px 0;
-  }
-}
-
-.hero-main__description p {
+.hero-main__info p {
   margin: 0;
 }
 @media (max-width: 1199px) {
-  .hero-main__description p {
+  .hero-main__info p {
     margin: -5px 0 -5px;
     line-height: 20px;
   }
 }
 @media (max-width: 1199px) and (max-width: 767px) {
-  .hero-main__description p {
+  .hero-main__info p {
+    padding: 0 14px 15px;
+    background-color: #ffffff;
+    border-radius: 0 0 14px 0;
     font-size: 14px;
   }
 }
 
-.hero-main__link {
+.hero-main__info a {
   min-width: 196px;
 }
 @media (max-width: 767px) {
-  .hero-main__link {
+  .hero-main__info a {
     padding: 10px 15px;
     min-width: 182px;
     background-color: #ffffff;
@@ -2767,6 +2751,12 @@ button,
   .grant__item h4 {
     font-size: 14px;
   }
+}
+
+.news-card span {
+  padding: 20px;
+  background-color: tomato;
+  border-radius: 16px;
 }
 
 .modal {
