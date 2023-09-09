@@ -4,19 +4,19 @@
   background-repeat: no-repeat;
   background-color: $color-default-blue;
 
-  &--interview {
-    background-image: url("../img/news/interview.jpg");
+  &--internships {
+    background-image: url("../img/news/internships.jpg");
 
     @include vp-1199 {
-      background-image: url("../img/news/interview-tablet.jpg");
+      background-image: url("../img/news/internships-tablet.jpg");
     }
   }
 
-  &--israel {
-    background-image: url("../img/news/israel.jpg");
+  &--trips {
+    background-image: url("../img/news/trips.jpg");
 
     @include vp-1199 {
-      background-image: url("../img/news/israel-tablet.jpg");
+      background-image: url("../img/news/trips-tablet.jpg");
     }
   }
 
@@ -39,10 +39,18 @@
 
 .swiper-slide {
   width: calc(25% - 24px);
+
+  @include vp-1199 {
+    width: auto;
+  }
 }
 
 .swiper-slide-active {
   width: calc(50% - 16px);
+
+  @include vp-1199 {
+    width: auto;
+  }
 }
 
 .swiper-slide .news-card__info {

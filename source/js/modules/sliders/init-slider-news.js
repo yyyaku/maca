@@ -15,14 +15,20 @@ const initSliderNews = () => {
 
       pagination: {
         el: newsPagination,
-        type: 'fraction',
+        clickable: true,
+        renderBullet: function (index, className) {
+          return '<span class="' + className + '">' + (index + 1) + '</span>';
+        },
       },
 
       allowTouchMove: true,
+      observer: true,
+      observeSlideChildren: true,
+      observeParents: true,
+      slidesPerView: 'auto',
 
       breakpoints: {
         1200: {
-          slidesPerView: 'auto',
           spaceBetween: 32,
           allowTouchMove: false,
         },
