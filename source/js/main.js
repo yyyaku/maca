@@ -4,6 +4,7 @@ import {Form} from './modules/form-validate/form';
 import {navButtonClick} from './modules/hero/nav';
 import {initSliderHero} from './modules/sliders/init-slider-hero';
 import {initSliderPrograms} from './modules/sliders/init-slider-programs';
+import {initSliderNews} from './modules/sliders/init-slider-news';
 
 // ---------------------------------
 
@@ -27,6 +28,7 @@ window.addEventListener('DOMContentLoaded', () => {
     navButtonClick();
     initSliderHero();
     initSliderPrograms();
+    initSliderNews();
   });
 });
 

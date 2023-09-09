@@ -1,5 +1,33 @@
-.news-card span {
-  padding: 20px;
-  background-color: tomato;
-  border-radius: 16px;
+.news__wrapper {
+  padding: 120px 0;
+}
+
+.news__wrapper h2 {
+  margin: 0 0 52px;
+  color: $color-default-blue;
+  text-align: center;
+  font-size: 50px;
+  font-weight: 400;
+  line-height: 50px;
+}
+
+.news__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.news__pagination-container {
+  position: relative;
+}
+
+.news__pagination {
+  position: absolute;
+  bottom: -20px;
+  display: flex;
+}
+
+.news__pagination .swiper-pagination-fraction {
+  font-size: 20px;
+  color: black;
 }

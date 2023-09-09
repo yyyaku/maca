@@ -1,0 +1,113 @@
+.news-card {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: $color-default-blue;
+
+  &--interview {
+    background-image: url("../img/news/interview.jpg");
+
+    @include vp-1199 {
+      background-image: url("../img/news/interview-tablet.jpg");
+    }
+  }
+
+  &--israel {
+    background-image: url("../img/news/israel.jpg");
+
+    @include vp-1199 {
+      background-image: url("../img/news/israel-tablet.jpg");
+    }
+  }
+
+  &--volunteer {
+    background-image: url("../img/news/volunteer.jpg");
+
+    @include vp-1199 {
+      background-image: url("../img/news/volunteer-tablet.jpg");
+    }
+  }
+
+  &--career {
+    background-image: url("../img/news/career.jpg");
+
+    @include vp-1199 {
+      background-image: url("../img/news/career-tablet.jpg");
+    }
+  }
+}
+
+.swiper-slide {
+  width: calc(25% - 24px);
+}
+
+.swiper-slide-active {
+  width: calc(50% - 16px);
+}
+
+.swiper-slide .news-card__info {
+  width: calc(100% - 46px);
+}
+
+.swiper-slide-active .news-card__info {
+  width: calc(100% - 215px);
+}
+
+.swiper-slide .news-card__header {
+  width: calc(100% - 72px);
+  padding: 10px 10px 4px 0;
+}
+
+.swiper-slide-active .news-card__header {
+  padding: 18px 18px 6px 0;
+  width: calc(100% - 313px);
+}
+
+.news-card__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-self: flex-start;
+  min-height: 400px;
+}
+
+.news-card__date span {
+  padding: 12px 12px 6px;
+  color: $color-default-blue;
+  background-color: $color-default-white;
+  border-radius: 0 12px 0 0;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 12px;
+  letter-spacing: 0.12px;
+}
+
+.news-card__header {
+  color: $color-default-blue;
+  background-color: $color-default-white;
+  border-radius: 0 12px 0 0;
+}
+
+.news-card__header h3 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 26px;
+}
+
+.news-card__info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 46px;
+  padding: 12px 18px 15px 0;
+  background-color: $color-default-white;
+  border-radius: 0 12px 0 0;
+}
+
+.news-card__info p {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+}
