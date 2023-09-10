@@ -1,0 +1,161 @@
+.question {
+  position: relative;
+  display: grid;
+  grid-template-columns: 650px auto;
+  margin: 0 0 10px;
+  padding: 40px;
+  color: $color-default-blue;
+  border: 1px solid $color-default-blue;
+  border-radius: 16px;
+
+  @include vp-1199 {
+    grid-template-columns: 1fr auto;
+    padding: 30px;
+  }
+
+  @include vp-767 {
+    padding: 20px 15px;
+  }
+}
+
+.question button {
+  position: relative;
+  grid-column: 2/3;
+  grid-row: 1/2;
+  align-self: center;
+  justify-self: end;
+  width: 40px;
+  padding: 0;
+  color: transparent;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+
+  @include vp-767 {
+    width: 32px;
+  }
+
+  // КРУГ КНОПКИ
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: block;
+    padding: 0;
+    width: 40px;
+    height: 40px;
+    background-color: $color-default-blue;
+    border: 1px solid $color-default-blue;
+    border-radius: 50%;
+    cursor: pointer;
+
+    @include vp-767 {
+      width: 32px;
+      height: 32px;
+    }
+  }
+}
+
+.question__button {
+  display: flex;
+  position: relative;
+
+  // ПЛЮС КНОПКИ
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 13px;
+    width: 18px;
+    height: 1px;
+    background-color: $color-default-white;
+
+    @include vp-767 {
+      left: 8px;
+    }
+  }
+
+  &::before {
+    transform: rotate(90deg);
+    box-shadow: none;
+  }
+
+  &::after {
+    transform: rotate(180deg);
+  }
+}
+
+.question.is-active {
+  gap: 30px 0;
+  padding: 40px;
+  color: $color-default-white;
+  background-color: $color-default-blue;
+
+  @include vp-1199 {
+    padding: 30px;
+  }
+
+  @include vp-767 {
+    gap: 20px 0;
+    padding: 20px 15px;
+  }
+
+  // КРУГ КНОПКИ
+  button {
+    &::before {
+      background-color: $color-default-white;
+    }
+
+    // МИНУС КНОПКИ
+    .question__button {
+      &::before {
+        background-color: $color-default-white;
+      }
+
+      &::after {
+        background-color: $color-default-blue;
+      }
+    }
+  }
+}
+
+.question h3 {
+  grid-column: 1/2;
+  grid-row: 1/2;
+  margin: 0;
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 34px;
+
+  @include vp-1199 {
+    font-size: 22px;
+    line-height: 26px;
+  }
+
+  @include vp-767 {
+    font-size: 16px;
+    line-height: 18px;
+  }
+}
+
+.question__content {
+  grid-column: 1/2;
+
+  @include vp-767 {
+    grid-column: 1/3;
+  }
+}
+
+.question__content p {
+  margin: 0;
+
+  @include vp-1199 {
+    line-height: 20px;
+  }
+
+  @include vp-767 {
+    font-size: 14px;
+  }
+}

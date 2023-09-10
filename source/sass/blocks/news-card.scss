@@ -1,0 +1,150 @@
+.news-card {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: $color-default-blue;
+
+  &--internships {
+    background-image: url("../img/news/internships.jpg");
+
+    @include vp-1199 {
+      background-image: url("../img/news/internships-tablet.jpg");
+    }
+  }
+
+  &--trips {
+    background-image: url("../img/news/trips.jpg");
+
+    @include vp-1199 {
+      background-image: url("../img/news/trips-tablet.jpg");
+    }
+  }
+
+  &--volunteer {
+    background-image: url("../img/news/volunteer.jpg");
+
+    @include vp-1199 {
+      background-image: url("../img/news/volunteer-tablet.jpg");
+    }
+  }
+
+  &--career {
+    background-image: url("../img/news/career.jpg");
+
+    @include vp-1199 {
+      background-image: url("../img/news/career-tablet.jpg");
+    }
+  }
+}
+
+.swiper-slide {
+  width: calc(25% - 24px);
+
+  @include vp-1199 {
+    width: calc(50% - 60px);
+  }
+}
+
+.swiper-slide-active {
+  width: calc(50% - 16px);
+
+  @include vp-1199 {
+    width: calc(50% - 60px);
+  }
+}
+
+.swiper-slide .news-card__info {
+  width: calc(100% - 46px);
+
+  @include vp-1199 {
+    width: calc(100% - 84px);
+  }
+}
+
+.swiper-slide-active .news-card__info {
+  width: calc(100% - 215px);
+
+  @include vp-1199 {
+    width: calc(100% - 84px);
+  }
+}
+
+.swiper-slide .news-card__header {
+  width: calc(100% - 72px);
+  padding: 10px 10px 4px 0;
+
+  @include vp-1199 {
+    width: calc(100% - 117px);
+  }
+}
+
+.swiper-slide-active .news-card__header {
+  padding: 18px 18px 6px 0;
+  width: calc(100% - 313px);
+
+  @include vp-1199 {
+    width: calc(100% - 117px);
+  }
+}
+
+.news-card__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-self: flex-start;
+  min-height: 400px;
+
+  @include vp-1199 {
+    min-height: 350px;
+  }
+}
+
+.news-card__date span {
+  padding: 12px 12px 6px 0;
+  color: $color-default-blue;
+  background-color: $color-default-white;
+  border-radius: 0 12px 0 0;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 12px;
+  letter-spacing: 0.12px;
+}
+
+.news-card__header {
+  color: $color-default-blue;
+  background-color: $color-default-white;
+  border-radius: 0 12px 0 0;
+}
+
+.news-card__header h3 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 26px;
+
+  @include vp-1199 {
+    font-size: 20px;
+    line-height: 24px;
+  }
+}
+
+.news-card__info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 46px;
+  padding: 12px 18px 15px 0;
+  background-color: $color-default-white;
+  border-radius: 0 12px 0 0;
+}
+
+.news-card__info p {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+
+  @include vp-1199 {
+    line-height: 20px;
+  }
+}
