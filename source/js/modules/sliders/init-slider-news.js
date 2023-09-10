@@ -6,7 +6,7 @@ const buttonNext = document.querySelector('.news__button--next');
 const initSliderNews = () => {
   if (sliderNews) {
     // eslint-disable-next-line
-    new Swiper(sliderNews, {
+      new Swiper(sliderNews, {
 
       navigation: {
         nextEl: buttonNext,
@@ -20,26 +20,13 @@ const initSliderNews = () => {
           return '<span class="' + className + '">' + (index + 1) + '</span>';
         },
       },
-
-      allowTouchMove: true,
-      observer: true,
-      observeSlideChildren: true,
-      observeParents: true,
       slidesPerView: 'auto',
-
+      spaceBetween: 32,
       breakpoints: {
-        1200: {
-          spaceBetween: 32,
-          allowTouchMove: false,
-        },
-
         768: {
-          slidesPerView: 2,
           spaceBetween: 30,
         },
-
         320: {
-          slidesPerView: 1,
           spaceBetween: 30,
         },
       },
