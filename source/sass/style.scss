@@ -5,6 +5,7 @@
 // Swiper 7.4.1
 @import "vendor/swiper";
 @import "vendor/data-tabs.scss";
+@import "vendor/data-accordion.scss";
 
 // Global
 // ---------------------------------
@@ -35,6 +36,8 @@
 @import "blocks/grant";
 @import "blocks/news";
 @import "blocks/news-card";
+@import "blocks/questions";
+@import "blocks/question";
 
 
 @import "blocks/modal";
