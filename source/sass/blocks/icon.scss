@@ -1,0 +1,10 @@
+.icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid $color-default-blue;
+
+  & svg {
+    fill: $color-default-white;
+  }
+}
