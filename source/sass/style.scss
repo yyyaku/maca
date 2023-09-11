@@ -6,6 +6,7 @@
 @import "vendor/swiper";
 @import "vendor/data-tabs.scss";
 @import "vendor/data-accordion.scss";
+@import "vendor/leaflet.scss";
 
 // Global
 // ---------------------------------
@@ -40,6 +41,8 @@
 @import "blocks/question";
 @import "blocks/reviews";
 @import "blocks/reviews-card";
+@import "blocks/contacts";
+@import "blocks/map";
 
 
 @import "blocks/modal";

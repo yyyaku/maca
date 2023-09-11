@@ -1,0 +1,12 @@
+.map {
+  min-height: 500px;
+  background-color: $color-default-blue;
+
+  @include vp-1199 {
+    min-height: 340px;
+  }
+
+  @include vp-767 {
+    min-height: 320px;
+  }
+}

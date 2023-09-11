@@ -8,6 +8,7 @@ import {initSliderHero} from './modules/sliders/init-slider-hero';
 import {initSliderPrograms} from './modules/sliders/init-slider-programs';
 import {initSliderNews} from './modules/sliders/init-slider-news';
 import {initSliderReviews} from './modules/sliders/init-slider-reviews';
+import {map} from './modules/map/map';
 
 // ---------------------------------
 
@@ -35,6 +36,7 @@ window.addEventListener('DOMContentLoaded', () => {
     initSliderPrograms();
     initSliderNews();
     initSliderReviews();
+    map();
   });
 });
 
