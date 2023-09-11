@@ -1,6 +1,18 @@
 .footer-header {
   display: flex;
+  align-items: center;
   gap: 52px;
+
+  @include vp-1199 {
+    flex-basis: 100%;
+    justify-content: space-between;
+    gap: 15px;
+    order: 1;
+  }
+
+  @include vp-767 {
+    flex-direction: column;
+  }
 }
 
 .footer-header__list {
@@ -10,4 +22,26 @@
   margin: 0;
   padding: 0;
   list-style-type: none;
+
+  @include vp-1199 {
+    gap: 15px;
+  }
+
+  @include vp-767 {
+    justify-content: center;
+    gap: 25px 30px;
+    width: 100%;
+  }
+}
+
+.footer-header__link {
+  color: $color-default-profect;
+
+  @include vp-1199 {
+    line-height: 20px;
+  }
+
+  @include vp-767 {
+    font-size: 14px;
+  }
 }

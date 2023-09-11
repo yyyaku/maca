@@ -1,6 +1,7 @@
 .reviews-card {
   display: grid;
   grid-template-columns: auto 1fr;
+  gap: 30px;
   padding: 50px;
   height: auto;
   border: 1px solid $color-default-blue;
@@ -8,6 +9,8 @@
 
   @include vp-767 {
     grid-template-columns: 1fr;
+    gap: 0;
+    padding: 30px 15px;
   }
 }
 
@@ -46,6 +49,7 @@
 
   @include vp-767 {
     justify-self: start;
+    margin: 0 0 25px;
   }
 }
 
@@ -85,14 +89,9 @@
 
 .reviews-card__content {
   grid-column: 1/3;
-  margin: 30px 0 0;
 
   @include vp-767 {
     grid-column: 1/2;
-  }
-
-  @include vp-767 {
-    margin: 25px 0 0;
   }
 }
 

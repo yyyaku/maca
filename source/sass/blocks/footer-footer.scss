@@ -3,4 +3,50 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @include vp-1199 {
+    flex-basis: auto;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    order: 2;
+  }
+
+  @include vp-767 {
+    align-items: center;
+  }
+}
+
+.footer-footer span {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+
+  @include vp-1199 {
+    color: $color-default-profect-opacity60;
+    font-size: 12px;
+    line-height: 12px;
+    order: 2;
+  }
+
+  @include vp-767 {
+    line-height: 14px;
+  }
+}
+
+.footer-footer__copyright {
+  color: $color-default-profect;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+
+  @include vp-1199 {
+    font-size: 12px;
+    line-height: 12px;
+    order: 1;
+  }
+
+  @include vp-767 {
+    line-height: 14px;
+  }
 }
