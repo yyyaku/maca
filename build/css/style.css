@@ -2478,6 +2478,23 @@ button,
   background-color: rgba(49, 109, 194, 0.2);
 }
 
+.hero__swiper-container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 100px;
+}
+@media (max-width: 1199px) {
+  .hero__swiper-container {
+    padding: 0 45px;
+  }
+}
+@media (max-width: 767px) {
+  .hero__swiper-container {
+    padding: 0 15px;
+  }
+}
+
 .hero__list {
   margin: 0;
   padding: 0;
