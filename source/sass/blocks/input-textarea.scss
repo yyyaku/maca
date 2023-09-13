@@ -1,0 +1,20 @@
+.input-textarea {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.input-textarea h3 {
+  margin: 0 0 12px;
+  color: $color-timber-wolf-opacity80;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+}
+
+.input-textarea textarea {
+  width: 100%;
+  background-color: transparent;
+  border: 1px solid $color-default-white-opacity30;
+  border-radius: 8px;
+}

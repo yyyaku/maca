@@ -602,6 +602,58 @@
           </div>
         </div>
       </section>
+      <section class="form">
+        <div class="container">
+          <div class="form__wrapper">
+            <div class="form__image">
+              <div class="form__content" data-form-validate="data-form-validate" data-callback="base">
+                <div class="form__header">
+                  <h2>Напишите нам</h2>
+                  <p>Оставьте ваши контакты, если у&nbsp;вас остались вопросы&nbsp;&mdash; мы&nbsp;на&nbsp;них ответим!
+                  </p>
+                </div>
+                <form id="personal-date" method="post" action="https://echo.htmlacademy.ru">
+                  <fieldset class="input-text">
+                    <h3 class="visually-hidden">Представьтесь:</h3>
+                    <ul class="input-text__list">
+                      <li class="input-text__item" data-validate-type="text" data-limitation="name" data-required>
+                        <label for="name-field">Имя</label>
+                        <input type="text" name="name" id="name-field" placeholder="" minlength="2" maxlength="25"
+                          required>
+                      </li>
+                      <li class="input-text__item" data-validate-type="phone" data-required>
+                        <label for="tel-field">Телефон</label>
+                        <input type="tel" name="tel" id="tel-field" placeholder="" required>
+                      </li>
+                    </ul>
+                  </fieldset>
+                  <fieldset class="input-textarea">
+                    <h3>Ваше сообщение</h3>
+                    <textarea rows="4" placeholder=""></textarea>
+                  </fieldset>
+                  <fieldset class="input-select">
+                    <h3>Выберите город</h3>
+                    <select>
+                      <option>Санкт-Петербург</option>
+                      <option>Санкт-Петербург</option>
+                      <option>Санкт-Петербург</option>
+                      <option>Санкт-Петербург</option>
+                    </select>
+                  </fieldset>
+                  <fieldset class="input-checkbox">
+                    <label class="input-checkbox__control">
+                      <input class="visually-hidden input-checkbox__input" type="checkbox" name="data">
+                      <span class="input-checkbox__check"></span>
+                      <h3>Я согласен на обработку моих персональных данных</h3>
+                    </label>
+                  </fieldset>
+                </form>
+                <button class="btn btn--blue form__btn" form="personal-date" type="submit">Отправить<span class="btn__arrow btn__arrow--blue"></span></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
       <!-- <section class="intro">
         <div class="container">
           <h1>Тестовая страница.</h1>
