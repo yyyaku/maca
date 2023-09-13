@@ -4557,7 +4557,7 @@ button,
 }
 
 .form__image {
-  padding: 0 742px 0 0;
+  border-radius: 16px;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -4577,8 +4577,19 @@ button,
 
 .form__content {
   padding: 89px 74px 51px;
+  width: 498px;
   background-color: #316dc2;
   border-radius: 16px;
+}
+@media (max-width: 1199px) {
+  .form__content {
+    width: 442px;
+  }
+}
+@media (max-width: 767px) {
+  .form__content {
+    width: 100%;
+  }
 }
 
 .form__header {
