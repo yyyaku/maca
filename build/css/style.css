@@ -2360,9 +2360,6 @@ button,
 .btn--blue:active .btn__arrow {
   border-top: 1px solid rgba(255, 255, 255, 0.7);
   border-right: 1px solid rgba(255, 255, 255, 0.7);
-  -webkit-transform: rotate(45deg);
-      -ms-transform: rotate(45deg);
-          transform: rotate(45deg);
 }
 .btn--blue:active .btn__arrow::before {
   background-color: rgba(255, 255, 255, 0.7);
@@ -2390,6 +2387,64 @@ button,
   height: 30px;
   background-color: #316dc2;
   border-radius: 50%;
+}
+.btn-secondary:hover::before {
+  background-color: #ffffff;
+}
+.btn-secondary:hover .btn-secondary__arrow {
+  border-top: 1px solid #316dc2;
+  border-right: 1px solid #316dc2;
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+.btn-secondary:hover .btn-secondary__arrow::before {
+  background-color: #316dc2;
+}
+.btn-secondary:focus-visible {
+  outline: none;
+}
+.btn-secondary:focus-visible::before {
+  background-color: #ffffff;
+}
+.btn-secondary:focus-visible .btn-secondary__arrow {
+  border-top: 1px solid #316dc2;
+  border-right: 1px solid #316dc2;
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+.btn-secondary:focus-visible .btn-secondary__arrow::before {
+  background-color: #316dc2;
+}
+.btn-secondary:focus {
+  outline: none;
+}
+.btn-secondary:active::before {
+  background-color: #ffffff;
+}
+.btn-secondary:active .btn-secondary__arrow {
+  border-top: 1px solid rgba(49, 109, 194, 0.7);
+  border-right: 1px solid rgba(49, 109, 194, 0.7);
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+.btn-secondary:active .btn-secondary__arrow::before {
+  background-color: rgba(49, 109, 194, 0.7);
+}
+.btn-secondary:disabled::before {
+  background-color: #a9afb7;
+}
+.btn-secondary:disabled .btn-secondary__arrow {
+  border-top: 1px solid #ffffff;
+  border-right: 1px solid #ffffff;
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+.btn-secondary:disabled .btn-secondary__arrow::before {
+  background-color: #ffffff;
 }
 
 .btn-secondary__arrow {
@@ -3499,7 +3554,7 @@ button,
   position: relative;
   padding: 18px 18px 6px 18px;
   width: 194px;
-  background-color: #ffffff;
+  background-color: #f0efe9;
   border-radius: 12px 12px 0 0;
 }
 
@@ -3507,7 +3562,7 @@ button,
   position: absolute;
   bottom: 0;
   right: -18px;
-  fill: #ffffff;
+  fill: #f0efe9;
 }
 
 .programs-card__header h3 {
@@ -3542,7 +3597,7 @@ button,
           align-items: center;
   gap: 64px;
   padding: 12px 18px 15px 18px;
-  background-color: #ffffff;
+  background-color: #f0efe9;
   border-radius: 0 12px 12px 12px;
 }
 

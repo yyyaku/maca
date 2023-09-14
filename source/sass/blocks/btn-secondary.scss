@@ -12,6 +12,56 @@
     background-color: $color-default-blue;
     border-radius: 50%;
   }
+
+  @include hover-focus-visible {
+    &::before {
+      background-color: $color-default-white;
+    }
+
+    .btn-secondary__arrow {
+      border-top: 1px solid $color-default-blue;
+      border-right: 1px solid $color-default-blue;
+      transform: rotate(45deg);
+
+      &::before {
+        background-color: $color-default-blue;
+      }
+    }
+  }
+
+  @include focus;
+
+  @include active {
+    &::before {
+      background-color: $color-default-white;
+    }
+
+    .btn-secondary__arrow {
+      border-top: 1px solid $color-default-blue-opacity70;
+      border-right: 1px solid $color-default-blue-opacity70;
+      transform: rotate(45deg);
+
+      &::before {
+        background-color: $color-default-blue-opacity70;
+      }
+    }
+  }
+
+  @include disabled {
+    &::before {
+      background-color: $color-grey;
+    }
+
+    .btn-secondary__arrow {
+      border-top: 1px solid $color-default-white;
+      border-right: 1px solid $color-default-white;
+      transform: rotate(45deg);
+
+      &::before {
+        background-color: $color-default-white;
+      }
+    }
+  }
 }
 
 .btn-secondary__arrow {
