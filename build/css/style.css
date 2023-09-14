@@ -2547,6 +2547,7 @@ button,
   border-right: 1px solid rgba(49, 109, 194, 0.7);
 }
 .swiper-buttons__button:disabled {
+  background-color: transparent;
   cursor: not-allowed;
 }
 .swiper-buttons__button:disabled::before {
@@ -4180,7 +4181,7 @@ button,
   list-style-type: none;
 }
 
-.question {
+.question__wrapper {
   position: relative;
   display: -ms-grid;
   display: grid;
@@ -4191,21 +4192,123 @@ button,
   color: #316dc2;
   border: 1px solid #316dc2;
   border-radius: 16px;
+  cursor: pointer;
 }
 @media (max-width: 1199px) {
-  .question {
+  .question__wrapper {
     -ms-grid-columns: 1fr auto;
     grid-template-columns: 1fr auto;
     padding: 30px;
   }
 }
 @media (max-width: 767px) {
-  .question {
+  .question__wrapper {
     padding: 20px 15px;
   }
 }
+.question__wrapper:hover {
+  background-color: #ffffff;
+}
+.question__wrapper:hover .question__button::before {
+  background-color: transparent;
+}
+.question__wrapper:hover .question__sign::after, .question__wrapper:hover .question__sign::before {
+  background-color: #316dc2;
+}
+.question__wrapper:focus-visible {
+  background-color: #ffffff;
+  outline: none;
+}
+.question__wrapper:focus-visible .question__button::before {
+  background-color: transparent;
+}
+.question__wrapper:focus-visible .question__sign::after, .question__wrapper:focus-visible .question__sign::before {
+  background-color: #316dc2;
+}
+.question__wrapper:focus {
+  outline: none;
+}
+.question__wrapper:active {
+  border: 1px solid #275699;
+}
+.question__wrapper:active .question__button::before {
+  background-color: #275699;
+  border: 1px solid #275699;
+}
+.question__wrapper:active .question__sign::after, .question__wrapper:active .question__sign::before {
+  background-color: #ffffff;
+}
 
-.question button {
+.question.is-active .question__wrapper {
+  gap: 30px 0;
+  padding: 40px;
+  color: #ffffff;
+  background-color: #316dc2;
+}
+@media (max-width: 1199px) {
+  .question.is-active .question__wrapper {
+    padding: 30px;
+  }
+}
+@media (max-width: 767px) {
+  .question.is-active .question__wrapper {
+    gap: 20px 0;
+    padding: 20px 15px;
+  }
+}
+.question.is-active .question__wrapper:hover .question__button::before {
+  background-color: transparent;
+  border: 1px solid #ffffff;
+}
+.question.is-active .question__wrapper:hover .question__sign::after {
+  background-color: transparent;
+}
+.question.is-active .question__wrapper:hover .question__sign::before {
+  background-color: #ffffff;
+}
+.question.is-active .question__wrapper:focus-visible {
+  outline: none;
+}
+.question.is-active .question__wrapper:focus-visible .question__button::before {
+  background-color: transparent;
+  border: 1px solid #ffffff;
+}
+.question.is-active .question__wrapper:focus-visible .question__sign::after {
+  background-color: transparent;
+}
+.question.is-active .question__wrapper:focus-visible .question__sign::before {
+  background-color: #ffffff;
+}
+.question.is-active .question__wrapper:focus {
+  outline: none;
+}
+.question.is-active .question__wrapper:active {
+  background-color: #275699;
+}
+.question.is-active .question__wrapper:active .question__button::before {
+  background-color: #ffffff;
+  border: 1px solid #ffffff;
+}
+.question.is-active .question__wrapper:active .question__sign::after {
+  background-color: transparent;
+}
+.question.is-active .question__wrapper:active .question__sign::before {
+  background-color: #275699;
+}
+
+.question.is-active .question__button::before {
+  background-color: #ffffff;
+  border: 1px solid #ffffff;
+}
+
+.question.is-active .question__sign::after {
+  background-color: transparent;
+}
+.question.is-active .question__sign::before {
+  background-color: #316dc2;
+}
+
+.question__button {
   position: relative;
   -ms-grid-column: 2;
   -ms-grid-column-span: 1;
@@ -4221,15 +4324,15 @@ button,
   padding: 0;
   color: transparent;
   background: transparent;
-  border: none;
+  border: 1px solid transparent;
   cursor: pointer;
 }
 @media (max-width: 767px) {
-  .question button {
+  .question__button {
     width: 32px;
   }
 }
-.question button::before {
+.question__button::before {
   content: "";
   position: absolute;
   top: 50%;
@@ -4243,145 +4346,40 @@ button,
   background-color: #316dc2;
   border: 1px solid #316dc2;
   border-radius: 50%;
-  cursor: pointer;
 }
 @media (max-width: 767px) {
-  .question button::before {
+  .question__button::before {
     width: 32px;
     height: 32px;
   }
 }
-.question button:hover::before {
-  background-color: transparent;
-}
-.question button:hover .question__button::after, .question button:hover .question__button::before {
-  background-color: #316dc2;
-}
-.question button:focus-visible {
-  outline: none;
-}
-.question button:focus-visible::before {
-  background-color: transparent;
-}
-.question button:focus-visible .question__button::after, .question button:focus-visible .question__button::before {
-  background-color: #316dc2;
-}
-.question button:focus {
-  outline: none;
-}
-.question button:active::before {
-  background-color: #275699;
-}
-.question button:active .question__button::after, .question button:active .question__button::before {
-  background-color: #ffffff;
-}
-.question button:disabled {
-  cursor: not-allowed;
-}
-.question button:disabled::before {
-  background-color: #a9afb7;
-}
-.question button:disabled .question__button {
-  cursor: not-allowed;
-}
-.question button:disabled .question__button::after, .question button:disabled .question__button::before {
-  background-color: #ffffff;
-}
 
-.question__button {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+.question__sign {
   position: relative;
 }
-.question__button::after, .question__button::before {
+.question__sign::after, .question__sign::before {
   content: "";
   position: absolute;
   top: 50%;
-  left: 13px;
+  left: 12px;
   width: 18px;
   height: 1px;
   background-color: #ffffff;
 }
 @media (max-width: 767px) {
-  .question__button::after, .question__button::before {
+  .question__sign::after, .question__sign::before {
     left: 8px;
   }
 }
-.question__button::after {
+.question__sign::after {
   -webkit-transform: rotate(90deg);
       -ms-transform: rotate(90deg);
           transform: rotate(90deg);
 }
-.question__button::before {
+.question__sign::before {
   -webkit-transform: rotate(180deg);
       -ms-transform: rotate(180deg);
           transform: rotate(180deg);
-  -webkit-box-shadow: none;
-          box-shadow: none;
-}
-
-.question.is-active {
-  gap: 30px 0;
-  padding: 40px;
-  color: #ffffff;
-  background-color: #316dc2;
-}
-@media (max-width: 1199px) {
-  .question.is-active {
-    padding: 30px;
-  }
-}
-@media (max-width: 767px) {
-  .question.is-active {
-    gap: 20px 0;
-    padding: 20px 15px;
-  }
-}
-
-.question.is-active button::before {
-  background-color: #ffffff;
-}
-.question.is-active button .question__button::after {
-  background-color: transparent;
-}
-.question.is-active button .question__button::before {
-  background-color: #316dc2;
-}
-.question.is-active button:hover::before {
-  background-color: transparent;
-  border: 1px solid #ffffff;
-}
-.question.is-active button:hover .question__button::after {
-  background-color: transparent;
-}
-.question.is-active button:hover .question__button::before {
-  background-color: #ffffff;
-}
-.question.is-active button:focus-visible {
-  outline: none;
-}
-.question.is-active button:focus-visible::before {
-  background-color: transparent;
-  border: 1px solid #ffffff;
-}
-.question.is-active button:focus-visible .question__button::after {
-  background-color: transparent;
-}
-.question.is-active button:focus-visible .question__button::before {
-  background-color: #ffffff;
-}
-.question.is-active button:focus {
-  outline: none;
-}
-.question.is-active button:active::before {
-  background-color: #ffffff;
-}
-.question.is-active button:active .question__button::after {
-  background-color: transparent;
-}
-.question.is-active button:active .question__button::before {
-  background-color: #275699;
 }
 
 .question h3 {
@@ -4424,6 +4422,7 @@ button,
 
 .question__content p {
   margin: 0;
+  color: #f0efe9;
 }
 @media (max-width: 1199px) {
   .question__content p {

@@ -519,36 +519,30 @@
             <h2>Вопросы и ответы</h2>
             <ul class="questions__list" data-accordion="parent">
               <li class="questions__item question" data-accordion="element">
-                <button type="button" data-accordion="button">
-                  <div class="question__button"></div>
-                </button>
-                <h3>Кто организатор? Какие сроки у&nbsp;программы?</h3>
-                <div class="question__content" data-accordion="content">
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam vero suscipit facere, similique natus
-                    id voluptas! Explicabo dolorum esse, deserunt quas voluptas, nobis velit tempora similique quia
-                    repudiandae illum. Autem!</p>
+                <div class="question__wrapper" data-accordion="button">
+                  <button class="question__button" type="button">
+                    <span class="question__sign"></span>
+                  </button>
+                  <h3>Кто организатор? Какие сроки у&nbsp;программы?</h3>
+                  <div class="question__content" data-accordion="content">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam vero suscipit facere, similique
+                      natus
+                      id voluptas! Explicabo dolorum esse, deserunt quas voluptas, nobis velit tempora similique quia
+                      repudiandae illum. Autem!</p>
+                  </div>
                 </div>
               </li>
               <li class="questions__item question" data-accordion="element">
-                <button type="button" data-accordion="button">
-                  <div class="question__button"></div>
-                </button>
-                <h3>Что такое грант на&nbsp;обучение?</h3>
-                <div class="question__content" data-accordion="content">
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam vero suscipit facere, similique natus
-                    id voluptas! Explicabo dolorum esse, deserunt quas voluptas, nobis velit tempora similique quia
-                    repudiandae illum. Autem!</p>
-                </div>
-              </li>
-              <li class="questions__item question" data-accordion="element">
-                <button type="button" data-accordion="button">
-                  <div class="question__button"></div>
-                </button>
-                <h3>Как определяется стоимость программы?</h3>
-                <div class="question__content" data-accordion="content">
-                  <p>Полная стоимость определяется организаторами в&nbsp;зависимости от&nbsp;направления.
-                    В&nbsp;большинстве случаев грант &laquo;Маса&raquo; не&nbsp;покрывает полную стоимость программы,
-                    и&nbsp;поэтому предусматривается определённая доля личного участия.</p>
+                <div class="question__wrapper" data-accordion="button">
+                  <button class="question__button" type="button">
+                    <span class="question__sign"></span>
+                  </button>
+                  <h3>Как определяется стоимость программы?</h3>
+                  <div class="question__content" data-accordion="content">
+                    <p>Полная стоимость определяется организаторами в&nbsp;зависимости от&nbsp;направления.
+                      В&nbsp;большинстве случаев грант &laquo;Маса&raquo; не&nbsp;покрывает полную стоимость программы,
+                      и&nbsp;поэтому предусматривается определённая доля личного участия.</p>
+                  </div>
                 </div>
               </li>
             </ul>
@@ -844,7 +838,8 @@
           <fieldset class="input-text">
             <h3 class="visually-hidden">Представьтесь:</h3>
             <ul class="input-text__list">
-              <li class="input-text__item input-text__item--modal" data-validate-type="text" data-limitation="name" data-required>
+              <li class="input-text__item input-text__item--modal" data-validate-type="text" data-limitation="name"
+                data-required>
                 <label for="name-field">Имя</label>
                 <input type="text" name="name" id="name-field" placeholder="" minlength="2" maxlength="25" required>
               </li>
