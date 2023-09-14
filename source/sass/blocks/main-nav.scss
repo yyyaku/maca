@@ -15,7 +15,7 @@
 }
 
 // КНОПКА ЗАКРЫТОГО МЕНЮ
-.main-nav .main-nav__toggle {
+.main-nav__toggle {
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -32,10 +32,8 @@
   letter-spacing: 0.28px;
   text-transform: uppercase;
   cursor: pointer;
-}
 
-// БУРГЕР КНОПКА ЗАКРЫТОГО МЕНЮ
-.main-nav__toggle {
+  // БУРГЕР КНОПКА ЗАКРЫТОГО МЕНЮ
   &::after {
     content: "";
     position: absolute;
@@ -46,10 +44,46 @@
     background-color: $color-default-white;
     box-shadow: 0 4px 0 0 $color-default-white, 0 8px 0 0 $color-default-white;
   }
+
+  @include hover-focus-visible {
+    color: $color-default-white;
+    background-color: $color-default-blue;
+    border: 1px solid $color-default-blue;
+
+    &::after {
+      background-color: $color-default-blue;
+      box-shadow: 0 4px 0 0 $color-default-blue, 0 8px 0 0 $color-default-blue;
+    }
+
+    .main-nav__toggle-circle {
+      &::before {
+        background-color: $color-default-white;
+      }
+    }
+  }
+
+  @include focus;
+
+  @include active {
+    color: $color-default-white-opacity70;
+    background-color: $color-default-blue;
+    border: 1px solid $color-default-blue;
+
+    &::after {
+      background-color: $color-default-blue-opacity70;
+      box-shadow: 0 4px 0 0 $color-default-blue-opacity70, 0 8px 0 0 $color-default-blue-opacity70;
+    }
+
+    .main-nav__toggle-circle {
+      &::before {
+        background-color: $color-default-white;
+      }
+    }
+  }
 }
 
 //СИНИЙ КРУГ ВОКРУГ БУРГЕРА
-.main-nav .main-nav__toggle-circle {
+.main-nav__toggle-circle {
   &::before {
     content: "";
     position: absolute;
@@ -101,6 +135,43 @@
 
   &::after {
     transform: rotate(-45deg);
+    box-shadow: none;
+  }
+
+  @include hover-focus-visible {
+    color: $color-default-blue;
+    background-color: $color-default-white;
+    border: 1px solid $color-default-blue;
+
+    &::before,
+    &::after {
+      background-color: $color-default-white;
+    }
+
+    .main-nav__toggle-circle {
+      &::before {
+        background-color: $color-default-blue;
+      }
+    }
+  }
+
+  @include focus;
+
+  @include active {
+    color: $color-default-blue-opacity70;
+    background-color: $color-default-white;
+    border: 1px solid $color-default-blue;
+
+    &::before,
+    &::after {
+      background-color: $color-default-white-opacity70;
+    }
+
+    .main-nav__toggle-circle {
+      &::before {
+        background-color: $color-default-blue;
+      }
+    }
   }
 }
 

@@ -1,0 +1,31 @@
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 52px;
+  height: 52px;
+  background-color: $color-default-white;
+  border-radius: 50%;
+
+  @include hover-focus-visible {
+    background-color: $color-default-blue;
+
+    & svg {
+      fill: $color-default-white;
+    }
+  }
+
+  @include focus;
+
+  @include active {
+    background-color: $color-default-white;
+
+    & svg {
+      fill: $color-purple-blue;
+    }
+  }
+}
+
+.logo svg {
+  fill: $color-default-blue;
+}

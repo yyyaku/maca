@@ -17,6 +17,21 @@
   letter-spacing: 0.32px;
   text-transform: uppercase;
   cursor: pointer;
+
+  @include hover-focus-visible {
+    color: $color-default-white;
+
+    .site-list__toggle-arrow {
+      border-top: 3px solid $color-default-white;
+      border-right: 3px solid $color-default-white;
+    }
+  }
+
+  @include focus;
+
+  @include active {
+    color: $color-default-white;
+  }
 }
 
 //ЗАКРЫТАЯ СТРЕЛКА КНОПКИ ПОДМЕНЮ
@@ -60,6 +75,16 @@
   line-height: 16px;
   letter-spacing: 0.32px;
   text-transform: uppercase;
+
+  @include hover-focus-visible {
+    color: $color-default-white;
+  }
+
+  @include focus;
+
+  @include active {
+    color: $color-default-white;
+  }
 }
 
 // ОТКРЫТАЯ КНОПКА И СПИСОК ПОДМЕНЮ
@@ -95,4 +120,14 @@
 
 .site-list__button--opened .site-list__link-secondary {
   color: $color-default-white-opacity70;
+
+  @include hover-focus-visible {
+    color: $color-default-white;
+  }
+
+  @include focus;
+
+  @include active {
+    color: $color-default-white;
+  }
 }

@@ -64,14 +64,43 @@
   height: 32px;
   color: $color-default-blue-opacity50;
   background-color: transparent;
+  border: 1px solid transparent;
   font-size: 16px;
   font-weight: 400;
   line-height: 20px;
+  opacity: 1;
+
+  @include hover-focus-visible {
+    color: $color-default-blue;
+    border: 1px solid $color-default-blue;
+  }
+
+  @include focus;
+
+  @include active {
+    color: $color-default-white;
+    background-color: $color-purple-blue;
+    border: 1px solid $color-purple-blue;
+  }
 }
 
 .news__buttons .swiper-pagination-bullet-active {
   color: $color-default-white;
   background-color: $color-default-blue;
+
+  @include hover-focus-visible {
+    color: $color-default-white;
+    background-color: $color-default-blue;
+    border: 1px solid $color-default-blue;
+  }
+
+  @include focus;
+
+  @include active {
+    color: $color-default-white;
+    background-color: $color-default-blue;
+    border: 1px solid $color-default-blue;
+  }
 }
 
 .news__button {
