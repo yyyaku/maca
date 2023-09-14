@@ -2,10 +2,11 @@ import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
 import {Form} from './modules/form-validate/form';
 import {initAccordions} from './modules/accordions/init-accordion';
-import {navButtonClick} from './modules/hero/nav';
+import {navButtonClick} from './modules/hero/nav-button-click';
 import {initSliderHero} from './modules/sliders/init-slider-hero';
 import {initSliderPrograms} from './modules/sliders/init-slider-programs';
-import {newsButtonClick, initSliderNews} from './modules/sliders/init-slider-news';
+import {newsButtonClick} from './modules/news/news-button-сlick';
+import {initSliderNews} from './modules/sliders/init-slider-news';
 import {initSliderReviews} from './modules/sliders/init-slider-reviews';
 import {map} from './modules/map/map';
 
