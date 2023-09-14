@@ -24,12 +24,16 @@
   }
 }
 
-.intro__swiper .swiper-pagination-bullet {
+.hero__pagination .swiper-pagination-bullet {
   width: 10px;
   height: 10px;
   background-color: transparent;
   border: 1px solid $color-default-blue;
   opacity: 1;
+}
+
+.hero__pagination .swiper-pagination-bullet-active {
+  background-color: $color-default-blue;
 }
 
 .hero-main__header {

@@ -58,9 +58,8 @@
 
   &__content {
     position: relative;
-
-    width: 600px;
-    padding: 40px;
+    width: 510px;
+    padding: 60px 80px;
 
     background-color: $color-default-white;
 
@@ -80,7 +79,7 @@
     height: 40px;
     padding: 0;
 
-    background: $color-transparent;
+    background: $color-brown;
     border: none;
     cursor: pointer;
   }
@@ -89,20 +88,6 @@
     .modal__content {
       width: 100%;
     }
-  }
-
-  &--fit-content {
-    .modal__content {
-      width: auto;
-
-      @include vp-767 {
-        width: 100%;
-      }
-    }
-  }
-
-  &--no-scale {
-    transform: none;
   }
 
   &--preload {
@@ -116,4 +101,29 @@
 
     pointer-events: auto;
   }
+}
+
+.modal__header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.modal__header h2 {
+  margin: 0;
+  color: $color-default-blue;
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 36px;
+}
+
+.modal__header p {
+  margin: 0;
+}
+
+.modal__content form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }

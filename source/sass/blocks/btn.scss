@@ -40,6 +40,65 @@
       height: 32px;
     }
   }
+
+  @include hover-focus-visible {
+    color: $color-default-white;
+    background-color: $color-default-blue;
+
+    &::before {
+      background-color: $color-default-white;
+    }
+
+    .btn__arrow {
+      border-top: 1px solid $color-default-blue;
+      border-right: 1px solid $color-default-blue;
+      transform: rotate(45deg);
+
+      &::before {
+        background-color: $color-default-blue;
+      }
+    }
+  }
+
+  @include focus;
+
+  @include active {
+    color: $color-default-white-opacity70;
+    background-color: $color-default-blue;
+
+    &::before {
+      background-color: $color-default-white;
+    }
+
+    .btn__arrow {
+      border-top: 1px solid $color-default-blue-opacity70;
+      border-right: 1px solid $color-default-blue-opacity70;
+      transform: rotate(45deg);
+
+      &::before {
+        background-color: $color-default-blue-opacity70;
+      }
+    }
+  }
+
+  @include disabled {
+    color: $color-grey;
+    background-color: transparent;
+
+    &::before {
+      background-color: $color-grey;
+    }
+
+    .btn__arrow {
+      border-top: 1px solid $color-default-white;
+      border-right: 1px solid $color-default-white;
+      transform: rotate(45deg);
+
+      &::before {
+        background-color: $color-default-white;
+      }
+    }
+  }
 }
 
 .btn__arrow {
@@ -72,11 +131,51 @@
 
 .btn--blue {
   color: $color-default-white;
-  background-color: $color-default-blue;
   border: 1px solid $color-default-white;
+
   //БЕЛЫЙ КРУГ
   &::before {
     background-color: $color-default-white;
+  }
+
+  @include hover-focus-visible {
+    color: $color-default-blue;
+    background-color: $color-default-white;
+    border: 1px solid $color-default-white;
+
+    &::before {
+      background-color: $color-default-blue;
+    }
+
+    .btn__arrow {
+      border-top: 1px solid $color-default-white;
+      border-right: 1px solid $color-default-white;
+
+      &::before {
+        background-color: $color-default-white;
+      }
+    }
+  }
+
+  @include focus;
+
+  @include active {
+    color: $color-default-blue-opacity70;
+    background-color: $color-default-white;
+
+    &::before {
+      background-color: $color-default-blue;
+    }
+
+    .btn__arrow {
+      border-top: 1px solid $color-default-white-opacity70;
+      border-right: 1px solid $color-default-white-opacity70;
+      transform: rotate(45deg);
+
+      &::before {
+        background-color: $color-default-white-opacity70;
+      }
+    }
   }
 }
 

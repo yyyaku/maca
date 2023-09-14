@@ -24,3 +24,13 @@
 .input-select option {
   color: black;
 }
+
+.input-select--modal {
+  & h3 {
+    color: $color-default-profect;
+  }
+
+  & select {
+    border: 1px solid $color-default-profect;
+  }
+}

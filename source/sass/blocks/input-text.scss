@@ -32,3 +32,13 @@
   border: 1px solid $color-default-white-opacity30;
   border-radius: 8px;
 }
+
+.input-text__item--modal {
+  & label {
+    color: $color-default-profect;
+  }
+
+  & input {
+    border: 1px solid $color-default-profect;
+  }
+}

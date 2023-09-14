@@ -224,7 +224,7 @@
                 и&nbsp;средних стадиях карьеры, предоставляя им&nbsp;инструменты для решения сложных проблем,
                 с&nbsp;которыми сталкиваются Израиль и&nbsp;еврейские общины во&nbsp;всем мире. Цель центра&nbsp;&mdash;
                 наделить этих людей способностью инициировать значимые изменения.</p>
-              <a href="#" class="btn">Подробнее о проекте<span class="btn__arrow"></span></a>
+              <a href="#" class="btn" data-open-modal="feedback">Подробнее о проекте<span class="btn__arrow"></span></a>
             </div>
             <ul class="about__list">
               <li class="about__item">
@@ -748,16 +748,6 @@
           </div>
         </div>
       </section>
-      <!-- <section class="intro">
-        <div class="container">
-          <h1>Тестовая страница.</h1>
-          <p>На данной странице показан пример модальных окон.</p>
-          <p>Перед началом разработки не забудьте удалить всё содержимое &#8249;main&#8250;&#8249;&#8260;main&#8250;.
-          </p>
-          <p><a class="btn" href="#" data-open-modal="feedback">modal--feedback link</a></p>
-          <p><a class="btn" href="#" data-open-modal="success">modal--success link</a></p>
-        </div>
-      </section> -->
     </main>
     <footer class="footer">
       <div class="container">
@@ -843,26 +833,46 @@
     <div class="modal__wrapper">
       <div class="modal__overlay" data-close-modal></div>
       <div class="modal__content">
-        <p class="modal__description">Обычная модалка</p>
         <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>
-          <svg width="15" height="15">
-            <use xlink:href="img/sprite.svg#icon-close"></use>
-          </svg>
         </button>
-      </div>
-    </div>
-  </div>
-
-  <div class="modal modal--preload modal--fit-content modal--no-scale" data-modal="success">
-    <div class="modal__wrapper">
-      <div class="modal__overlay" data-close-modal></div>
-      <div class="modal__content">
-        <p class="modal__description">Размер этой модалки зависит от ширины контента,<br> отключена анимация-скейл</p>
-        <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>
-          <svg width="15" height="15">
-            <use xlink:href="img/sprite.svg#icon-close"></use>
-          </svg>
-        </button>
+        <div class="modal__header">
+          <h2>Напишите нам</h2>
+          <p>Оставьте ваши контакты, если у&nbsp;вас остались вопросы&nbsp;&mdash;
+            мы&nbsp;на&nbsp;них ответим!</p>
+        </div>
+        <form id="personal-date" method="post" action="https://echo.htmlacademy.ru">
+          <fieldset class="input-text">
+            <h3 class="visually-hidden">Представьтесь:</h3>
+            <ul class="input-text__list">
+              <li class="input-text__item input-text__item--modal" data-validate-type="text" data-limitation="name" data-required>
+                <label for="name-field">Имя</label>
+                <input type="text" name="name" id="name-field" placeholder="" minlength="2" maxlength="25" required>
+              </li>
+              <li class="input-text__item input-text__item--modal" data-validate-type="phone" data-required>
+                <label for="tel-field">Телефон</label>
+                <input type="tel" name="tel" id="tel-field" placeholder="" required>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset class="input-select input-select--modal">
+            <h3>Выберите город</h3>
+            <select>
+              <option>Санкт-Петербург</option>
+              <option>Санкт-Петербург</option>
+              <option>Санкт-Петербург</option>
+              <option>Санкт-Петербург</option>
+            </select>
+          </fieldset>
+          <fieldset class="input-checkbox">
+            <label class="input-checkbox__control">
+              <input class="visually-hidden input-checkbox__input" type="checkbox" name="data">
+              <span class="input-checkbox__check"></span>
+              <h3>Я согласен на обработку моих персональных данных</h3>
+            </label>
+          </fieldset>
+        </form>
+        <button class="btn form__btn" form="personal-date" type="submit">Отправить<span
+            class="btn__arrow"></span></button>
       </div>
     </div>
   </div>
