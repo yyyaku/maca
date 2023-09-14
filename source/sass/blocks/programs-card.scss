@@ -64,10 +64,18 @@
 }
 
 .programs-card__header {
+  position: relative;
   padding: 18px 18px 6px 18px;
   width: 194px;
   background-color: $color-default-white;
   border-radius: 12px 12px 0 0;
+}
+
+.programs-card__header svg {
+  position: absolute;
+  bottom: 0;
+  right: -18px;
+  fill: $color-default-white;
 }
 
 .programs-card__header h3 {
