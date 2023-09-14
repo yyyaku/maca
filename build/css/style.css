@@ -2751,36 +2751,64 @@ button,
   opacity: 1;
 }
 
-.hero-main h2 {
-  margin: 0;
+.hero-main__header {
+  position: relative;
   padding: 40px 50px 30px 50px;
   width: 78.06%;
   color: #316dc2;
   background-color: #ffffff;
   border-radius: 0 30px 30px 0;
+}
+@media (max-width: 1199px) {
+  .hero-main__header {
+    padding: 30px 40px 24px 40px;
+    width: 97.2%;
+  }
+}
+@media (max-width: 767px) {
+  .hero-main__header {
+    padding: 20px 14px 16px 14px;
+    border-radius: 0 16px 16px 0;
+    width: 100%;
+  }
+}
+
+.hero-main__header svg {
+  position: absolute;
+  top: -20px;
+  left: 94px;
+  fill: #ffffff;
+}
+@media (max-width: 767px) {
+  .hero-main__header svg {
+    top: -10px;
+    left: 80px;
+    width: 10px;
+    height: 10px;
+  }
+}
+
+.hero-main__header h2 {
+  margin: 0;
   font-size: 54px;
   font-weight: 400;
   line-height: 62px;
 }
 @media (max-width: 1199px) {
-  .hero-main h2 {
-    padding: 30px 40px 24px 40px;
-    width: 97.2%;
+  .hero-main__header h2 {
     font-size: 36px;
     line-height: 44px;
   }
 }
 @media (max-width: 767px) {
-  .hero-main h2 {
-    padding: 20px 14px 16px 14px;
-    border-radius: 0 16px 16px 0;
-    width: 100%;
+  .hero-main__header h2 {
     font-size: 22px;
     line-height: 26px;
   }
 }
 
 .hero-main__info {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2813,33 +2841,77 @@ button,
   }
 }
 
-.hero-main__info p {
+.hero-main__info svg {
+  position: absolute;
+  top: 0;
+  right: -26px;
+  fill: #ffffff;
+}
+@media (max-width: 767px) {
+  .hero-main__info svg {
+    display: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .hero-main__description {
+    position: relative;
+    padding: 0 14px 15px;
+    background-color: #ffffff;
+    border-radius: 0 0 14px 0;
+  }
+}
+
+.hero-main__description svg {
+  display: none;
+}
+@media (max-width: 767px) {
+  .hero-main__description svg {
+    position: absolute;
+    top: 0;
+    right: -10px;
+    fill: #ffffff;
+    display: block;
+  }
+}
+
+.hero-main__description p {
   margin: 0;
 }
 @media (max-width: 1199px) {
-  .hero-main__info p {
-    margin: -5px 0 -5px;
+  .hero-main__description p {
     line-height: 20px;
   }
 }
 @media (max-width: 1199px) and (max-width: 767px) {
-  .hero-main__info p {
-    padding: 0 14px 15px;
-    background-color: #ffffff;
-    border-radius: 0 0 14px 0;
+  .hero-main__description p {
     font-size: 14px;
   }
 }
 
-.hero-main__info a {
+.hero-main__link {
   min-width: 196px;
 }
 @media (max-width: 767px) {
-  .hero-main__info a {
+  .hero-main__link {
+    position: relative;
     padding: 10px 15px;
     min-width: 182px;
     background-color: #ffffff;
     border-radius: 0 0 14px 14px;
+  }
+}
+
+.hero-main__link svg {
+  display: none;
+}
+@media (max-width: 767px) {
+  .hero-main__link svg {
+    position: absolute;
+    top: 0;
+    right: -10px;
+    fill: #ffffff;
+    display: block;
   }
 }
 
