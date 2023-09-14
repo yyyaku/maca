@@ -2260,6 +2260,7 @@ button,
 .btn:disabled {
   color: #a9afb7;
   background-color: transparent;
+  cursor: not-allowed;
 }
 .btn:disabled::before {
   background-color: #a9afb7;
@@ -2270,6 +2271,7 @@ button,
   -webkit-transform: rotate(45deg);
       -ms-transform: rotate(45deg);
           transform: rotate(45deg);
+  cursor: not-allowed;
 }
 .btn:disabled .btn__arrow::before {
   background-color: #ffffff;
@@ -2433,6 +2435,9 @@ button,
 .btn-secondary:active .btn-secondary__arrow::before {
   background-color: rgba(49, 109, 194, 0.7);
 }
+.btn-secondary:disabled {
+  cursor: not-allowed;
+}
 .btn-secondary:disabled::before {
   background-color: #a9afb7;
 }
@@ -2442,6 +2447,7 @@ button,
   -webkit-transform: rotate(45deg);
       -ms-transform: rotate(45deg);
           transform: rotate(45deg);
+  cursor: not-allowed;
 }
 .btn-secondary:disabled .btn-secondary__arrow::before {
   background-color: #ffffff;
@@ -2504,7 +2510,7 @@ button,
   width: 22px;
   height: 22px;
   background-color: transparent;
-  border: none;
+  border: 1px solid transparent;
   border-radius: 50%;
   cursor: pointer;
 }
@@ -2520,10 +2526,41 @@ button,
   height: 1px;
   background-color: #316dc2;
 }
+.swiper-buttons__button:hover {
+  background-color: #ffffff;
+}
+.swiper-buttons__button:focus-visible {
+  background-color: #ffffff;
+  outline: none;
+}
+.swiper-buttons__button:focus {
+  outline: none;
+}
+.swiper-buttons__button:active {
+  background-color: #ffffff;
+}
+.swiper-buttons__button:active::before {
+  background-color: rgba(49, 109, 194, 0.7);
+}
+.swiper-buttons__button:active .swiper-buttons__arrow {
+  border-top: 1px solid rgba(49, 109, 194, 0.7);
+  border-right: 1px solid rgba(49, 109, 194, 0.7);
+}
+.swiper-buttons__button:disabled {
+  cursor: not-allowed;
+}
+.swiper-buttons__button:disabled::before {
+  background-color: #a9afb7;
+}
+.swiper-buttons__button:disabled .swiper-buttons__arrow {
+  border-top: 1px solid #a9afb7;
+  border-right: 1px solid #a9afb7;
+  cursor: not-allowed;
+}
 
 .swiper-buttons__arrow {
   position: absolute;
-  top: 7px;
+  top: 6px;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -4214,6 +4251,42 @@ button,
     height: 32px;
   }
 }
+.question button:hover::before {
+  background-color: transparent;
+}
+.question button:hover .question__button::after, .question button:hover .question__button::before {
+  background-color: #316dc2;
+}
+.question button:focus-visible {
+  outline: none;
+}
+.question button:focus-visible::before {
+  background-color: transparent;
+}
+.question button:focus-visible .question__button::after, .question button:focus-visible .question__button::before {
+  background-color: #316dc2;
+}
+.question button:focus {
+  outline: none;
+}
+.question button:active::before {
+  background-color: #275699;
+}
+.question button:active .question__button::after, .question button:active .question__button::before {
+  background-color: #ffffff;
+}
+.question button:disabled {
+  cursor: not-allowed;
+}
+.question button:disabled::before {
+  background-color: #a9afb7;
+}
+.question button:disabled .question__button {
+  cursor: not-allowed;
+}
+.question button:disabled .question__button::after, .question button:disabled .question__button::before {
+  background-color: #ffffff;
+}
 
 .question__button {
   display: -webkit-box;
@@ -4221,7 +4294,7 @@ button,
   display: flex;
   position: relative;
 }
-.question__button::before, .question__button::after {
+.question__button::after, .question__button::before {
   content: "";
   position: absolute;
   top: 50%;
@@ -4231,21 +4304,21 @@ button,
   background-color: #ffffff;
 }
 @media (max-width: 767px) {
-  .question__button::before, .question__button::after {
+  .question__button::after, .question__button::before {
     left: 8px;
   }
 }
-.question__button::before {
+.question__button::after {
   -webkit-transform: rotate(90deg);
       -ms-transform: rotate(90deg);
           transform: rotate(90deg);
-  -webkit-box-shadow: none;
-          box-shadow: none;
 }
-.question__button::after {
+.question__button::before {
   -webkit-transform: rotate(180deg);
       -ms-transform: rotate(180deg);
           transform: rotate(180deg);
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
 .question.is-active {
@@ -4265,14 +4338,50 @@ button,
     padding: 20px 15px;
   }
 }
+
 .question.is-active button::before {
   background-color: #ffffff;
 }
+.question.is-active button .question__button::after {
+  background-color: transparent;
+}
 .question.is-active button .question__button::before {
+  background-color: #316dc2;
+}
+.question.is-active button:hover::before {
+  background-color: transparent;
+  border: 1px solid #ffffff;
+}
+.question.is-active button:hover .question__button::after {
+  background-color: transparent;
+}
+.question.is-active button:hover .question__button::before {
   background-color: #ffffff;
 }
-.question.is-active button .question__button::after {
-  background-color: #316dc2;
+.question.is-active button:focus-visible {
+  outline: none;
+}
+.question.is-active button:focus-visible::before {
+  background-color: transparent;
+  border: 1px solid #ffffff;
+}
+.question.is-active button:focus-visible .question__button::after {
+  background-color: transparent;
+}
+.question.is-active button:focus-visible .question__button::before {
+  background-color: #ffffff;
+}
+.question.is-active button:focus {
+  outline: none;
+}
+.question.is-active button:active::before {
+  background-color: #ffffff;
+}
+.question.is-active button:active .question__button::after {
+  background-color: transparent;
+}
+.question.is-active button:active .question__button::before {
+  background-color: #275699;
 }
 
 .question h3 {

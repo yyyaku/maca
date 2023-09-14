@@ -48,6 +48,8 @@
   }
 
   @include disabled {
+    cursor: not-allowed;
+
     &::before {
       background-color: $color-grey;
     }
@@ -56,6 +58,7 @@
       border-top: 1px solid $color-default-white;
       border-right: 1px solid $color-default-white;
       transform: rotate(45deg);
+      cursor: not-allowed;
 
       &::before {
         background-color: $color-default-white;

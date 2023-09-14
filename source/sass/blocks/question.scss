@@ -55,6 +55,51 @@
       height: 32px;
     }
   }
+
+  @include hover-focus-visible {
+    &::before {
+      background-color: transparent;
+    }
+
+    .question__button {
+      &::after,
+      &::before {
+        background-color: $color-default-blue;
+      }
+    }
+  }
+
+  @include focus;
+
+  @include active {
+    &::before {
+      background-color: $color-purple-blue;
+    }
+
+    .question__button {
+      &::after,
+      &::before {
+        background-color: $color-default-white;
+      }
+    }
+  }
+
+  @include disabled {
+    cursor: not-allowed;
+
+    &::before {
+      background-color: $color-grey;
+    }
+
+    .question__button {
+      cursor: not-allowed;
+
+      &::after,
+      &::before {
+        background-color: $color-default-white;
+      }
+    }
+  }
 }
 
 .question__button {
@@ -62,8 +107,8 @@
   position: relative;
 
   // ПЛЮС КНОПКИ
-  &::before,
-  &::after {
+  &::after,
+  &::before {
     content: "";
     position: absolute;
     top: 50%;
@@ -77,13 +122,13 @@
     }
   }
 
-  &::before {
+  &::after {
     transform: rotate(90deg);
-    box-shadow: none;
   }
 
-  &::after {
+  &::before {
     transform: rotate(180deg);
+    box-shadow: none;
   }
 }
 
@@ -101,21 +146,54 @@
     gap: 20px 0;
     padding: 20px 15px;
   }
+}
 
-  // КРУГ КНОПКИ
-  button {
+.question.is-active button {
+  &::before {
+    background-color: $color-default-white;
+  }
+  // МИНУС КНОПКИ
+  .question__button {
+    &::after {
+      background-color: transparent;
+    }
+
+    &::before {
+      background-color: $color-default-blue;
+    }
+  }
+
+  @include hover-focus-visible {
+    &::before {
+      background-color: transparent;
+      border: 1px solid $color-default-white;
+    }
+
+    .question__button {
+      &::after {
+        background-color: transparent;
+      }
+
+      &::before {
+        background-color: $color-default-white;
+      }
+    }
+  }
+
+  @include focus;
+
+  @include active {
     &::before {
       background-color: $color-default-white;
     }
 
-    // МИНУС КНОПКИ
     .question__button {
-      &::before {
-        background-color: $color-default-white;
+      &::after {
+        background-color: transparent;
       }
 
-      &::after {
-        background-color: $color-default-blue;
+      &::before {
+        background-color: $color-purple-blue;
       }
     }
   }
