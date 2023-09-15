@@ -6188,6 +6188,17 @@ button,
     width: 442px;
   }
 
+  .form__header h2 {
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px;
+  }
+
+  .form__header p {
+    line-height: 20px;
+  }
+
   .footer-header {
     -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
@@ -6698,6 +6709,17 @@ button,
   .form__content {
     padding: 56px 15px 50px;
     width: 100%;
+  }
+
+  .form__header h2 {
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px;
+  }
+
+  .form__header p {
+    font-size: 14px;
   }
 
   .footer__wrapper {
