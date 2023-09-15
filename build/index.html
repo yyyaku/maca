@@ -2,9 +2,9 @@
 <html lang="ru">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Сайт проекта правительства Израиля и Еврейского агентства Сохнут.">
   <title>Masa</title>
   <link rel="stylesheet" href="css/style.min.css">
@@ -312,6 +312,20 @@
                     </div>
                   </div>
                 </li>
+                <li class="programs-card programs-card--studies swiper-slide" tabindex="0">
+                  <div class="programs-card__wrapper">
+                    <div class="programs-card__header">
+                      <h3>Учёба</h3>
+                      <svg width="18" height="18">
+                        <use href="img/sprite.svg#angle-left-bottom"></use>
+                      </svg>
+                    </div>
+                    <div class="programs-card__info">
+                      <p>Получите образование и&nbsp;измените свое будущее.</p>
+                      <a href="#" class="btn-secondary"><span class="btn-secondary__arrow"></span></a>
+                    </div>
+                  </div>
+                </li>
               </ul>
             </div>
             <div class="programs__controls">
@@ -537,7 +551,47 @@
                   <button class="question__button" type="button">
                     <span class="question__sign"></span>
                   </button>
+                  <h3>Что такое грант на&nbsp;обучение?</h3>
+                  <div class="question__content" data-accordion="content">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam vero suscipit facere, similique
+                      natus
+                      id voluptas! Explicabo dolorum esse, deserunt quas voluptas, nobis velit tempora similique quia
+                      repudiandae illum. Autem!</p>
+                  </div>
+                </div>
+              </li>
+              <li class="questions__item question" data-accordion="element">
+                <div class="question__wrapper" data-accordion="button">
+                  <button class="question__button" type="button">
+                    <span class="question__sign"></span>
+                  </button>
                   <h3>Как определяется стоимость программы?</h3>
+                  <div class="question__content" data-accordion="content">
+                    <p>Полная стоимость определяется организаторами в&nbsp;зависимости от&nbsp;направления.
+                      В&nbsp;большинстве случаев грант &laquo;Маса&raquo; не&nbsp;покрывает полную стоимость программы,
+                      и&nbsp;поэтому предусматривается определённая доля личного участия.</p>
+                  </div>
+                </div>
+              </li>
+              <li class="questions__item question" data-accordion="element">
+                <div class="question__wrapper" data-accordion="button">
+                  <button class="question__button" type="button">
+                    <span class="question__sign"></span>
+                  </button>
+                  <h3>Признаётся&nbsp;ли учеба в&nbsp;рамках проекта для дальнейшего обучения?</h3>
+                  <div class="question__content" data-accordion="content">
+                    <p>Полная стоимость определяется организаторами в&nbsp;зависимости от&nbsp;направления.
+                      В&nbsp;большинстве случаев грант &laquo;Маса&raquo; не&nbsp;покрывает полную стоимость программы,
+                      и&nbsp;поэтому предусматривается определённая доля личного участия.</p>
+                  </div>
+                </div>
+              </li>
+              <li class="questions__item question" data-accordion="element">
+                <div class="question__wrapper" data-accordion="button">
+                  <button class="question__button" type="button">
+                    <span class="question__sign"></span>
+                  </button>
+                  <h3>Как выглядит полный процесс регистрации на&nbsp;программу &laquo;Маса&raquo;?</h3>
                   <div class="question__content" data-accordion="content">
                     <p>Полная стоимость определяется организаторами в&nbsp;зависимости от&nbsp;направления.
                       В&nbsp;большинстве случаев грант &laquo;Маса&raquo; не&nbsp;покрывает полную стоимость программы,
@@ -704,35 +758,39 @@
                     <h3 class="visually-hidden">Представьтесь:</h3>
                     <ul class="input-text__list">
                       <li class="input-text__item" data-validate-type="text" data-limitation="name" data-required>
-                        <label for="name-field">Имя</label>
-                        <input type="text" name="name" id="name-field" placeholder="" minlength="2" maxlength="25"
-                          required>
+                        <input class="input-text__input" type="text" name="name" id="name-field" minlength="2"
+                          maxlength="25" required>
+                        <label class="input-text__label" for="name-field">Имя</label>
                       </li>
                       <li class="input-text__item" data-validate-type="phone" data-required>
-                        <label for="tel-field">Телефон</label>
-                        <input type="tel" name="tel" id="tel-field" placeholder="" required>
+                        <input class="input-text__input" type="tel" name="tel" id="tel-field" required>
+                        <label class="input-text__label" for="tel-field">Телефон</label>
                       </li>
                     </ul>
                   </fieldset>
                   <fieldset class="input-textarea">
-                    <h3>Ваше сообщение</h3>
-                    <textarea rows="4" placeholder=""></textarea>
+                    <textarea class="input-textarea__input" rows="4" id="message-field"></textarea>
+                    <label class="input-textarea__label" for="message-field">Ваше сообщение</label>
                   </fieldset>
                   <fieldset class="input-select">
-                    <h3>Выберите город</h3>
-                    <select>
-                      <option>Санкт-Петербург</option>
-                      <option>Санкт-Петербург</option>
-                      <option>Санкт-Петербург</option>
-                      <option>Санкт-Петербург</option>
-                    </select>
+                    <div class="input-select__wrapper">
+                      <select class="input-select__input" id="city-field">
+                        <option value="">Санкт-Петербург</option>
+                        <option value="value2">Санкт-Петербург</option>
+                        <option value="value3">Санкт-Петербург</option>
+                        <option value="value4">Санкт-Петербург</option>
+                      </select>
+                      <label class="input-select__label" for="city-field">Выберите город</label>
+                    </div>
                   </fieldset>
                   <fieldset class="input-checkbox">
-                    <label class="input-checkbox__control">
-                      <input class="visually-hidden input-checkbox__input" type="checkbox" name="data">
+                    <div class="input-checkbox__control" data-validate-type="checkbox" data-required>
+                      <input class="visually-hidden input-checkbox__input" type="checkbox" name="data" id="data-field"
+                        required>
                       <span class="input-checkbox__check"></span>
-                      <h3>Я согласен на обработку моих персональных данных</h3>
-                    </label>
+                      <label class="input-checkbox__label" for="data-field">Я согласен на обработку моих персональных
+                        данных</label>
+                    </div>
                   </fieldset>
                 </form>
                 <button class="btn btn--blue form__btn" form="personal-date" type="submit">Отправить<span
@@ -834,39 +892,42 @@
           <p>Оставьте ваши контакты, если у&nbsp;вас остались вопросы&nbsp;&mdash;
             мы&nbsp;на&nbsp;них ответим!</p>
         </div>
-        <form id="personal-date" method="post" action="https://echo.htmlacademy.ru">
-          <fieldset class="input-text">
+        <form id="personal-date-modal" method="post" action="https://echo.htmlacademy.ru">
+          <fieldset class="input-text input-text--modal">
             <h3 class="visually-hidden">Представьтесь:</h3>
             <ul class="input-text__list">
-              <li class="input-text__item input-text__item--modal" data-validate-type="text" data-limitation="name"
-                data-required>
-                <label for="name-field">Имя</label>
-                <input type="text" name="name" id="name-field" placeholder="" minlength="2" maxlength="25" required>
+              <li class="input-text__item" data-validate-type="text" data-limitation="name" data-required>
+                <input class="input-text__input" type="text" name="name" id="name-field-modal" minlength="2"
+                  maxlength="25" required>
+                <label class="input-text__label" for="name-field-modal">Имя</label>
               </li>
-              <li class="input-text__item input-text__item--modal" data-validate-type="phone" data-required>
-                <label for="tel-field">Телефон</label>
-                <input type="tel" name="tel" id="tel-field" placeholder="" required>
+              <li class="input-text__item" data-validate-type="phone" data-required>
+                <input class="input-text__input" type="tel" name="tel" id="tel-field-modal" required>
+                <label class="input-text__label" for="tel-field-modal">Телефон</label>
               </li>
             </ul>
           </fieldset>
           <fieldset class="input-select input-select--modal">
-            <h3>Выберите город</h3>
-            <select>
-              <option>Санкт-Петербург</option>
-              <option>Санкт-Петербург</option>
-              <option>Санкт-Петербург</option>
-              <option>Санкт-Петербург</option>
-            </select>
+            <div class="input-select__wrapper">
+              <select class="input-select__input" id="city-field-modal">
+                <option>Санкт-Петербург</option>
+                <option>Санкт-Петербург</option>
+                <option>Санкт-Петербург</option>
+                <option>Санкт-Петербург</option>
+              </select>
+              <label class="input-select__label" for="city-field-modal">Выберите город</label>
+            </div>
           </fieldset>
-          <fieldset class="input-checkbox">
-            <label class="input-checkbox__control">
-              <input class="visually-hidden input-checkbox__input" type="checkbox" name="data">
+          <fieldset class="input-checkbox input-checkbox--modal">
+            <div class="input-checkbox__control">
+              <input class="visually-hidden input-checkbox__input" type="checkbox" name="data" id="data-field-modal">
               <span class="input-checkbox__check"></span>
-              <h3>Я согласен на обработку моих персональных данных</h3>
-            </label>
+              <label class="input-checkbox__label" for="data-field-modal">Я согласен на обработку моих персональных
+                данных</label>
+            </div>
           </fieldset>
         </form>
-        <button class="btn form__btn" form="personal-date" type="submit">Отправить<span
+        <button class="btn modal__btn" form="personal-date-modal" type="submit">Отправить<span
             class="btn__arrow"></span></button>
       </div>
     </div>

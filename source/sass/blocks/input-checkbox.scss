@@ -9,10 +9,31 @@
   align-items: center;
   min-height: 20px;
   cursor: pointer;
+
+  @include hover-focus-visible {
+    .input-checkbox__check {
+      &::before {
+        border: 1px solid $color-default-white;
+      }
+    }
+
+    .input-checkbox__input:checked + .input-checkbox__check::after {
+      border-right: 1px solid $color-default-white;
+      border-top: 1px solid $color-default-white;
+    }
+
+    .input-checkbox__input:checked + .input-checkbox__check::before {
+      background-color: transparent;
+    }
+  }
 }
 
 .input-checkbox__input:checked + .input-checkbox__check::after {
   opacity: 1;
+}
+
+.input-checkbox__input:checked + .input-checkbox__check::before {
+  background-color: $color-default-white;
 }
 
 .input-checkbox__check {
@@ -27,7 +48,8 @@
     display: block;
     width: 20px;
     height: 20px;
-    background-color: $color-default-white;
+    background-color: transparent;
+    border: 1px solid $color-default-white-opacity70;
     z-index: 1;
   }
 
@@ -35,8 +57,8 @@
     content: "";
     display: block;
     position: absolute;
-    top: 0;
-    left: 0;
+    top: -5px;
+    left: 5px;
     width: 8px;
     height: 6px;
     border-right: 1px solid $color-default-blue;
@@ -47,11 +69,62 @@
   }
 }
 
-.input-checkbox__control h3 {
+.input-checkbox__label {
   margin: 0;
   padding: 0 0 0 30px;
   color: $color-default-white-opacity90;
   font-size: 12px;
   font-weight: 400;
   line-height: 12px;
+  cursor: pointer;
+}
+
+.input-checkbox__control.is-invalid .input-checkbox__check {
+  &::before {
+    background-color: $color-red-opacity20;
+    border: 1px solid $color-red;
+  }
+}
+
+.input-checkbox--modal {
+  .input-checkbox__check {
+    &::before {
+      border: 1px solid $color-default-blue-opacity70;
+    }
+
+    &::after {
+      opacity: 0;
+    }
+  }
+
+  .input-checkbox__label {
+    color: $color-default-profect;
+  }
+
+  .input-checkbox__input:checked + .input-checkbox__check::after {
+    border-right: 1px solid $color-default-white;
+    border-top: 1px solid $color-default-white;
+    opacity: 1;
+  }
+
+  .input-checkbox__input:checked + .input-checkbox__check::before {
+    background-color: $color-default-blue;
+  }
+
+  @include hover-focus-visible {
+    .input-checkbox__check {
+      &::before {
+        border: 1px solid $color-default-blue;
+      }
+    }
+
+    .input-checkbox__input:checked + .input-checkbox__check::after {
+      border-right: 1px solid $color-default-blue;
+      border-top: 1px solid $color-default-blue;
+    }
+
+    .input-checkbox__input:checked + .input-checkbox__check::before {
+      background-color: transparent;
+    }
+  }
 }

@@ -22,9 +22,9 @@
     "*.js",
     "source/**/*.html",
     "source/**/*.pug",
-    "source/js/**/*.js",
+    "source/js/**/*.js, !source/js/vendor/leaflet.js",
     "source/img/**/*.svg",
-    "source/sass/**/*.{sass,scss}"
+    "source/sass/**/*.{sass,scss}, !source/sass/vendor/leaflet.scss"
   ],
   "devDependencies": {
     "@babel/preset-env": "7.18.6",
