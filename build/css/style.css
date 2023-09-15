@@ -4816,6 +4816,8 @@ button,
 }
 
 .reviews-card__image {
+  width: 90px;
+  height: 90px;
   background-color: #316dc2;
   border-radius: 50%;
 }
