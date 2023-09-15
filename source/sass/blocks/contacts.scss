@@ -91,7 +91,20 @@
 }
 
 .contacts__item a {
+  padding: 5px 0;
   color: $color-default-white;
+  border-bottom: 1px solid transparent;
+
+  @include hover-focus-visible {
+    border-bottom: 1px solid $color-default-white;
+  }
+
+  @include focus;
+
+  @include active {
+    color: $color-default-white-opacity80;
+    border-bottom: 1px solid transparent;
+  }
 }
 
 .contacts__map {
@@ -99,6 +112,7 @@
   width: 100%;
   min-height: 500px;
   height: auto;
+  border-radius: 16px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;

@@ -20,14 +20,29 @@ const initSliderNews = () => {
           return '<span class="' + className + '">' + (index + 1) + '</span>';
         },
       },
-      slidesPerView: 'auto',
-      spaceBetween: 32,
+
+      allowTouchMove: true,
       breakpoints: {
+        1200: {
+          slidesPerView: 'auto',
+          spaceBetween: 32,
+          allowTouchMove: false,
+        },
         768: {
+          slidesPerView: 2,
           spaceBetween: 30,
+          grid: {
+            rows: 2,
+            fill: 'row',
+          },
         },
         320: {
+          slidesPerView: 1,
           spaceBetween: 30,
+          grid: {
+            rows: 2,
+            fill: 'row',
+          },
         },
       },
     });

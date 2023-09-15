@@ -24,10 +24,16 @@
   }
 }
 
+.reviews-card__image {
+  background-color: $color-default-blue;
+  border-radius: 50%;
+}
+
 .reviews-card__header img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  border-radius: 50%;
 }
 
 .reviews-card__header h3 {

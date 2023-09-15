@@ -1,5 +1,6 @@
 .map {
   min-height: 500px;
+  border-radius: 16px;
   background-color: $color-default-blue;
 
   @include vp-767 {

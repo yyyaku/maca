@@ -2,3 +2,5 @@ build/*.js
 source/js/vendor/*.js
 gulpfile.js
 webpack.config.cjs
+source/js/modules/map/map.js
+source/js/modules/sliders/init-slider-news.js

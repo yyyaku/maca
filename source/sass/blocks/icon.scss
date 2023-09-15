@@ -2,9 +2,26 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: $color-default-blue;
   border: 1px solid $color-default-blue;
 
   & svg {
     fill: $color-default-white;
+  }
+
+  @include hover-focus-visible {
+    & svg {
+      fill: $color-default-white-opacity70;
+    }
+  }
+
+  @include focus;
+
+  @include active {
+    background-color: $color-purple-blue;
+
+    & svg {
+      fill: $color-default-white;
+    }
   }
 }

@@ -4,7 +4,6 @@
 @import "vendor/normalize";
 // Swiper 7.4.1
 @import "vendor/swiper";
-@import "vendor/data-tabs.scss";
 @import "vendor/data-accordion.scss";
 @import "vendor/leaflet.scss";
 
@@ -48,14 +47,11 @@
 @import "blocks/input-textarea";
 @import "blocks/input-select";
 @import "blocks/input-checkbox";
-
 @import "blocks/footer";
 @import "blocks/footer-header";
 @import "blocks/social";
 @import "blocks/icon";
 @import "blocks/footer-footer";
-
-
 @import "blocks/modal";
 @import "blocks/custom-input";
 @import "blocks/custom-toggle";

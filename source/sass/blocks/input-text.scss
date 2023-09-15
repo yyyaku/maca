@@ -16,19 +16,55 @@
 .input-text__item {
   display: flex;
   flex-direction: column;
+  gap: 12px;
 }
 
-.input-text__item label {
-  margin: 0 0 12px;
+.input-text__label {
+  margin: 0;
   color: $color-timber-wolf-opacity80;
   font-size: 14px;
   font-weight: 400;
   line-height: 18px;
 }
 
-.input-text__item input {
+.input-text__input {
+  padding: 16px 25px;
   min-height: 50px;
+  color: $color-default-white;
   background-color: transparent;
   border: 1px solid $color-default-white-opacity30;
   border-radius: 8px;
+  order: 2;
+
+  @include hover-focus-visible {
+    border: 1px solid $color-default-white;
+  }
+}
+
+.input-text__input:hover ~ .input-text__label {
+  color: $color-timber-wolf;
+}
+
+.input-text__item.is-invalid input {
+  background-color: $color-red-opacity20;
+  border: 1px solid $color-red;
+}
+
+.input-text--modal {
+  .input-text__label {
+    color: $color-default-profect-opacity80;
+  }
+
+  .input-text__input {
+    color: $color-default-profect;
+    border: 1px solid $color-default-profect-opacity30;
+
+    @include hover-focus-visible {
+      border: 1px solid $color-default-profect;
+    }
+  }
+
+  .input-text__input:hover ~ .input-text__label {
+    color: $color-default-profect;
+  }
 }

@@ -44,4 +44,14 @@
   @include vp-767 {
     font-size: 14px;
   }
+
+  @include hover-focus-visible {
+    color: $color-default-blue;
+  }
+
+  @include focus;
+
+  @include active {
+    color: $color-purple-blue;
+  }
 }

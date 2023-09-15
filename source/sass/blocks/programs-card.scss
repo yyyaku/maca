@@ -64,10 +64,18 @@
 }
 
 .programs-card__header {
+  position: relative;
   padding: 18px 18px 6px 18px;
   width: 194px;
-  background-color: $color-default-white;
+  background-color: $color-timber-wolf;
   border-radius: 12px 12px 0 0;
+}
+
+.programs-card__header svg {
+  position: absolute;
+  bottom: 0;
+  right: -18px;
+  fill: $color-timber-wolf;
 }
 
 .programs-card__header h3 {
@@ -94,7 +102,7 @@
   align-items: center;
   gap: 64px;
   padding: 12px 18px 15px 18px;
-  background-color: $color-default-white;
+  background-color: $color-timber-wolf;
   border-radius: 0 12px 12px 12px;
 }
 

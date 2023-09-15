@@ -39,18 +39,10 @@
 
 .swiper-slide {
   width: calc(25% - 24px);
-
-  @include vp-1199 {
-    width: calc(50% - 60px);
-  }
 }
 
-.swiper-slide-active {
+.swiper-slide:first-child {
   width: calc(50% - 16px);
-
-  @include vp-1199 {
-    width: calc(50% - 60px);
-  }
 }
 
 .swiper-slide .news-card__info {
@@ -61,7 +53,7 @@
   }
 }
 
-.swiper-slide-active .news-card__info {
+.swiper-slide:first-child .news-card__info {
   width: calc(100% - 215px);
 
   @include vp-1199 {
@@ -78,7 +70,7 @@
   }
 }
 
-.swiper-slide-active .news-card__header {
+.swiper-slide:first-child .news-card__header {
   padding: 18px 18px 6px 0;
   width: calc(100% - 313px);
 
@@ -91,7 +83,7 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  align-self: flex-start;
+  align-items: flex-start;
   min-height: 400px;
 
   @include vp-1199 {
@@ -99,11 +91,29 @@
   }
 }
 
-.news-card__date span {
+.news-card__date {
+  position: relative;
   padding: 12px 12px 6px 0;
   color: $color-default-blue;
-  background-color: $color-default-white;
+  background-color: $color-timber-wolf;
   border-radius: 0 12px 0 0;
+}
+
+.news-card__date .news-card__date-svg-top {
+  position: absolute;
+  top: -16px;
+  left: 0;
+  fill: $color-timber-wolf;
+}
+
+.news-card__date .news-card__date-svg-right {
+  position: absolute;
+  bottom: 0;
+  right: -16px;
+  fill: $color-timber-wolf;
+}
+
+.news-card__date span {
   font-size: 12px;
   font-weight: 400;
   line-height: 12px;
@@ -111,9 +121,17 @@
 }
 
 .news-card__header {
+  position: relative;
   color: $color-default-blue;
-  background-color: $color-default-white;
+  background-color: $color-timber-wolf;
   border-radius: 0 12px 0 0;
+}
+
+.news-card__header svg {
+  position: absolute;
+  bottom: 0;
+  right: -16px;
+  fill: $color-timber-wolf;
 }
 
 .news-card__header h3 {
@@ -129,13 +147,21 @@
 }
 
 .news-card__info {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 46px;
   padding: 12px 18px 15px 0;
-  background-color: $color-default-white;
+  background-color: $color-timber-wolf;
   border-radius: 0 12px 0 0;
+}
+
+.news-card__info svg {
+  position: absolute;
+  bottom: 0;
+  right: -16px;
+  fill: $color-timber-wolf;
 }
 
 .news-card__info p {
