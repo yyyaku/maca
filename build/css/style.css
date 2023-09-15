@@ -4038,9 +4038,9 @@ button,
   margin: 0 0 30px;
 }
 
-.news__controls button {
+.news__control {
   padding: 14px 20px;
-  color: #316dc2;
+  color: rgba(49, 109, 194, 0.6);
   background-color: transparent;
   border: none;
   font-size: 14px;
@@ -4048,6 +4048,20 @@ button,
   line-height: 14px;
   letter-spacing: 0.28px;
   text-transform: uppercase;
+  cursor: pointer;
+}
+.news__control:hover {
+  color: #316dc2;
+}
+.news__control:focus-visible {
+  color: #316dc2;
+  outline: none;
+}
+
+.news__control.is-active {
+  color: #316dc2;
+  border: 1px solid #316dc2;
+  border-radius: 20px;
 }
 
 .news__swiper {

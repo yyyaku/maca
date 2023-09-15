@@ -20,9 +20,9 @@
   margin: 0 0 30px;
 }
 
-.news__controls button {
+.news__control {
   padding: 14px 20px;
-  color: $color-default-blue;
+  color: $color-default-blue-opacity60;
   background-color: transparent;
   border: none;
   font-size: 14px;
@@ -30,6 +30,17 @@
   line-height: 14px;
   letter-spacing: 0.28px;
   text-transform: uppercase;
+  cursor: pointer;
+
+  @include hover-focus-visible {
+    color: $color-default-blue;
+  }
+}
+
+.news__control.is-active {
+  color: $color-default-blue;
+  border: 1px solid $color-default-blue;
+  border-radius: 20px;
 }
 
 .news__swiper {
