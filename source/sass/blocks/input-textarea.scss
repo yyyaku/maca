@@ -33,3 +33,8 @@
   color: $color-timber-wolf;
 }
 
+
+.input-textarea.is-invalid .input-textarea__input {
+  background-color: $color-red-opacity20;
+  border: 1px solid $color-red;
+}

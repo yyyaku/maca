@@ -780,19 +780,30 @@
                       </li>
                     </ul>
                   </fieldset>
-                  <fieldset class="input-textarea">
-                    <textarea class="input-textarea__input" rows="4" id="message-field"></textarea>
+                  <fieldset class="input-textarea" data-validate-type="text" data-required>
+                    <textarea class="input-textarea__input" rows="4" id="message-field" required></textarea>
                     <label class="input-textarea__label" for="message-field">Ваше сообщение</label>
                   </fieldset>
                   <fieldset class="input-select">
-                    <div class="input-select__wrapper">
-                      <select class="input-select__input" id="city-field">
-                        <option value="">Санкт-Петербург</option>
-                        <option value="value2">Санкт-Петербург</option>
-                        <option value="value3">Санкт-Петербург</option>
-                        <option value="value4">Санкт-Петербург</option>
-                      </select>
-                      <label class="input-select__label" for="city-field">Выберите город</label>
+                    <div class="custom-select" data-select="data-select" data-validate-type="select"
+                      data-name="some-name" data-id="id-example-1" data-required>
+                      <button class="custom-select__button" type="button" aria-label="Выберите одну из опций"><span
+                          class="custom-select__text"></span><span class="custom-select__icon"></span></button>
+                      <h3 class="custom-select__label">Выберите город</h3>
+                      <ul class="custom-select__list" role="listbox">
+                        <li class="custom-select__item" tabindex="0" data-select-value="id-1" aria-selected="false"
+                          role="option">Тема 1</li>
+                        <li class="custom-select__item" tabindex="0" data-select-value="id-2" aria-selected="false"
+                          role="option">Тема 2</li>
+                        <li class="custom-select__item" tabindex="0" data-select-value="id-3" aria-selected="false"
+                          role="option">Тема 3</li>
+                        <li class="custom-select__item" tabindex="0" data-select-value="id-4" aria-selected="false"
+                          role="option">Тема 4</li>
+                        <li class="custom-select__item" tabindex="0" data-select-value="id-5" aria-selected="false"
+                          role="option">Тема 5</li>
+                        <li class="custom-select__item" tabindex="0" data-select-value="id-6" aria-selected="false"
+                          role="option">Тема 6</li>
+                      </ul>
                     </div>
                   </fieldset>
                   <fieldset class="input-checkbox">
