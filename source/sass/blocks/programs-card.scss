@@ -66,9 +66,13 @@
 .programs-card__header {
   position: relative;
   padding: 13px 18px 1px;
-  width: 194px;
+  width: calc(100% - 158px);
   background-color: $color-timber-wolf;
   border-radius: 12px 12px 0 0;
+
+  @include vp-1199 {
+    width: calc(100% - 111px);
+  }
 }
 
 .programs-card__header svg {
@@ -106,6 +110,11 @@
   height: 79px;
   background-color: $color-timber-wolf;
   border-radius: 0 12px 12px 12px;
+
+  @include vp-1199 {
+    gap: 45px;
+    width: calc(100% - 21px);
+  }
 }
 
 .programs-card__info p {

@@ -2706,7 +2706,7 @@ button,
 }
 @media (max-width: 1199px) {
   .hero__item {
-    padding: 649px 0 60px;
+    padding: 632px 0 60px;
   }
 }
 @media (max-width: 767px) {
@@ -3210,7 +3210,7 @@ button,
 }
 @media (max-width: 1199px) {
   .hero-main__info {
-    padding: 0 40px 35px 40px;
+    padding: 3px 40px 25px;
     width: 87.2%;
   }
 }
@@ -3282,16 +3282,25 @@ button,
 }
 
 .hero-main__link {
-  margin: 5px 0;
-  min-width: 196px;
+  min-width: 194px;
 }
 @media (max-width: 767px) {
   .hero-main__link {
     position: relative;
+    margin: 0;
     padding: 10px 15px;
     min-width: 182px;
     background-color: #ffffff;
     border-radius: 0 0 14px 14px;
+  }
+}
+
+.hero-main__link a {
+  margin: 5px 0;
+}
+@media (max-width: 1199px) {
+  .hero-main__link a {
+    margin: -2px;
   }
 }
 
@@ -3317,15 +3326,23 @@ button,
       flex-wrap: wrap;
   gap: 60px 0;
 }
+@media (max-width: 1199px) {
+  .about__wrapper {
+    padding: 100px 0;
+    gap: 30px 0;
+  }
+}
 
 .about__header {
   -ms-flex-preferred-size: 50%;
       flex-basis: 50%;
+  padding: 0 55px 0 0;
 }
 @media (max-width: 1199px) {
   .about__header {
-    -ms-flex-preferred-size: 100%;
-        flex-basis: 100%;
+    -ms-flex-preferred-size: 75%;
+        flex-basis: 75%;
+    padding: 0;
   }
 }
 
@@ -3338,6 +3355,7 @@ button,
 }
 @media (max-width: 1199px) {
   .about__header h2 {
+    margin: 0 0 24px;
     font-size: 34px;
   }
 }
@@ -3350,7 +3368,6 @@ button,
 
 .about__header p {
   margin: 0;
-  width: 77%;
   font-size: 22px;
   font-weight: 400;
   line-height: 32px;
@@ -3376,9 +3393,10 @@ button,
 }
 @media (max-width: 1199px) {
   .about__info {
-    -ms-flex-preferred-size: 100%;
-        flex-basis: 100%;
+    -ms-flex-preferred-size: 75%;
+        flex-basis: 75%;
     padding: 0;
+    margin: 0 0 30px;
   }
 }
 
@@ -3391,6 +3409,7 @@ button,
 }
 @media (max-width: 1199px) {
   .about__info h2 {
+    margin: 0 0 22px;
     font-size: 28px;
     line-height: 28px;
   }
@@ -3407,6 +3426,7 @@ button,
 }
 @media (max-width: 1199px) {
   .about__info p {
+    margin: 0 0 36px;
     line-height: 20px;
   }
 }
@@ -3442,11 +3462,8 @@ button,
 }
 @media (max-width: 1199px) {
   .about__list {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    padding: 62px 40px;
+    gap: 42px 52px;
+    padding: 61px 40px 40px 60px;
   }
 }
 @media (max-width: 767px) {
@@ -3495,13 +3512,12 @@ button,
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
-    gap: 12px;
-    padding: 30px;
+    gap: 8px;
+    padding: 30px 28px 25px;
   }
 }
 @media (max-width: 767px) {
   .about__item {
-    gap: 8px;
     padding: 24px 20px;
   }
 }
@@ -3533,6 +3549,7 @@ button,
 }
 @media (max-width: 1199px) {
   .about__item h3 {
+    margin: 0 75px 0 0;
     font-size: 20px;
     line-height: 22px;
     letter-spacing: 0.2px;
@@ -3540,6 +3557,7 @@ button,
 }
 @media (max-width: 767px) {
   .about__item h3 {
+    margin: 0;
     font-size: 16px;
     line-height: 20px;
     letter-spacing: 0.16px;
@@ -3553,6 +3571,11 @@ button,
   font-size: 16px;
   font-weight: 300;
   line-height: 20px;
+}
+@media (max-width: 1199px) {
+  .about__item p {
+    margin: 0;
+  }
 }
 @media (max-width: 767px) {
   .about__item p {
@@ -3573,6 +3596,11 @@ button,
       -ms-flex-align: center;
           align-items: center;
   padding: 0 0 123px;
+}
+@media (max-width: 1199px) {
+  .programs__wrapper {
+    padding: 0 0 100px;
+  }
 }
 
 @media (max-width: 767px) {
@@ -3617,6 +3645,11 @@ button,
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
   margin: 45px 0 37px;
+}
+@media (max-width: 1199px) {
+  .programs__swiper {
+    margin: 40px 0;
+  }
 }
 @media (max-width: 767px) {
   .programs__swiper {
@@ -3761,9 +3794,14 @@ button,
 .programs-card__header {
   position: relative;
   padding: 13px 18px 1px;
-  width: 194px;
+  width: calc(100% - 158px);
   background-color: #f0efe9;
   border-radius: 12px 12px 0 0;
+}
+@media (max-width: 1199px) {
+  .programs-card__header {
+    width: calc(100% - 111px);
+  }
 }
 
 .programs-card__header svg {
@@ -3809,6 +3847,12 @@ button,
   height: 79px;
   background-color: #f0efe9;
   border-radius: 0 12px 12px 12px;
+}
+@media (max-width: 1199px) {
+  .programs-card__info {
+    gap: 45px;
+    width: calc(100% - 21px);
+  }
 }
 
 .programs-card__info p {
