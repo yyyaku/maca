@@ -4381,7 +4381,7 @@ button,
 }
 
 .questions__wrapper h2 {
-  margin: 0 0 73px;
+  margin: 0 0 67px;
   color: #316dc2;
   text-align: center;
   font-size: 50px;
@@ -4413,7 +4413,7 @@ button,
   display: grid;
   -ms-grid-columns: 650px auto;
   grid-template-columns: 650px auto;
-  margin: 0 0 10px;
+  margin: 0 0 8px;
   padding: 40px;
   color: #316dc2;
   border: 1px solid #316dc2;
@@ -4466,8 +4466,9 @@ button,
 }
 
 .question.is-active .question__wrapper {
-  gap: 30px 0;
-  padding: 40px;
+  gap: 10px 0;
+  margin: 0 0 10px;
+  padding: 40px 40px 35px;
   color: #ffffff;
   background-color: #316dc2;
 }
@@ -4542,11 +4543,12 @@ button,
   -ms-grid-row: 1;
   -ms-grid-row-span: 1;
   grid-row: 1/2;
-  -ms-grid-row-align: center;
-      align-self: center;
+  -ms-grid-row-align: start;
+      align-self: start;
   -ms-grid-column-align: end;
       justify-self: end;
   width: 40px;
+  height: 40px;
   padding: 0;
   color: transparent;
   background: transparent;
@@ -4584,7 +4586,7 @@ button,
   content: "";
   position: absolute;
   top: 50%;
-  left: 12px;
+  left: 11px;
   width: 18px;
   height: 1px;
   background-color: #ffffff;
@@ -4615,7 +4617,7 @@ button,
   margin: 0;
   font-size: 28px;
   font-weight: 400;
-  line-height: 34px;
+  line-height: 27px;
 }
 @media (max-width: 1199px) {
   .question h3 {
@@ -4670,9 +4672,8 @@ button,
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 40px;
   margin: 0 auto;
-  padding: 120px 100px 120px;
+  padding: 113px 100px 120px;
   width: 100%;
   max-width: 1440px;
 }
@@ -4715,6 +4716,9 @@ button,
   }
 }
 
+.reviews__swiper {
+  margin: 45px 0 40px;
+}
 @media (max-width: 767px) {
   .reviews__swiper {
     -webkit-box-ordinal-group: 4;
@@ -4789,8 +4793,8 @@ button,
   display: grid;
   -ms-grid-columns: auto 1fr;
   grid-template-columns: auto 1fr;
-  gap: 30px;
-  padding: 50px;
+  gap: 26px;
+  padding: 50px 50px 40px;
   height: auto;
   border: 1px solid #316dc2;
   border-radius: 16px;
@@ -4918,7 +4922,7 @@ button,
 }
 
 .reviews-card__content h3 {
-  margin: 0 0 25px;
+  margin: 0 0 15px;
   color: #316dc2;
   font-size: 24px;
   font-weight: 400;
@@ -4957,7 +4961,7 @@ button,
           align-items: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  gap: 80px;
+  gap: 73px;
   padding: 120px 0;
 }
 @media (max-width: 1199px) {
@@ -4980,7 +4984,7 @@ button,
 }
 
 .contacts__header h2 {
-  margin: 0;
+  margin: -20px 0 0;
   font-size: 50px;
   font-weight: 400;
   line-height: 50px;
@@ -5031,7 +5035,7 @@ button,
 }
 
 .contacts__item h3 {
-  margin: 0 0 24px;
+  margin: 0 0 15px;
   color: #f0efe9;
   font-size: 12px;
   font-weight: 400;
@@ -5126,7 +5130,7 @@ button,
 }
 
 .form__wrapper {
-  padding: 120px 0 60px;
+  padding: 120px 0 55px;
 }
 
 .form__image {
@@ -5149,7 +5153,7 @@ button,
 }
 
 .form__content {
-  padding: 89px 74px 51px;
+  padding: 80px 74px 51px;
   width: 498px;
   background-color: #316dc2;
   border-radius: 16px;
@@ -5174,8 +5178,8 @@ button,
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: 38px;
-  margin: 0 0 30px;
+  gap: 27px;
+  margin: 0 0 18px;
 }
 
 .form__header h2 {
@@ -5224,7 +5228,7 @@ button,
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: 20px;
+  gap: 16px;
   margin: 0;
   padding: 0;
   list-style-type: none;
@@ -5238,7 +5242,7 @@ button,
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: 12px;
+  gap: 8px;
 }
 
 .input-text__label {
@@ -5250,7 +5254,7 @@ button,
 }
 
 .input-text__input {
-  padding: 16px 25px;
+  padding: 12px 25px;
   min-height: 50px;
   color: #ffffff;
   background-color: transparent;
@@ -5272,7 +5276,7 @@ button,
   color: #f0efe9;
 }
 
-.input-text__item.is-invalid input {
+.input-text__item.is-invalid .input-text__input {
   background-color: rgba(255, 94, 102, 0.2);
   border: 1px solid #ff5e66;
 }
@@ -5293,56 +5297,6 @@ button,
 }
 .input-text--modal .input-text__input:hover ~ .input-text__label {
   color: #484848;
-}
-
-.input-textarea {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  gap: 12px;
-  margin: 0;
-  padding: 0;
-  border: 0;
-}
-
-.input-textarea__label {
-  margin: 0;
-  color: rgba(240, 239, 233, 0.8);
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 18px;
-}
-
-.input-textarea__input {
-  padding: 16px 25px;
-  width: 100%;
-  color: #ffffff;
-  background-color: transparent;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  border-radius: 8px;
-  -webkit-box-ordinal-group: 3;
-      -ms-flex-order: 2;
-          order: 2;
-}
-.input-textarea__input:hover {
-  border: 1px solid #ffffff;
-}
-.input-textarea__input:focus-visible {
-  border: 1px solid #ffffff;
-  outline: none;
-}
-
-.input-textarea__input:hover ~ .input-textarea__label {
-  color: #f0efe9;
-}
-
-.input-textarea.is-invalid .input-textarea__input {
-  background-color: rgba(255, 94, 102, 0.2);
-  border: 1px solid #ff5e66;
 }
 
 .input-select {

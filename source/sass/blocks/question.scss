@@ -2,7 +2,7 @@
   position: relative;
   display: grid;
   grid-template-columns: 650px auto;
-  margin: 0 0 10px;
+  margin: 0 0 8px;
   padding: 40px;
   color: $color-default-blue;
   border: 1px solid $color-default-blue;
@@ -28,6 +28,7 @@
     }
 
     .question__sign {
+
       &::after,
       &::before {
         background-color: $color-default-blue;
@@ -48,6 +49,7 @@
     }
 
     .question__sign {
+
       &::after,
       &::before {
         background-color: $color-default-white;
@@ -57,8 +59,9 @@
 }
 
 .question.is-active .question__wrapper {
-  gap: 30px 0;
-  padding: 40px;
+  gap: 10px 0;
+  margin: 0 0 10px;
+  padding: 40px 40px 35px;
   color: $color-default-white;
   background-color: $color-default-blue;
 
@@ -135,9 +138,10 @@
   position: relative;
   grid-column: 2/3;
   grid-row: 1/2;
-  align-self: center;
+  align-self: start;
   justify-self: end;
   width: 40px;
+  height: 40px;
   padding: 0;
   color: transparent;
   background: transparent;
@@ -170,13 +174,14 @@
 }
 
 .question__sign {
+
   // ПЛЮС КНОПКИ
   &::after,
   &::before {
     content: "";
     position: absolute;
     top: 50%;
-    left: 12px;
+    left: 11px;
     width: 18px;
     height: 1px;
     background-color: $color-default-white;
@@ -201,7 +206,7 @@
   margin: 0;
   font-size: 28px;
   font-weight: 400;
-  line-height: 34px;
+  line-height: 27px;
 
   @include vp-1199 {
     font-size: 22px;

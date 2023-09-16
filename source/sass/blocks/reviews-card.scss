@@ -1,8 +1,8 @@
 .reviews-card {
   display: grid;
   grid-template-columns: auto 1fr;
-  gap: 30px;
-  padding: 50px;
+  gap: 26px;
+  padding: 50px 50px 40px;
   height: auto;
   border: 1px solid $color-default-blue;
   border-radius: 16px;
@@ -104,7 +104,7 @@
 }
 
 .reviews-card__content h3 {
-  margin: 0 0 25px;
+  margin: 0 0 15px;
   color: $color-default-blue;
   font-size: 24px;
   font-weight: 400;
