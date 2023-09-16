@@ -1,5 +1,5 @@
 .about__wrapper {
-  padding: 120px 0;
+  padding: 117px 0 122px;
   display: flex;
   flex-wrap: wrap;
   gap: 60px 0;
@@ -14,7 +14,7 @@
 }
 
 .about__header h2 {
-  margin: 0 0 43px;
+  margin: 7px 0 29px;
   color: $color-default-blue;
   font-size: 50px;
   font-weight: 400;
@@ -51,7 +51,7 @@
 
 .about__info {
   flex-basis: 50%;
-  padding: 0 106px 0 0;
+  padding: 0 106px 0 15px;
 
   @include vp-1199 {
     flex-basis: 100%;
@@ -60,7 +60,7 @@
 }
 
 .about__info h2 {
-  margin: 0 0 46px;
+  margin: 0 0 35px;
   color: $color-default-blue;
   font-size: 32px;
   font-weight: 400;
@@ -78,7 +78,7 @@
 }
 
 .about__info p {
-  margin: 0 0 40px;
+  margin: 0 0 33px;
 
   @include vp-1199 {
     line-height: 20px;
@@ -103,7 +103,7 @@
   grid-template-columns: repeat(2, 1fr);
   gap: 52px;
   margin: 0;
-  padding: 92px 102px;
+  padding: 90px 106px 55px 125px;
   color: $color-default-white;
   background-color: $color-default-blue;
   border-radius: 20px;
@@ -169,7 +169,6 @@
 }
 
 .about__item h3 {
-  flex-shrink: 1;
   margin: 0;
   color: $color-default-white;
   font-size: 26px;
@@ -192,8 +191,7 @@
 }
 
 .about__item p {
-  flex-shrink: 1;
-  margin: 0;
+  margin: 0 -23px 0 23px;
   width: 100%;
   color: $color-timber-wolf;
   font-size: 16px;

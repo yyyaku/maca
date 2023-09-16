@@ -2702,7 +2702,7 @@ button,
 }
 
 .hero__item {
-  padding: 373px 0 35px;
+  padding: 365px 0 60px;
 }
 @media (max-width: 1199px) {
   .hero__item {
@@ -3202,7 +3202,7 @@ button,
   display: -ms-flexbox;
   display: flex;
   gap: 30px;
-  padding: 0 50px 35px 50px;
+  padding: 0 50px 20px;
   width: 62.26%;
   color: #484848;
   background-color: #ffffff;
@@ -3242,6 +3242,9 @@ button,
   }
 }
 
+.hero-main__description {
+  margin: -7px 0 7px;
+}
 @media (max-width: 767px) {
   .hero-main__description {
     position: relative;
@@ -3279,6 +3282,7 @@ button,
 }
 
 .hero-main__link {
+  margin: 5px 0;
   min-width: 196px;
 }
 @media (max-width: 767px) {
@@ -3305,7 +3309,7 @@ button,
 }
 
 .about__wrapper {
-  padding: 120px 0;
+  padding: 117px 0 122px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3326,7 +3330,7 @@ button,
 }
 
 .about__header h2 {
-  margin: 0 0 43px;
+  margin: 7px 0 29px;
   color: #316dc2;
   font-size: 50px;
   font-weight: 400;
@@ -3368,7 +3372,7 @@ button,
 .about__info {
   -ms-flex-preferred-size: 50%;
       flex-basis: 50%;
-  padding: 0 106px 0 0;
+  padding: 0 106px 0 15px;
 }
 @media (max-width: 1199px) {
   .about__info {
@@ -3379,7 +3383,7 @@ button,
 }
 
 .about__info h2 {
-  margin: 0 0 46px;
+  margin: 0 0 35px;
   color: #316dc2;
   font-size: 32px;
   font-weight: 400;
@@ -3399,7 +3403,7 @@ button,
 }
 
 .about__info p {
-  margin: 0 0 40px;
+  margin: 0 0 33px;
 }
 @media (max-width: 1199px) {
   .about__info p {
@@ -3430,7 +3434,7 @@ button,
   grid-template-columns: repeat(2, 1fr);
   gap: 52px;
   margin: 0;
-  padding: 92px 102px;
+  padding: 90px 106px 55px 125px;
   color: #ffffff;
   background-color: #316dc2;
   border-radius: 20px;
@@ -3519,8 +3523,6 @@ button,
 }
 
 .about__item h3 {
-  -ms-flex-negative: 1;
-      flex-shrink: 1;
   margin: 0;
   color: #ffffff;
   font-size: 26px;
@@ -3545,9 +3547,7 @@ button,
 }
 
 .about__item p {
-  -ms-flex-negative: 1;
-      flex-shrink: 1;
-  margin: 0;
+  margin: 0 -23px 0 23px;
   width: 100%;
   color: #f0efe9;
   font-size: 16px;
@@ -3572,7 +3572,6 @@ button,
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 40px;
   padding: 0 0 120px;
 }
 
@@ -3617,6 +3616,7 @@ button,
 .programs__swiper {
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
+  margin: 45px 0 35px;
 }
 @media (max-width: 767px) {
   .programs__swiper {
