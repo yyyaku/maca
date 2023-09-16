@@ -5,7 +5,8 @@
 .grant__wrapper {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  padding: 120px 0 107px;
+  gap: 35px;
+  padding: 124px 0 110px;
 
   @include vp-1199 {
     grid-template-columns: 1fr;
@@ -18,7 +19,7 @@
 }
 
 .grant__header {
-  padding: 0 138px 0 0;
+  padding: 0 105px 0 0;
 
   @include vp-1199 {
     margin: 0 0 50px;
@@ -27,7 +28,7 @@
 }
 
 .grant__header h2 {
-  margin: 0 0 42px;
+  margin: 0 0 30px;
   color: $color-default-white;
   font-size: 50px;
   font-weight: 400;
@@ -44,7 +45,7 @@
 }
 
 .grant__header p {
-  margin: 0 0 40px;
+  margin: 0 0 30px;
   color: $color-timber-wolf;
 
   @include vp-1199 {
@@ -76,7 +77,7 @@
 }
 
 .grant__info h3 {
-  margin: 0 0 61px;
+  margin: 4px 0 55px;
   color: $color-default-white;
   font-size: 32px;
   font-weight: 400;
@@ -96,8 +97,8 @@
 .grant__list {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 23px;
-  margin: 0;
+  gap: 22px;
+  margin: 0 0 0 18px;
   padding: 0;
   list-style-type: none;
 
@@ -112,7 +113,7 @@
 
 .grant__item {
   position: relative;
-  padding: 30px 25px;
+  padding: 23px 25px;
   border: 1px solid $color-default-white;
   border-radius: 16px;
 
@@ -130,7 +131,7 @@
 
 .grant__item span {
   position: absolute;
-  top: 0;
+  top: 4px;
   left: 0;
   transform: translate(-50%, -50%);
   color: $color-default-white;

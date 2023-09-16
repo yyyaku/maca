@@ -62,8 +62,8 @@
 }
 
 .swiper-slide .news-card__header {
+  padding: 6px 5px 0 0;
   width: calc(100% - 72px);
-  padding: 10px 10px 4px 0;
 
   @include vp-1199 {
     width: calc(100% - 117px);
@@ -71,7 +71,7 @@
 }
 
 .swiper-slide:first-child .news-card__header {
-  padding: 18px 18px 6px 0;
+  padding: 12px 18px 3px 0;
   width: calc(100% - 313px);
 
   @include vp-1199 {
@@ -93,7 +93,7 @@
 
 .news-card__date {
   position: relative;
-  padding: 12px 12px 6px 0;
+  padding: 2px 12px 0 0;
   color: $color-default-blue;
   background-color: $color-timber-wolf;
   border-radius: 0 12px 0 0;
@@ -152,7 +152,7 @@
   align-items: center;
   justify-content: space-between;
   gap: 46px;
-  padding: 12px 18px 15px 0;
+  padding: 8px 18px 12px 0;
   background-color: $color-timber-wolf;
   border-radius: 0 12px 0 0;
 }

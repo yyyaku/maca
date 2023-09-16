@@ -2502,7 +2502,7 @@ button,
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 0 4px;
+  gap: 0 10px;
 }
 
 .swiper-buttons__button {
@@ -3572,7 +3572,7 @@ button,
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 0 0 120px;
+  padding: 0 0 123px;
 }
 
 @media (max-width: 767px) {
@@ -3616,7 +3616,7 @@ button,
 .programs__swiper {
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
-  margin: 45px 0 35px;
+  margin: 45px 0 37px;
 }
 @media (max-width: 767px) {
   .programs__swiper {
@@ -3760,7 +3760,7 @@ button,
 
 .programs-card__header {
   position: relative;
-  padding: 18px 18px 6px 18px;
+  padding: 13px 18px 1px;
   width: 194px;
   background-color: #f0efe9;
   border-radius: 12px 12px 0 0;
@@ -3803,8 +3803,10 @@ button,
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 64px;
+  gap: 50px;
   padding: 12px 18px 15px 18px;
+  width: calc(100% - 31px);
+  height: 79px;
   background-color: #f0efe9;
   border-radius: 0 12px 12px 12px;
 }
@@ -3836,7 +3838,8 @@ button,
   display: grid;
   -ms-grid-columns: (1fr)[2];
   grid-template-columns: repeat(2, 1fr);
-  padding: 120px 0 107px;
+  gap: 35px;
+  padding: 124px 0 110px;
 }
 @media (max-width: 1199px) {
   .grant__wrapper {
@@ -3852,7 +3855,7 @@ button,
 }
 
 .grant__header {
-  padding: 0 138px 0 0;
+  padding: 0 105px 0 0;
 }
 @media (max-width: 1199px) {
   .grant__header {
@@ -3862,7 +3865,7 @@ button,
 }
 
 .grant__header h2 {
-  margin: 0 0 42px;
+  margin: 0 0 30px;
   color: #ffffff;
   font-size: 50px;
   font-weight: 400;
@@ -3881,7 +3884,7 @@ button,
 }
 
 .grant__header p {
-  margin: 0 0 40px;
+  margin: 0 0 30px;
   color: #f0efe9;
 }
 @media (max-width: 1199px) {
@@ -3917,7 +3920,7 @@ button,
 }
 
 .grant__info h3 {
-  margin: 0 0 61px;
+  margin: 4px 0 55px;
   color: #ffffff;
   font-size: 32px;
   font-weight: 400;
@@ -3941,8 +3944,8 @@ button,
   display: grid;
   -ms-grid-columns: 1fr;
   grid-template-columns: 1fr;
-  gap: 23px;
-  margin: 0;
+  gap: 22px;
+  margin: 0 0 0 18px;
   padding: 0;
   list-style-type: none;
 }
@@ -3961,7 +3964,7 @@ button,
 
 .grant__item {
   position: relative;
-  padding: 30px 25px;
+  padding: 23px 25px;
   border: 1px solid #ffffff;
   border-radius: 16px;
 }
@@ -3980,7 +3983,7 @@ button,
 
 .grant__item span {
   position: absolute;
-  top: 0;
+  top: 4px;
   left: 0;
   -webkit-transform: translate(-50%, -50%);
       -ms-transform: translate(-50%, -50%);
@@ -4010,11 +4013,11 @@ button,
 }
 
 .news__wrapper {
-  padding: 120px 0;
+  padding: 125px 0;
 }
 
 .news__wrapper h2 {
-  margin: 0 0 52px;
+  margin: 0 0 42px;
   color: #316dc2;
   text-align: center;
   font-size: 50px;
@@ -4034,12 +4037,12 @@ button,
       align-self: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  gap: 10px;
-  margin: 0 0 30px;
+  gap: 34px;
+  margin: 0 0 37px;
 }
 
 .news__control {
-  padding: 14px 20px;
+  padding: 14px 24px;
   color: rgba(49, 109, 194, 0.6);
   background-color: transparent;
   border: none;
@@ -4091,6 +4094,7 @@ button,
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  gap: 12px;
   z-index: 1;
 }
 
@@ -4234,8 +4238,8 @@ button,
 }
 
 .swiper-slide .news-card__header {
+  padding: 6px 5px 0 0;
   width: calc(100% - 72px);
-  padding: 10px 10px 4px 0;
 }
 @media (max-width: 1199px) {
   .swiper-slide .news-card__header {
@@ -4244,7 +4248,7 @@ button,
 }
 
 .swiper-slide:first-child .news-card__header {
-  padding: 18px 18px 6px 0;
+  padding: 12px 18px 3px 0;
   width: calc(100% - 313px);
 }
 @media (max-width: 1199px) {
@@ -4277,7 +4281,7 @@ button,
 
 .news-card__date {
   position: relative;
-  padding: 12px 12px 6px 0;
+  padding: 2px 12px 0 0;
   color: #316dc2;
   background-color: #f0efe9;
   border-radius: 0 12px 0 0;
@@ -4343,7 +4347,7 @@ button,
       -ms-flex-pack: justify;
           justify-content: space-between;
   gap: 46px;
-  padding: 12px 18px 15px 0;
+  padding: 8px 18px 12px 0;
   background-color: #f0efe9;
   border-radius: 0 12px 0 0;
 }
