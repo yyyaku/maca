@@ -6,7 +6,7 @@ import {navButtonClick} from './modules/hero/nav-button-click';
 import {initSliderHero} from './modules/sliders/init-slider-hero';
 import {initSliderPrograms} from './modules/sliders/init-slider-programs';
 import {newsButtonClick} from './modules/news/news-button-сlick';
-import {initSliderNews} from './modules/sliders/init-slider-news';
+import {initSliderNews, initSliderControlsNews, initSliderControllerNews} from './modules/sliders/init-slider-news';
 import {initSliderReviews} from './modules/sliders/init-slider-reviews';
 import {map} from './modules/map/map';
 import {CustomSelect} from './modules/select/custom-select';
@@ -34,7 +34,9 @@ window.addEventListener('DOMContentLoaded', () => {
     navButtonClick();
     initSliderHero();
     initSliderPrograms();
+    initSliderControlsNews();
     initSliderNews();
+    initSliderControllerNews();
     newsButtonClick();
     initSliderReviews();
     map();
