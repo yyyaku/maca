@@ -36,8 +36,10 @@
 
 //ЗАКРЫТАЯ СТРЕЛКА КНОПКИ ПОДМЕНЮ
 .site-list__toggle-arrow {
+  position: absolute;
+  top: 0;
+  right: -20px;
   display: inline-flex;
-  margin: 0 0 0 10px;
   width: 10px;
   height: 10px;
   cursor: pointer;
@@ -93,6 +95,7 @@
   flex-direction: column;
   align-items: flex-start;
   gap: 20px;
+  margin: 5px 0 0;
 }
 
 // ОТКРЫТАЯ КНОПКА ПОДМЕНЮ
@@ -102,6 +105,7 @@
 
 //ОТКРЫТАЯ СТРЕЛКА КНОПКИ
 .site-list__button--opened .site-list__toggle-arrow {
+  top: 5px;
   border-top: 3px solid $color-default-white;
   border-right: 3px solid $color-default-white;
   transform: rotate(-45deg);
