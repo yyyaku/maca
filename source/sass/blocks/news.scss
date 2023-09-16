@@ -1,9 +1,9 @@
 .news__wrapper {
-  padding: 120px 0;
+  padding: 125px 0;
 }
 
 .news__wrapper h2 {
-  margin: 0 0 52px;
+  margin: 0 0 42px;
   color: $color-default-blue;
   text-align: center;
   font-size: 50px;
@@ -16,12 +16,12 @@
   justify-content: center;
   align-self: center;
   flex-wrap: wrap;
-  gap: 10px;
-  margin: 0 0 30px;
+  gap: 34px;
+  margin: 0 0 37px;
 }
 
 .news__control {
-  padding: 14px 20px;
+  padding: 14px 24px;
   color: $color-default-blue-opacity60;
   background-color: transparent;
   border: none;
@@ -64,6 +64,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 12px;
   z-index: 1;
 }
 

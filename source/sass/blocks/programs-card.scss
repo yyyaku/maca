@@ -65,7 +65,7 @@
 
 .programs-card__header {
   position: relative;
-  padding: 18px 18px 6px 18px;
+  padding: 13px 18px 1px;
   width: 194px;
   background-color: $color-timber-wolf;
   border-radius: 12px 12px 0 0;
@@ -100,8 +100,10 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 64px;
+  gap: 50px;
   padding: 12px 18px 15px 18px;
+  width: calc(100% - 31px);
+  height: 79px;
   background-color: $color-timber-wolf;
   border-radius: 0 12px 12px 12px;
 }

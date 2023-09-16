@@ -3,9 +3,8 @@
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  gap: 40px;
   margin: 0 auto;
-  padding: 120px 100px 120px;
+  padding: 113px 100px 120px;
   width: 100%;
   max-width: 1440px;
 
@@ -43,6 +42,8 @@
 }
 
 .reviews__swiper {
+  margin: 45px 0 40px;
+
   @include vp-767 {
     order: 3;
   }

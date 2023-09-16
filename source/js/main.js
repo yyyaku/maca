@@ -9,6 +9,7 @@ import {newsButtonClick} from './modules/news/news-button-сlick';
 import {initSliderNews} from './modules/sliders/init-slider-news';
 import {initSliderReviews} from './modules/sliders/init-slider-reviews';
 import {map} from './modules/map/map';
+import {CustomSelect} from './modules/select/custom-select';
 
 // ---------------------------------
 
@@ -37,6 +38,8 @@ window.addEventListener('DOMContentLoaded', () => {
     newsButtonClick();
     initSliderReviews();
     map();
+    const select = new CustomSelect();
+    select.init();
   });
 });
 

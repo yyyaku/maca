@@ -7,7 +7,7 @@
 .input-text__list {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 16px;
   margin: 0;
   padding: 0;
   list-style-type: none;
@@ -16,7 +16,7 @@
 .input-text__item {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 8px;
 }
 
 .input-text__label {
@@ -28,7 +28,7 @@
 }
 
 .input-text__input {
-  padding: 16px 25px;
+  padding: 12px 25px;
   min-height: 50px;
   color: $color-default-white;
   background-color: transparent;
@@ -45,7 +45,7 @@
   color: $color-timber-wolf;
 }
 
-.input-text__item.is-invalid input {
+.input-text__item.is-invalid .input-text__input {
   background-color: $color-red-opacity20;
   border: 1px solid $color-red;
 }
