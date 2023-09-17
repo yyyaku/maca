@@ -3,6 +3,7 @@
   background-position: center;
   background-repeat: no-repeat;
   background-color: $color-default-blue;
+  border-radius: 12px;
 
   &--internships {
     background-image: url("../img/programs/internships.jpg");
@@ -48,6 +49,7 @@
   padding: 20px;
   min-height: 420px;
   background-color: $color-default-blue-opacity20;
+  border-radius: 12px;
 
   @include vp-1199 {
     min-width: 324px;
