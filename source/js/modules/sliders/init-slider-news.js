@@ -60,7 +60,7 @@ const initSliderControlsNews = () => {
     if (sliderControls) {
       // eslint-disable-next-line
       sliderNewsControls = new Swiper(sliderControls, {
-        slidesPerView: 2.5,
+        slidesPerView: 'auto',
         spaceBetween: 12,
       });
     }
@@ -74,8 +74,10 @@ const initSliderControlsNews = () => {
 };
 
 const initSliderControllerNews = () => {
-  sliderNewsControls.controller.control = sliderNewsCards;
-  sliderNewsCards.controller.control = sliderNewsControls;
+  if (window.innerWidth < 768) {
+    sliderNewsControls.controller.control = sliderNewsCards;
+    sliderNewsCards.controller.control = sliderNewsControls;
+  }
 }
 
 export {initSliderNews, initSliderControlsNews, initSliderControllerNews};
