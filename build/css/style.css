@@ -5690,6 +5690,10 @@ button,
   color: #ffffff;
 }
 
+.input-checkbox__control input:hover ~ .input-checkbox__label {
+  color: #ffffff;
+}
+
 .input-checkbox__check {
   position: relative;
 }
@@ -5726,16 +5730,12 @@ button,
 .input-checkbox__label {
   margin: 0;
   padding: 0 0 0 30px;
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(255, 255, 255, 0.8);
   font-size: 12px;
   font-weight: 400;
   line-height: 12px;
   cursor: pointer;
   z-index: 1;
-}
-
-.input-checkbox__control input:hover ~ .input-checkbox__label {
-  color: #ffffff;
 }
 
 .input-checkbox__control.is-invalid .input-checkbox__check::before {
@@ -6317,13 +6317,13 @@ button,
   border: 1px solid #ff5e66;
 }
 
-.input-checkbox {
+.input-checkbox-modal {
   margin: 0;
   padding: 0;
   border: 0;
 }
 
-.input-checkbox__control {
+.input-checkbox-modal__control {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -6333,46 +6333,46 @@ button,
   min-height: 20px;
   cursor: pointer;
 }
-.input-checkbox__control:hover .input-checkbox__check::before {
-  border: 1px solid #ffffff;
+.input-checkbox-modal__control:hover .input-checkbox-modal__check::before {
+  border: 1px solid #484848;
 }
-.input-checkbox__control:hover input:checked + .input-checkbox__check::after {
-  border-right: 1px solid #ffffff;
-  border-top: 1px solid #ffffff;
+.input-checkbox-modal__control:hover input:checked + .input-checkbox-modal__check::after {
+  border-right: 1px solid #484848;
+  border-top: 1px solid #484848;
 }
-.input-checkbox__control:hover input:checked + .input-checkbox__check::before {
+.input-checkbox-modal__control:hover input:checked + .input-checkbox-modal__check::before {
   background-color: transparent;
 }
-.input-checkbox__control:focus-visible {
+.input-checkbox-modal__control:focus-visible {
   outline: none;
 }
-.input-checkbox__control:focus-visible .input-checkbox__check::before {
-  border: 1px solid #ffffff;
+.input-checkbox-modal__control:focus-visible .input-checkbox-modal__check::before {
+  border: 1px solid #484848;
 }
-.input-checkbox__control:focus-visible input:checked + .input-checkbox__check::after {
-  border-right: 1px solid #ffffff;
-  border-top: 1px solid #ffffff;
+.input-checkbox-modal__control:focus-visible input:checked + .input-checkbox-modal__check::after {
+  border-right: 1px solid #484848;
+  border-top: 1px solid #484848;
 }
-.input-checkbox__control:focus-visible input:checked + .input-checkbox__check::before {
+.input-checkbox-modal__control:focus-visible input:checked + .input-checkbox-modal__check::before {
   background-color: transparent;
 }
 
-.input-checkbox__control input:checked + .input-checkbox__check::after {
+.input-checkbox-modal__control input:checked + .input-checkbox-modal__check::after {
   opacity: 1;
 }
 
-.input-checkbox__control input:checked + .input-checkbox__check::before {
-  background-color: #ffffff;
+.input-checkbox-modal__control input:checked + .input-checkbox-modal__check::before {
+  background-color: #316dc2;
 }
 
-.input-checkbox__control input:checked ~ .input-checkbox__label {
-  color: #ffffff;
+.input-checkbox-modal__control input:checked ~ .input-checkbox-modal__label {
+  color: #484848;
 }
 
-.input-checkbox__check {
+.input-checkbox-modal__check {
   position: relative;
 }
-.input-checkbox__check::before {
+.input-checkbox-modal__check::before {
   content: "";
   position: absolute;
   top: 0;
@@ -6384,9 +6384,9 @@ button,
   width: 20px;
   height: 20px;
   background-color: transparent;
-  border: 1px solid rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(72, 72, 72, 0.3);
 }
-.input-checkbox__check::after {
+.input-checkbox-modal__check::after {
   content: "";
   display: block;
   position: absolute;
@@ -6394,18 +6394,18 @@ button,
   left: 5px;
   width: 8px;
   height: 6px;
-  border-right: 1px solid #316dc2;
-  border-top: 1px solid #316dc2;
+  border-right: 1px solid #ffffff;
+  border-top: 1px solid #ffffff;
   -webkit-transform: rotate(135deg);
       -ms-transform: rotate(135deg);
           transform: rotate(135deg);
   opacity: 0;
 }
 
-.input-checkbox__label {
+.input-checkbox-modal__label {
   margin: 0;
   padding: 0 0 0 30px;
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(72, 72, 72, 0.8);
   font-size: 12px;
   font-weight: 400;
   line-height: 12px;
@@ -6413,11 +6413,11 @@ button,
   z-index: 1;
 }
 
-.input-checkbox__control input:hover ~ .input-checkbox__label {
-  color: #ffffff;
+.input-checkbox-modal__control input:hover ~ .input-checkbox-modal__label {
+  color: #484848;
 }
 
-.input-checkbox__control.is-invalid .input-checkbox__check::before {
+.input-checkbox-modal__control.is-invalid .input-checkbox-modal__check::before {
   background-color: rgba(255, 94, 102, 0.2);
   border: 1px solid #ff5e66;
 }
@@ -6500,13 +6500,7 @@ button,
   background-color: rgba(255, 255, 255, 0.2);
   border: 1px solid rgba(255, 255, 255, 0.4);
 }
-.custom-select__button:hover ~ .custom-select__label {
-  color: #f0efe9;
-}
-.custom-select__button:active ~ .custom-select__label {
-  color: #f0efe9;
-}
-.custom-select__button:focus ~ .custom-select__label {
+.custom-select__button:hover ~ .custom-select__label, .custom-select__button:active ~ .custom-select__label, .custom-select__button:focus ~ .custom-select__label {
   color: #f0efe9;
 }
 .custom-select__list {
@@ -6609,6 +6603,42 @@ button,
 .custom-select.is-invalid .custom-select__button {
   background-color: rgba(255, 94, 102, 0.2);
   border: 1px solid #ff5e66;
+}
+.custom-select__label--modal {
+  color: rgba(72, 72, 72, 0.8);
+}
+.custom-select__button--modal {
+  border: 1px solid rgba(72, 72, 72, 0.3);
+}
+.custom-select__button--modal:hover {
+  border: 1px solid #484848;
+}
+.custom-select__button--modal:focus-visible {
+  border: 1px solid #484848;
+  outline: none;
+}
+.custom-select__button--modal:focus {
+  border: 1px solid #484848;
+  outline: none;
+}
+.custom-select__button--modal:active {
+  border: 1px solid #484848;
+}
+.custom-select__button--modal:disabled {
+  background-color: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+.custom-select__button--modal:hover ~ .custom-select__label, .custom-select__button--modal:active ~ .custom-select__label, .custom-select__button--modal:focus ~ .custom-select__label {
+  color: #484848;
+}
+.custom-select__list--modal {
+  border: 1px solid #484848;
+}
+.custom-select__text--modal {
+  color: #484848;
+}
+.custom-select__icon--modal {
+  background-color: #484848;
 }
 
 /* @mixin hover-focus {

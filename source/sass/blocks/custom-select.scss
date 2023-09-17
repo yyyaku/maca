@@ -68,14 +68,8 @@
     }
   }
 
-  &__button:hover ~ &__label {
-    color: $color-timber-wolf;
-  }
-
-  &__button:active ~ &__label {
-    color: $color-timber-wolf;
-  }
-
+  &__button:hover ~ &__label,
+  &__button:active ~ &__label,
   &__button:focus ~ &__label {
     color: $color-timber-wolf;
   }
@@ -164,14 +158,6 @@
     }
   }
 
-  // &.open-up {
-  //   .custom-select__list {
-  //     bottom: auto;
-  //     top: 0;
-  //     transform: translateY(calc(-100% + 10px));
-  //   }
-  // }
-
   &.is-open {
     .custom-select__list {
       visibility: visible;
@@ -195,4 +181,48 @@
       border: 1px solid $color-red;
     }
   }
+
+  &__label--modal {
+    color: $color-default-profect-opacity80;
+  }
+
+  &__button--modal {
+    border: 1px solid $color-default-profect-opacity30;
+
+    @include hover-focus-visible {
+      border: 1px solid $color-default-profect;
+    }
+
+    @include focus {
+      border: 1px solid $color-default-profect;
+    }
+
+    @include active {
+      border: 1px solid $color-default-profect;
+    }
+
+    @include disabled {
+      background-color: $color-default-white-opacity20;
+      border: 1px solid $color-default-white-opacity40;
+    }
+  }
+
+  &__button--modal:hover ~ &__label,
+  &__button--modal:active ~ &__label,
+  &__button--modal:focus ~ &__label {
+    color: $color-default-profect;
+  }
+
+  &__list--modal {
+    border: 1px solid $color-default-profect;
+  }
+
+  &__text--modal {
+    color: $color-default-profect;
+  }
+
+  &__icon--modal {
+    background-color: $color-default-profect;
+  }
 }
+

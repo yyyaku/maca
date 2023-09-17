@@ -40,6 +40,10 @@
   color: $color-default-white;
 }
 
+.input-checkbox__control input:hover ~ .input-checkbox__label {
+  color: $color-default-white;
+}
+
 .input-checkbox__check {
   position: relative;
 
@@ -74,16 +78,12 @@
 .input-checkbox__label {
   margin: 0;
   padding: 0 0 0 30px;
-  color: $color-default-white-opacity70;
+  color: $color-default-white-opacity80;
   font-size: 12px;
   font-weight: 400;
   line-height: 12px;
   cursor: pointer;
   z-index: 1;
-}
-
-.input-checkbox__control input:hover ~ .input-checkbox__label {
-  color: $color-default-white;
 }
 
 .input-checkbox__control.is-invalid .input-checkbox__check {

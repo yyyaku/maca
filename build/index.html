@@ -1005,10 +1005,10 @@
           <fieldset class="input-select">
             <div class="custom-select" data-select="data-select" data-validate-type="select" data-name="some-name"
               data-id="id-example-1" data-required>
-              <button class="custom-select__button" type="button" aria-label="Выберите одну из опций"><span
-                  class="custom-select__text"></span><span class="custom-select__icon"></span></button>
-              <h3 class="custom-select__label">Выберите город</h3>
-              <ul class="custom-select__list" role="listbox">
+              <button class="custom-select__button custom-select__button--modal" type="button" aria-label="Выберите одну из опций"><span
+                  class="custom-select__text custom-select__text--modal"></span><span class="custom-select__icon custom-select__icon--modal"></span></button>
+              <h3 class="custom-select__label custom-select__label--modal">Выберите город</h3>
+              <ul class="custom-select__list custom-select__list--modal" role="listbox">
                 <li class="custom-select__item" tabindex="0" data-select-value="id-1" aria-selected="false"
                   role="option">Санкт-Петербург</li>
                 <li class="custom-select__item" tabindex="0" data-select-value="id-2" aria-selected="false"
@@ -1021,10 +1021,10 @@
             </div>
           </fieldset>
           <fieldset class="input-checkbox-modal">
-            <div class="input-checkbox__control-modal">
-              <input class="visually-hidden" type="checkbox" name="data" id="data-field-modal">
-              <span class="input-checkbox__check-modal"></span>
-              <label class="input-checkbox__label-modal" for="data-field-modal">Я согласен на обработку моих персональных
+            <div class="input-checkbox-modal__control" data-validate-type="checkbox" data-required>
+              <input class="visually-hidden" type="checkbox" name="data" id="data-field-modal" required>
+              <span class="input-checkbox-modal__check"></span>
+              <label class="input-checkbox-modal__label" for="data-field-modal">Я согласен на обработку моих персональных
                 данных</label>
             </div>
           </fieldset>
