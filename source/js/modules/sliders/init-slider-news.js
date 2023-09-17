@@ -2,11 +2,12 @@ const sliderNews = document.querySelector('.news__swiper');
 const newsPagination = document.querySelector('.news__pagination');
 const buttonPrev = document.querySelector('.news__button--prev');
 const buttonNext = document.querySelector('.news__button--next');
+let sliderNewsCards;
 
 const initSliderNews = () => {
   if (sliderNews) {
     // eslint-disable-next-line
-      new Swiper(sliderNews, {
+     sliderNewsCards = new Swiper(sliderNews, {
 
       navigation: {
         nextEl: buttonNext,
@@ -49,4 +50,34 @@ const initSliderNews = () => {
   }
 };
 
-export {initSliderNews};
+const sliderControls = document.querySelector('.news__controls-swiper');
+const sliderControlsWrapper = document.querySelector('.news__controls');
+const sliderControlsSlide = document.querySelectorAll('.news__control');
+let sliderNewsControls;
+
+const initSliderControlsNews = () => {
+  if (window.innerWidth < 768) {
+    if (sliderControls) {
+      // eslint-disable-next-line
+      sliderNewsControls = new Swiper(sliderControls, {
+        slidesPerView: 'auto',
+        spaceBetween: 12,
+      });
+    }
+  } else {
+    sliderControls.classList.remove('swiper');
+    sliderControlsWrapper.classList.remove('swiper-wrapper');
+    sliderControlsSlide.forEach((item) => {
+      item.classList.remove('swiper-slide');
+    });
+  }
+};
+
+const initSliderControllerNews = () => {
+  if (window.innerWidth < 768) {
+    sliderNewsControls.controller.control = sliderNewsCards;
+    sliderNewsCards.controller.control = sliderNewsControls;
+  }
+}
+
+export {initSliderNews, initSliderControlsNews, initSliderControllerNews};
