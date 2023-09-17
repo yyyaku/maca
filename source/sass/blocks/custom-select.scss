@@ -50,26 +50,51 @@
     cursor: pointer;
     order: 2;
 
-    @include hover {
+    @include hover-focus-visible {
       border: 1px solid $color-default-white;
     }
+
+    @include focus {
+      border: 1px solid $color-default-white;
+    }
+
+    @include active {
+      border: 1px solid $color-default-white;
+    }
+
+    @include disabled {
+      background-color: $color-default-white-opacity20;
+      border: 1px solid $color-default-white-opacity40;
+    }
+  }
+
+  &__button:hover ~ &__label {
+    color: $color-timber-wolf;
+  }
+
+  &__button:active ~ &__label {
+    color: $color-timber-wolf;
+  }
+
+  &__button:focus ~ &__label {
+    color: $color-timber-wolf;
   }
 
   &__list {
     position: absolute;
-    bottom: 10px;
+    bottom: -4px;
     z-index: 2;
 
     width: 100%;
-    max-height: 100px;
     margin: 0;
     padding: 0;
     overflow-y: auto;
 
     list-style: none;
 
-    background-color: #ffffff;
-    border: 2px solid #000000;
+    background-color: $color-default-white;
+    border: 1px solid $color-default-white;
+    border-radius: 8px;
     transform: translateY(100%);
     visibility: hidden;
     opacity: 0;
@@ -78,44 +103,35 @@
   }
 
   &__item {
-    padding: 5px;
-
+    padding: 17px 20px;
+    color: $color-default-profect;
     outline: none;
     cursor: pointer;
-
     transition: background-color 0.3s ease;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 14px;
 
-    &[aria-selected="true"] {
-      background-color: rgba(0, 0, 0, 0.2);
-
-      @media (hover: hover) {
-        &:hover:not(.focus-visible) {
-          background-color: rgba(0, 0, 0, 0.2);
-        }
-      }
-
-      &.focus-visible:focus {
-        background-color: rgba(0, 0, 0, 0.2);
-      }
+    @include hover {
+      color: $color-default-blue;
     }
 
-    @media (hover: hover) {
-      &:hover:not(.focus-visible) {
-        background-color: rgba(0, 0, 0, 0.4);
-      }
-    }
+    @include focus;
 
-    &.focus-visible:focus {
-      background-color: rgba(0, 0, 0, 0.4);
+    @include active-focus-visible {
+      color: $color-default-white;
+      background-color: $color-default-blue;
     }
   }
 
   &__text {
-    font-size: 20px;
-    line-height: 24px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 14px;
     flex-shrink: 0;
     width: 80%;
     overflow: hidden;
+    color: $color-timber-wolf;
 
     text-align: left;
     white-space: nowrap;
@@ -135,11 +151,8 @@
     width: 20px;
     height: 10px;
     margin-left: auto;
-
     background-color: $color-default-white;
-
     transition: transform 0.3s ease;
-
     clip-path: polygon(100% 0, 100% 20%, 50% 100%, 0 20%, 0 0, 50% 80%);
   }
 
@@ -151,13 +164,13 @@
     }
   }
 
-  &.open-up {
-    .custom-select__list {
-      bottom: auto;
-      top: 0;
-      transform: translateY(calc(-100% + 10px));
-    }
-  }
+  // &.open-up {
+  //   .custom-select__list {
+  //     bottom: auto;
+  //     top: 0;
+  //     transform: translateY(calc(-100% + 10px));
+  //   }
+  // }
 
   &.is-open {
     .custom-select__list {
@@ -173,10 +186,6 @@
   &.not-empty {
     .custom-select__text {
       opacity: 1;
-    }
-
-    .custom-select__placeholder {
-      opacity: 0;
     }
   }
 
