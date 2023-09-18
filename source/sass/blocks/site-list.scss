@@ -1,5 +1,7 @@
 // ЗАКРЫТЫЙ СПИСОК МЕНЮ
 .site-list {
+  position: absolute;
+  top: -550px;
   opacity: 0;
   margin: 0;
   padding: 0;
@@ -63,7 +65,7 @@
   gap: 28px;
   padding: 35px 25px;
   min-width: 286px;
-  max-height: 80vh;
+  max-height: 70vh;
   overflow-y: auto;
   background-color: $color-default-blue;
   border-radius: 16px;
