@@ -488,7 +488,7 @@
                   </div>
                 </div>
               </li>
-              <li class="news-card news-card--career swiper-slide" tabindex="0" id="career">
+              <li class="news-card news-card--career swiper-slide" tabindex="0">
                 <div class="news-card__wrapper">
                   <div class="news-card__date">
                     <span>10/03/2023</span>
@@ -514,7 +514,7 @@
                   </div>
                 </div>
               </li>
-              <li class="news-card news-card--career swiper-slide" tabindex="0" id="career">
+              <li class="news-card news-card--career swiper-slide" tabindex="0">
                 <div class="news-card__wrapper">
                   <div class="news-card__date">
                     <span>10/03/2023</span>
@@ -540,7 +540,7 @@
                   </div>
                 </div>
               </li>
-              <li class="news-card news-card--career swiper-slide" tabindex="0" id="career">
+              <li class="news-card news-card--career swiper-slide" tabindex="0">
                 <div class="news-card__wrapper">
                   <div class="news-card__date">
                     <span>10/03/2023</span>
@@ -716,7 +716,8 @@
                   <h3>Я&nbsp;могу с&nbsp;уверенностью сказать, что это был один из&nbsp;самых незабываемых опытов&nbsp;в
                     жизни!</h3>
                   <p>Я&nbsp;рекомендую программу &laquo;Маса&raquo; всем израильским студентам, желающим получить
-                    незабываемые впечатления.&nbsp;Сочетание&nbsp;путешествий, общения и&nbsp;значимой работы действительно
+                    незабываемые впечатления.&nbsp;Сочетание&nbsp;путешествий, общения и&nbsp;значимой работы
+                    действительно
                     отличает её&nbsp;от&nbsp;других программ, и&nbsp;я&nbsp;чувствую огромную благодарность
                     за&nbsp;предоставленную мне возможность.</p>
                 </div>
@@ -819,11 +820,11 @@
               </li>
               <li class="contacts__item">
                 <h3>Телефон</h3>
-                <span><a href="tel:+796387687676">+7 963 876 876 76</a></span>
+                <a href="tel:+796387687676">+7 963 876 876 76</a>
               </li>
               <li class="contacts__item">
                 <h3>E-mail</h3>
-                <span><a href="Info@masa.ru">Info@masa.ru</a></span>
+                <a href="Info@masa.ru">Info@masa.ru</a>
               </li>
             </ul>
             <div class="contacts__map">
@@ -848,16 +849,15 @@
                     <h3 class="visually-hidden">Представьтесь:</h3>
                     <ul class="input-text__list">
                       <li class="input-text__item" data-validate-type="text" data-limitation="name" data-required>
-                        <input class="input-text__input" type="text" name="name" id="name-field" minlength="2"
-                          maxlength="25" required>
+                        <input type="text" name="name" id="name-field" minlength="2" maxlength="25" required>
                         <label class="input-text__label" for="name-field">Имя</label>
                       </li>
                       <li class="input-text__item" data-validate-type="phone" data-required>
-                        <input class="input-text__input" type="tel" name="tel" id="tel-field" required>
+                        <input type="tel" name="tel" id="tel-field" required>
                         <label class="input-text__label" for="tel-field">Телефон</label>
                       </li>
                       <li class="input-text__item" data-validate-type="text" data-required>
-                        <textarea class="input-text__input" rows="4" id="message-field" required></textarea>
+                        <textarea rows="4" id="message-field" required></textarea>
                         <label class="input-text__label" for="message-field">Ваше сообщение</label>
                       </li>
                     </ul>
@@ -870,24 +870,19 @@
                       <h3 class="custom-select__label">Выберите город</h3>
                       <ul class="custom-select__list" role="listbox">
                         <li class="custom-select__item" tabindex="0" data-select-value="id-1" aria-selected="false"
-                          role="option">Тема 1</li>
+                          role="option">Санкт-Петербург</li>
                         <li class="custom-select__item" tabindex="0" data-select-value="id-2" aria-selected="false"
-                          role="option">Тема 2</li>
+                          role="option">Санкт-Петербург</li>
                         <li class="custom-select__item" tabindex="0" data-select-value="id-3" aria-selected="false"
-                          role="option">Тема 3</li>
+                          role="option">Санкт-Петербург</li>
                         <li class="custom-select__item" tabindex="0" data-select-value="id-4" aria-selected="false"
-                          role="option">Тема 4</li>
-                        <li class="custom-select__item" tabindex="0" data-select-value="id-5" aria-selected="false"
-                          role="option">Тема 5</li>
-                        <li class="custom-select__item" tabindex="0" data-select-value="id-6" aria-selected="false"
-                          role="option">Тема 6</li>
+                          role="option">Санкт-Петербург</li>
                       </ul>
                     </div>
                   </fieldset>
                   <fieldset class="input-checkbox">
                     <div class="input-checkbox__control" data-validate-type="checkbox" data-required>
-                      <input class="visually-hidden input-checkbox__input" type="checkbox" name="data" id="data-field"
-                        required>
+                      <input class="visually-hidden" type="checkbox" name="data" id="data-field" required>
                       <span class="input-checkbox__check"></span>
                       <label class="input-checkbox__label" for="data-field">Я согласен на обработку моих персональных
                         данных</label>
@@ -985,7 +980,7 @@
   <div class="modal modal--preload" data-modal="feedback">
     <div class="modal__wrapper">
       <div class="modal__overlay" data-close-modal></div>
-      <div class="modal__content">
+      <div class="modal__content" data-form-validate="data-form-validate" data-callback="base">
         <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>
         </button>
         <div class="modal__header">
@@ -994,36 +989,45 @@
             мы&nbsp;на&nbsp;них ответим!</p>
         </div>
         <form id="personal-date-modal" method="post" action="https://echo.htmlacademy.ru">
-          <fieldset class="input-text input-text--modal">
+          <fieldset class="input-text-modal">
             <h3 class="visually-hidden">Представьтесь:</h3>
-            <ul class="input-text__list">
-              <li class="input-text__item" data-validate-type="text" data-limitation="name" data-required>
-                <input class="input-text__input" type="text" name="name" id="name-field-modal" minlength="2"
-                  maxlength="25" required>
-                <label class="input-text__label" for="name-field-modal">Имя</label>
+            <ul class="input-text-modal__list">
+              <li class="input-text-modal__item" data-validate-type="text" data-limitation="name" data-required>
+                <input type="text" name="name" id="name-field-modal" minlength="2" maxlength="25" required>
+                <label class="input-text-modal__label" for="name-field-modal">Имя</label>
               </li>
-              <li class="input-text__item" data-validate-type="phone" data-required>
-                <input class="input-text__input" type="tel" name="tel" id="tel-field-modal" required>
-                <label class="input-text__label" for="tel-field-modal">Телефон</label>
+              <li class="input-text-modal__item" data-validate-type="phone" data-required>
+                <input type="tel" name="tel" id="tel-field-modal" required>
+                <label class="input-text-modal__label" for="tel-field-modal">Телефон</label>
               </li>
             </ul>
           </fieldset>
-          <fieldset class="input-select input-select--modal">
-            <div class="input-select__wrapper">
-              <select class="input-select__input" id="city-field-modal">
-                <option>Санкт-Петербург</option>
-                <option>Санкт-Петербург</option>
-                <option>Санкт-Петербург</option>
-                <option>Санкт-Петербург</option>
-              </select>
-              <label class="input-select__label" for="city-field-modal">Выберите город</label>
+          <fieldset class="input-select">
+            <div class="custom-select" data-select="data-select" data-validate-type="select" data-name="some-name"
+              data-id="id-example-1" data-required>
+              <button class="custom-select__button custom-select__button--modal" type="button"
+                aria-label="Выберите одну из опций"><span
+                  class="custom-select__text custom-select__text--modal"></span><span
+                  class="custom-select__icon custom-select__icon--modal"></span></button>
+              <h3 class="custom-select__label custom-select__label--modal">Выберите город</h3>
+              <ul class="custom-select__list custom-select__list--modal" role="listbox">
+                <li class="custom-select__item" tabindex="0" data-select-value="id-1" aria-selected="false"
+                  role="option">Санкт-Петербург</li>
+                <li class="custom-select__item" tabindex="0" data-select-value="id-2" aria-selected="false"
+                  role="option">Санкт-Петербург</li>
+                <li class="custom-select__item" tabindex="0" data-select-value="id-3" aria-selected="false"
+                  role="option">Санкт-Петербург</li>
+                <li class="custom-select__item" tabindex="0" data-select-value="id-4" aria-selected="false"
+                  role="option">Санкт-Петербург</li>
+              </ul>
             </div>
           </fieldset>
-          <fieldset class="input-checkbox input-checkbox--modal">
-            <div class="input-checkbox__control">
-              <input class="visually-hidden input-checkbox__input" type="checkbox" name="data" id="data-field-modal">
-              <span class="input-checkbox__check"></span>
-              <label class="input-checkbox__label" for="data-field-modal">Я согласен на обработку моих персональных
+          <fieldset class="input-checkbox-modal">
+            <div class="input-checkbox-modal__control" data-validate-type="checkbox" data-required>
+              <input class="visually-hidden" type="checkbox" name="data" id="data-field-modal" required>
+              <span class="input-checkbox-modal__check"></span>
+              <label class="input-checkbox-modal__label" for="data-field-modal">Я согласен на обработку моих
+                персональных
                 данных</label>
             </div>
           </fieldset>

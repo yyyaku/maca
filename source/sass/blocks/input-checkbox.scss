@@ -17,23 +17,31 @@
       }
     }
 
-    .input-checkbox__input:checked + .input-checkbox__check::after {
+    input:checked + .input-checkbox__check::after {
       border-right: 1px solid $color-default-white;
       border-top: 1px solid $color-default-white;
     }
 
-    .input-checkbox__input:checked + .input-checkbox__check::before {
+    input:checked + .input-checkbox__check::before {
       background-color: transparent;
     }
   }
 }
 
-.input-checkbox__input:checked + .input-checkbox__check::after {
+.input-checkbox__control input:checked + .input-checkbox__check::after {
   opacity: 1;
 }
 
-.input-checkbox__input:checked + .input-checkbox__check::before {
+.input-checkbox__control input:checked + .input-checkbox__check::before {
   background-color: $color-default-white;
+}
+
+.input-checkbox__control input:checked ~ .input-checkbox__label {
+  color: $color-default-white;
+}
+
+.input-checkbox__control input:hover ~ .input-checkbox__label {
+  color: $color-default-white;
 }
 
 .input-checkbox__check {
@@ -50,7 +58,6 @@
     height: 20px;
     background-color: transparent;
     border: 1px solid $color-default-white-opacity70;
-    z-index: 1;
   }
 
   &::after {
@@ -65,66 +72,23 @@
     border-top: 1px solid $color-default-blue;
     transform: rotate(135deg);
     opacity: 0;
-    z-index: 2;
   }
 }
 
 .input-checkbox__label {
   margin: 0;
   padding: 0 0 0 30px;
-  color: $color-default-white-opacity90;
+  color: $color-default-white-opacity80;
   font-size: 12px;
   font-weight: 400;
   line-height: 12px;
   cursor: pointer;
+  z-index: 1;
 }
 
 .input-checkbox__control.is-invalid .input-checkbox__check {
   &::before {
     background-color: $color-red-opacity20;
     border: 1px solid $color-red;
-  }
-}
-
-.input-checkbox--modal {
-  .input-checkbox__check {
-    &::before {
-      border: 1px solid $color-default-blue-opacity70;
-    }
-
-    &::after {
-      opacity: 0;
-    }
-  }
-
-  .input-checkbox__label {
-    color: $color-default-profect;
-  }
-
-  .input-checkbox__input:checked + .input-checkbox__check::after {
-    border-right: 1px solid $color-default-white;
-    border-top: 1px solid $color-default-white;
-    opacity: 1;
-  }
-
-  .input-checkbox__input:checked + .input-checkbox__check::before {
-    background-color: $color-default-blue;
-  }
-
-  @include hover-focus-visible {
-    .input-checkbox__check {
-      &::before {
-        border: 1px solid $color-default-blue;
-      }
-    }
-
-    .input-checkbox__input:checked + .input-checkbox__check::after {
-      border-right: 1px solid $color-default-blue;
-      border-top: 1px solid $color-default-blue;
-    }
-
-    .input-checkbox__input:checked + .input-checkbox__check::before {
-      background-color: transparent;
-    }
   }
 }

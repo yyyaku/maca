@@ -1,0 +1,94 @@
+.input-checkbox-modal {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.input-checkbox-modal__control {
+  display: flex;
+  align-items: center;
+  min-height: 20px;
+  cursor: pointer;
+
+  @include hover-focus-visible {
+    .input-checkbox-modal__check {
+      &::before {
+        border: 1px solid $color-default-profect;
+      }
+    }
+
+    input:checked + .input-checkbox-modal__check::after {
+      border-right: 1px solid $color-default-profect;
+      border-top: 1px solid $color-default-profect;
+    }
+
+    input:checked + .input-checkbox-modal__check::before {
+      background-color: transparent;
+    }
+  }
+}
+
+.input-checkbox-modal__control input:checked + .input-checkbox-modal__check::after {
+  opacity: 1;
+}
+
+.input-checkbox-modal__control input:checked + .input-checkbox-modal__check::before {
+  background-color: $color-default-blue;
+}
+
+.input-checkbox-modal__control input:checked ~ .input-checkbox-modal__label {
+  color: $color-default-profect;
+}
+
+.input-checkbox-modal__check {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateY(-50%);
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+    border: 1px solid $color-default-profect-opacity30;
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: -5px;
+    left: 5px;
+    width: 8px;
+    height: 6px;
+    border-right: 1px solid $color-default-white;
+    border-top: 1px solid $color-default-white;
+    transform: rotate(135deg);
+    opacity: 0;
+  }
+}
+
+.input-checkbox-modal__label {
+  margin: 0;
+  padding: 0 0 0 30px;
+  color: $color-default-profect-opacity80;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 12px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.input-checkbox-modal__control input:hover ~ .input-checkbox-modal__label {
+  color: $color-default-profect;
+}
+
+.input-checkbox-modal__control.is-invalid .input-checkbox-modal__check {
+  &::before {
+    background-color: $color-red-opacity20;
+    border: 1px solid $color-red;
+  }
+}
