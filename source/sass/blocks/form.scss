@@ -94,8 +94,12 @@
 .form form {
   display: flex;
   flex-direction: column;
-  gap: 17px;
+  gap: 20px;
   margin: 0 0 40px;
+
+  @include vp-1199 {
+    gap: 17px;
+  }
 
   @include vp-767 {
     gap: 21px;
