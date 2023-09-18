@@ -3568,6 +3568,7 @@ button,
   position: relative;
   padding: 13px 18px 1px;
   width: calc(100% - 158px);
+  min-width: 214px;
   background-color: #f0efe9;
   border-radius: 12px 12px 0 0;
 }
@@ -3600,7 +3601,7 @@ button,
   gap: 50px;
   padding: 12px 18px 15px 18px;
   width: calc(100% - 31px);
-  height: 79px;
+  min-height: 79px;
   background-color: #f0efe9;
   border-radius: 0 12px 12px 12px;
 }
@@ -3925,22 +3926,26 @@ button,
   width: calc(50% - 16px);
 }
 
-.swiper-slide .news-card__info {
-  width: calc(100% - 46px);
-}
-
-.swiper-slide:first-child .news-card__info {
-  width: calc(100% - 215px);
-}
-
 .swiper-slide .news-card__header {
   padding: 6px 5px 0 0;
   width: calc(100% - 72px);
+  min-width: 214px;
 }
 
 .swiper-slide:first-child .news-card__header {
   padding: 12px 18px 3px 0;
   width: calc(100% - 313px);
+  min-width: 214px;
+}
+
+.swiper-slide .news-card__info {
+  width: calc(100% - 46px);
+  min-width: 240px;
+}
+
+.swiper-slide:first-child .news-card__info {
+  width: calc(100% - 215px);
+  min-width: 389px;
 }
 
 .news-card__wrapper {
@@ -4522,6 +4527,9 @@ button,
   padding: 5px 0;
   color: #ffffff;
   border-bottom: 1px solid transparent;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
 }
 
 .contacts__item a:hover {
@@ -4675,7 +4683,8 @@ button,
   line-height: 18px;
 }
 
-.input-text__input {
+.input-text__item input,
+.input-text__item textarea {
   padding: 12px 25px;
   min-height: 50px;
   color: #ffffff;
@@ -4687,44 +4696,57 @@ button,
   order: 2;
 }
 
-.input-text__input:hover {
+.input-text__item input:hover,
+.input-text__item textarea:hover {
   border: 1px solid #ffffff;
 }
 
-.input-text__input:focus-visible {
+.input-text__item input:focus,
+.input-text__item textarea:focus {
+  outline: none;
+}
+
+.input-text__item input:active,
+.input-text__item textarea:active {
+  border: 1px solid #ffffff;
+}
+
+.input-text__item input:focus-visible,
+.input-text__item textarea:focus-visible {
   border: 1px solid #ffffff;
   outline: none;
 }
 
-.input-text__input:hover ~ .input-text__label {
+.input-text__item input:disabled,
+.input-text__item textarea:disabled {
+  background-color: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.input-text__item input:hover ~ .input-text__label,
+.input-text__item textarea:hover ~ .input-text__label {
   color: #f0efe9;
 }
 
-.input-text__item.is-invalid .input-text__input {
+.input-text__item input:active ~ .input-text__label,
+.input-text__item textarea:active ~ .input-text__label {
+  color: #f0efe9;
+}
+
+.input-text__item input:focus ~ .input-text__label,
+.input-text__item textarea:focus ~ .input-text__label {
+  color: #f0efe9;
+}
+
+.input-text__item input:disabled ~ .input-text__label,
+.input-text__item textarea:disabled ~ .input-text__label {
+  color: rgba(240, 239, 233, 0.8);
+}
+
+.input-text__item.is-invalid input,
+.input-text__item.is-invalid textarea {
   background-color: rgba(255, 94, 102, 0.2);
   border: 1px solid #ff5e66;
-}
-
-.input-text--modal .input-text__label {
-  color: rgba(72, 72, 72, 0.8);
-}
-
-.input-text--modal .input-text__input {
-  color: #484848;
-  border: 1px solid rgba(72, 72, 72, 0.3);
-}
-
-.input-text--modal .input-text__input:hover {
-  border: 1px solid #484848;
-}
-
-.input-text--modal .input-text__input:focus-visible {
-  border: 1px solid #484848;
-  outline: none;
-}
-
-.input-text--modal .input-text__input:hover ~ .input-text__label {
-  color: #484848;
 }
 
 .input-select {
@@ -4754,12 +4776,12 @@ button,
   border: 1px solid #ffffff;
 }
 
-.input-checkbox__control:hover .input-checkbox__input:checked + .input-checkbox__check::after {
+.input-checkbox__control:hover input:checked + .input-checkbox__check::after {
   border-right: 1px solid #ffffff;
   border-top: 1px solid #ffffff;
 }
 
-.input-checkbox__control:hover .input-checkbox__input:checked + .input-checkbox__check::before {
+.input-checkbox__control:hover input:checked + .input-checkbox__check::before {
   background-color: transparent;
 }
 
@@ -4771,21 +4793,29 @@ button,
   border: 1px solid #ffffff;
 }
 
-.input-checkbox__control:focus-visible .input-checkbox__input:checked + .input-checkbox__check::after {
+.input-checkbox__control:focus-visible input:checked + .input-checkbox__check::after {
   border-right: 1px solid #ffffff;
   border-top: 1px solid #ffffff;
 }
 
-.input-checkbox__control:focus-visible .input-checkbox__input:checked + .input-checkbox__check::before {
+.input-checkbox__control:focus-visible input:checked + .input-checkbox__check::before {
   background-color: transparent;
 }
 
-.input-checkbox__input:checked + .input-checkbox__check::after {
+.input-checkbox__control input:checked + .input-checkbox__check::after {
   opacity: 1;
 }
 
-.input-checkbox__input:checked + .input-checkbox__check::before {
+.input-checkbox__control input:checked + .input-checkbox__check::before {
   background-color: #ffffff;
+}
+
+.input-checkbox__control input:checked ~ .input-checkbox__label {
+  color: #ffffff;
+}
+
+.input-checkbox__control input:hover ~ .input-checkbox__label {
+  color: #ffffff;
 }
 
 .input-checkbox__check {
@@ -4805,7 +4835,6 @@ button,
   height: 20px;
   background-color: transparent;
   border: 1px solid rgba(255, 255, 255, 0.7);
-  z-index: 1;
 }
 
 .input-checkbox__check::after {
@@ -4822,74 +4851,22 @@ button,
   -ms-transform: rotate(135deg);
   transform: rotate(135deg);
   opacity: 0;
-  z-index: 2;
 }
 
 .input-checkbox__label {
   margin: 0;
   padding: 0 0 0 30px;
-  color: rgba(255, 255, 255, 0.9);
+  color: rgba(255, 255, 255, 0.8);
   font-size: 12px;
   font-weight: 400;
   line-height: 12px;
   cursor: pointer;
+  z-index: 1;
 }
 
 .input-checkbox__control.is-invalid .input-checkbox__check::before {
   background-color: rgba(255, 94, 102, 0.2);
   border: 1px solid #ff5e66;
-}
-
-.input-checkbox--modal .input-checkbox__check::before {
-  border: 1px solid rgba(49, 109, 194, 0.7);
-}
-
-.input-checkbox--modal .input-checkbox__check::after {
-  opacity: 0;
-}
-
-.input-checkbox--modal .input-checkbox__label {
-  color: #484848;
-}
-
-.input-checkbox--modal .input-checkbox__input:checked + .input-checkbox__check::after {
-  border-right: 1px solid #ffffff;
-  border-top: 1px solid #ffffff;
-  opacity: 1;
-}
-
-.input-checkbox--modal .input-checkbox__input:checked + .input-checkbox__check::before {
-  background-color: #316dc2;
-}
-
-.input-checkbox--modal:hover .input-checkbox__check::before {
-  border: 1px solid #316dc2;
-}
-
-.input-checkbox--modal:hover .input-checkbox__input:checked + .input-checkbox__check::after {
-  border-right: 1px solid #316dc2;
-  border-top: 1px solid #316dc2;
-}
-
-.input-checkbox--modal:hover .input-checkbox__input:checked + .input-checkbox__check::before {
-  background-color: transparent;
-}
-
-.input-checkbox--modal:focus-visible {
-  outline: none;
-}
-
-.input-checkbox--modal:focus-visible .input-checkbox__check::before {
-  border: 1px solid #316dc2;
-}
-
-.input-checkbox--modal:focus-visible .input-checkbox__input:checked + .input-checkbox__check::after {
-  border-right: 1px solid #316dc2;
-  border-top: 1px solid #316dc2;
-}
-
-.input-checkbox--modal:focus-visible .input-checkbox__input:checked + .input-checkbox__check::before {
-  background-color: transparent;
 }
 
 .footer__wrapper {
@@ -5247,6 +5224,214 @@ button,
   width: 194px;
 }
 
+.input-text-modal {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.input-text-modal__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 16px;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.input-text-modal__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.input-text-modal__label {
+  margin: 0;
+  color: rgba(72, 72, 72, 0.8);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+}
+
+.input-text-modal__item input {
+  padding: 12px 25px;
+  min-height: 50px;
+  color: #484848;
+  background-color: transparent;
+  border: 1px solid rgba(72, 72, 72, 0.3);
+  border-radius: 8px;
+  -webkit-box-ordinal-group: 3;
+  -ms-flex-order: 2;
+  order: 2;
+}
+
+.input-text-modal__item input:hover {
+  border: 1px solid #484848;
+}
+
+.input-text-modal__item input:focus {
+  outline: none;
+}
+
+.input-text-modal__item input:active {
+  border: 1px solid #484848;
+}
+
+.input-text-modal__item input:focus-visible {
+  border: 1px solid #484848;
+  outline: none;
+}
+
+.input-text-modal__item input:disabled {
+  background-color: rgba(169, 175, 183, 0.5);
+  border: 1px solid rgba(169, 175, 183, 0.2);
+}
+
+.input-text-modal__item input:hover ~ .input-text-modal__label {
+  color: #484848;
+}
+
+.input-text-modal__item input:active ~ .input-text-modal__label {
+  color: #484848;
+}
+
+.input-text-modal__item input:focus ~ .input-text-modal__label {
+  color: #484848;
+}
+
+.input-text-modal__item input:disabled ~ .input-text-modal__label {
+  color: rgba(240, 239, 233, 0.8);
+}
+
+.input-text-modal__item.is-invalid input {
+  background-color: rgba(255, 94, 102, 0.2);
+  border: 1px solid #ff5e66;
+}
+
+.input-checkbox-modal {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.input-checkbox-modal__control {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-height: 20px;
+  cursor: pointer;
+}
+
+.input-checkbox-modal__control:hover .input-checkbox-modal__check::before {
+  border: 1px solid #484848;
+}
+
+.input-checkbox-modal__control:hover input:checked + .input-checkbox-modal__check::after {
+  border-right: 1px solid #484848;
+  border-top: 1px solid #484848;
+}
+
+.input-checkbox-modal__control:hover input:checked + .input-checkbox-modal__check::before {
+  background-color: transparent;
+}
+
+.input-checkbox-modal__control:focus-visible {
+  outline: none;
+}
+
+.input-checkbox-modal__control:focus-visible .input-checkbox-modal__check::before {
+  border: 1px solid #484848;
+}
+
+.input-checkbox-modal__control:focus-visible input:checked + .input-checkbox-modal__check::after {
+  border-right: 1px solid #484848;
+  border-top: 1px solid #484848;
+}
+
+.input-checkbox-modal__control:focus-visible input:checked + .input-checkbox-modal__check::before {
+  background-color: transparent;
+}
+
+.input-checkbox-modal__control input:checked + .input-checkbox-modal__check::after {
+  opacity: 1;
+}
+
+.input-checkbox-modal__control input:checked + .input-checkbox-modal__check::before {
+  background-color: #316dc2;
+}
+
+.input-checkbox-modal__control input:checked ~ .input-checkbox-modal__label {
+  color: #484848;
+}
+
+.input-checkbox-modal__check {
+  position: relative;
+}
+
+.input-checkbox-modal__check::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  display: block;
+  width: 20px;
+  height: 20px;
+  background-color: transparent;
+  border: 1px solid rgba(72, 72, 72, 0.3);
+}
+
+.input-checkbox-modal__check::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -5px;
+  left: 5px;
+  width: 8px;
+  height: 6px;
+  border-right: 1px solid #ffffff;
+  border-top: 1px solid #ffffff;
+  -webkit-transform: rotate(135deg);
+  -ms-transform: rotate(135deg);
+  transform: rotate(135deg);
+  opacity: 0;
+}
+
+.input-checkbox-modal__label {
+  margin: 0;
+  padding: 0 0 0 30px;
+  color: rgba(72, 72, 72, 0.8);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 12px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.input-checkbox-modal__control input:hover ~ .input-checkbox-modal__label {
+  color: #484848;
+}
+
+.input-checkbox-modal__control.is-invalid .input-checkbox-modal__check::before {
+  background-color: rgba(255, 94, 102, 0.2);
+  border: 1px solid #ff5e66;
+}
+
 .custom-select {
   position: relative;
   display: -webkit-box;
@@ -5309,18 +5494,43 @@ button,
   border: 1px solid #ffffff;
 }
 
+.custom-select__button:focus-visible {
+  border: 1px solid #ffffff;
+  outline: none;
+}
+
+.custom-select__button:focus {
+  border: 1px solid #ffffff;
+  outline: none;
+}
+
+.custom-select__button:active {
+  border: 1px solid #ffffff;
+}
+
+.custom-select__button:disabled {
+  background-color: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.custom-select__button:hover ~ .custom-select__label,
+.custom-select__button:active ~ .custom-select__label,
+.custom-select__button:focus ~ .custom-select__label {
+  color: #f0efe9;
+}
+
 .custom-select__list {
   position: absolute;
-  bottom: 10px;
+  bottom: -4px;
   z-index: 2;
   width: 100%;
-  max-height: 100px;
   margin: 0;
   padding: 0;
   overflow-y: auto;
   list-style: none;
   background-color: #ffffff;
-  border: 2px solid #000000;
+  border: 1px solid #ffffff;
+  border-radius: 8px;
   -webkit-transform: translateY(100%);
   -ms-transform: translateY(100%);
   transform: translateY(100%);
@@ -5331,32 +5541,45 @@ button,
 }
 
 .custom-select__item {
-  padding: 5px;
+  padding: 17px 20px;
+  color: #484848;
   outline: none;
   cursor: pointer;
   -webkit-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 14px;
 }
 
-.custom-select__item[aria-selected=true] {
-  background-color: rgba(0, 0, 0, 0.2);
+.custom-select__item:hover {
+  color: #316dc2;
 }
 
-.custom-select__item[aria-selected=true].focus-visible:focus {
-  background-color: rgba(0, 0, 0, 0.2);
+.custom-select__item:focus {
+  outline: none;
 }
 
-.custom-select__item.focus-visible:focus {
-  background-color: rgba(0, 0, 0, 0.4);
+.custom-select__item:active {
+  color: #ffffff;
+  background-color: #316dc2;
+}
+
+.custom-select__item:focus-visible {
+  color: #ffffff;
+  background-color: #316dc2;
+  outline: none;
 }
 
 .custom-select__text {
-  font-size: 20px;
-  line-height: 24px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 14px;
   -ms-flex-negative: 0;
   flex-shrink: 0;
   width: 80%;
   overflow: hidden;
+  color: #f0efe9;
   text-align: left;
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -5392,14 +5615,6 @@ button,
   display: none;
 }
 
-.custom-select.open-up .custom-select__list {
-  bottom: auto;
-  top: 0;
-  -webkit-transform: translateY(calc(-100% + 10px));
-  -ms-transform: translateY(calc(-100% + 10px));
-  transform: translateY(calc(-100% + 10px));
-}
-
 .custom-select.is-open .custom-select__list {
   visibility: visible;
   opacity: 1;
@@ -5415,13 +5630,58 @@ button,
   opacity: 1;
 }
 
-.custom-select.not-empty .custom-select__placeholder {
-  opacity: 0;
-}
-
 .custom-select.is-invalid .custom-select__button {
   background-color: rgba(255, 94, 102, 0.2);
   border: 1px solid #ff5e66;
+}
+
+.custom-select__label--modal {
+  color: rgba(72, 72, 72, 0.8);
+}
+
+.custom-select__button--modal {
+  border: 1px solid rgba(72, 72, 72, 0.3);
+}
+
+.custom-select__button--modal:hover {
+  border: 1px solid #484848;
+}
+
+.custom-select__button--modal:focus-visible {
+  border: 1px solid #484848;
+  outline: none;
+}
+
+.custom-select__button--modal:focus {
+  border: 1px solid #484848;
+  outline: none;
+}
+
+.custom-select__button--modal:active {
+  border: 1px solid #484848;
+}
+
+.custom-select__button--modal:disabled {
+  background-color: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.custom-select__button--modal:hover ~ .custom-select__label,
+.custom-select__button--modal:active ~ .custom-select__label,
+.custom-select__button--modal:focus ~ .custom-select__label {
+  color: #484848;
+}
+
+.custom-select__list--modal {
+  border: 1px solid #484848;
+}
+
+.custom-select__text--modal {
+  color: #484848;
+}
+
+.custom-select__icon--modal {
+  background-color: #484848;
 }
 
 /* @mixin hover-focus {
@@ -5710,20 +5970,24 @@ button,
     background-image: url("../img/news/career-tablet.jpg");
   }
 
-  .swiper-slide .news-card__info {
-    width: calc(100% - 84px);
-  }
-
-  .swiper-slide:first-child .news-card__info {
-    width: calc(100% - 84px);
-  }
-
   .swiper-slide .news-card__header {
     width: calc(100% - 117px);
+    min-width: 207px;
   }
 
   .swiper-slide:first-child .news-card__header {
     width: calc(100% - 117px);
+    min-width: 207px;
+  }
+
+  .swiper-slide .news-card__info {
+    width: calc(100% - 84px);
+    min-width: 240px;
+  }
+
+  .swiper-slide:first-child .news-card__info {
+    width: calc(100% - 84px);
+    min-width: 240px;
   }
 
   .news-card__wrapper {
@@ -5812,6 +6076,10 @@ button,
   }
 
   .contacts__item span {
+    line-height: 20px;
+  }
+
+  .contacts__item a {
     line-height: 20px;
   }
 
@@ -6314,20 +6582,24 @@ button,
     right: 15px;
   }
 
-  .swiper-slide .news-card__info {
-    width: calc(100% - 28px);
-  }
-
-  .swiper-slide:first-child .news-card__info {
-    width: calc(100% - 28px);
-  }
-
   .swiper-slide .news-card__header {
     width: calc(100% - 90px);
+    min-width: 200px;
   }
 
   .swiper-slide:first-child .news-card__header {
     width: calc(100% - 90px);
+    min-width: 200px;
+  }
+
+  .swiper-slide .news-card__info {
+    width: calc(100% - 28px);
+    min-width: 263px;
+  }
+
+  .swiper-slide:first-child .news-card__info {
+    width: calc(100% - 28px);
+    min-width: 263px;
   }
 
   .news-card__wrapper {
@@ -6501,6 +6773,10 @@ button,
     font-size: 14px;
   }
 
+  .contacts__item a {
+    font-size: 14px;
+  }
+
   .contacts__map {
     min-height: 240px;
   }
@@ -6598,18 +6874,13 @@ button,
     width: 100%;
   }
 
-  .custom-select__label {
+  .input-text-modal__label {
     font-size: 12px;
     line-height: 14px;
   }
-}
 
-@media (hover: hover) {
-  .custom-select__item[aria-selected=true]:hover:not(.focus-visible) {
-    background-color: rgba(0, 0, 0, 0.2);
-  }
-
-  .custom-select__item:hover:not(.focus-visible) {
-    background-color: rgba(0, 0, 0, 0.4);
+  .custom-select__label {
+    font-size: 12px;
+    line-height: 14px;
   }
 }
