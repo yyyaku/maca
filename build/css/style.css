@@ -3495,7 +3495,7 @@ button,
   grid-template-columns: repeat(2, 1fr);
   gap: 52px;
   margin: 0;
-  padding: 90px 106px 55px 125px;
+  padding: 90px 30px 55px;
   color: #ffffff;
   background-color: #316dc2;
   border-radius: 20px;
@@ -3527,7 +3527,9 @@ button,
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin: 0 0 0 10px;
   padding: 30px 60px;
+  max-width: 478px;
   border: 1px solid #f0efe9;
   border-radius: 16px;
 }
@@ -3554,6 +3556,7 @@ button,
         -ms-flex-align: start;
             align-items: flex-start;
     gap: 8px;
+    margin: 0;
     padding: 30px 28px 25px;
   }
 }
@@ -3561,6 +3564,17 @@ button,
   .about__item {
     gap: 5px;
     padding: 20px 17px 21px 19px;
+  }
+}
+
+.about__item:nth-child(2n+1) {
+  -ms-grid-column-align: end;
+      justify-self: end;
+  margin: 0 -10px 0 0;
+}
+@media (max-width: 1199px) {
+  .about__item:nth-child(2n+1) {
+    margin: 0;
   }
 }
 
