@@ -1,5 +1,5 @@
 const map = () => {
-  const map = L.map('map').setView([55.8235, 37.6232], 13);
+  const map = L.map('map').setView([55.0285, 82.9282], 13);
 
   L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 19,
@@ -17,7 +17,7 @@ const map = () => {
     icon: customIcon,
   };
 
-  const marker = L.marker({ lat: 55.8166, lng: 37.6369 }, markerOptions);
+  const marker = L.marker({ lat: 55.0285, lng: 82.9282 }, markerOptions);
 
   marker.addTo(map);
 };

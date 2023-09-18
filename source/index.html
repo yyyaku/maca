@@ -33,7 +33,7 @@
               <button class="main-nav__toggle" type="button">Меню<span class="main-nav__toggle-circle"></span></button>
               <ul class="site-list">
                 <li class="site-list__item">
-                  <a class="site-list__link" href="#">
+                  <a class="site-list__link" href="#about">
                     О проекте
                   </a>
                 </li>
@@ -43,34 +43,34 @@
                       class="site-list__toggle-arrow"></span></button>
                   <ul class="site-list__secondary">
                     <li class="site-list__item-secondary">
-                      <a href="#" class="site-list__link-secondary">
+                      <a href="#programs" class="site-list__link-secondary">
                         Стажировки
                       </a>
                     </li>
                     <li class="site-list__item-secondary">
-                      <a href="#" class="site-list__link-secondary">
+                      <a href="#programs" class="site-list__link-secondary">
                         Волонтёрство
                       </a>
                     </li>
                     <li class="site-list__item-secondary">
-                      <a href="#" class="site-list__link-secondary">
+                      <a href="#programs" class="site-list__link-secondary">
                         Учеба
                       </a>
                     </li>
                     <li class="site-list__item-secondary">
-                      <a href="#" class="site-list__link-secondary">
+                      <a href="#programs" class="site-list__link-secondary">
                         Религия
                       </a>
                     </li>
                   </ul>
                 </li>
                 <li class="site-list__item">
-                  <a class="site-list__link" href="#">
+                  <a class="site-list__link" href="#grant">
                     Как поехать
                   </a>
                 </li>
                 <li class="site-list__item">
-                  <a class="site-list__link" href="#">
+                  <a class="site-list__link" href="#reviews">
                     Отзывы
                   </a>
                 </li>
@@ -80,34 +80,34 @@
                       class="site-list__toggle-arrow"></span></button>
                   <ul class="site-list__secondary">
                     <li class="site-list__item-secondary">
-                      <a href="#" class="site-list__link-secondary">
+                      <a href="#news" class="site-list__link-secondary">
                         Общее
                       </a>
                     </li>
                     <li class="site-list__item-secondary">
-                      <a href="#" class="site-list__link-secondary">
+                      <a href="#news" class="site-list__link-secondary">
                         Волонтёрство
                       </a>
                     </li>
                     <li class="site-list__item-secondary">
-                      <a href="#" class="site-list__link-secondary">
+                      <a href="#news" class="site-list__link-secondary">
                         Стажировки
                       </a>
                     </li>
                     <li class="site-list__item-secondary">
-                      <a href="#" class="site-list__link-secondary">
+                      <a href="#news" class="site-list__link-secondary">
                         Карьера
                       </a>
                     </li>
                     <li class="site-list__item-secondary">
-                      <a href="#" class="site-list__link-secondary">
+                      <a href="#news" class="site-list__link-secondary">
                         Путешествия
                       </a>
                     </li>
                   </ul>
                 </li>
                 <li class="site-list__item">
-                  <a class="site-list__link" href="#">
+                  <a class="site-list__link" href="#contacts">
                     Контакты
                   </a>
                 </li>
@@ -210,7 +210,7 @@
           </div>
         </div>
       </section>
-      <section class="about">
+      <section class="about" id="about">
         <div class="container">
           <div class="about__wrapper">
             <div class="about__header">
@@ -259,7 +259,7 @@
           </div>
         </div>
       </section>
-      <section class="programs">
+      <section class="programs" id="programs">
         <div class="container">
           <div class="programs__wrapper">
             <div class="programs__header">
@@ -346,7 +346,7 @@
           </div>
         </div>
       </section>
-      <section class="grant">
+      <section class="grant" id="grant">
         <div class="container">
           <div class="grant__wrapper">
             <div class="grant__header">
@@ -436,6 +436,32 @@
                   </div>
                 </div>
               </li>
+              <li class="news-card news-card--career swiper-slide" tabindex="0" id="career">
+                <div class="news-card__wrapper">
+                  <div class="news-card__date">
+                    <span>10/03/2023</span>
+                    <svg class="news-card__date-svg-top" width="16" height="16">
+                      <use href="img/sprite.svg#angle-left-bottom"></use>
+                    </svg>
+                    <svg class="news-card__date-svg-right" width="16" height="16">
+                      <use href="img/sprite.svg#angle-left-bottom"></use>
+                    </svg>
+                  </div>
+                  <div class="news-card__header">
+                    <h3>Построй свою карьеру</h3>
+                    <svg width="16" height="16">
+                      <use href="img/sprite.svg#angle-left-bottom"></use>
+                    </svg>
+                  </div>
+                  <div class="news-card__info">
+                    <p>Ведущие компании готовы трудоустроить выпускников стажировки</p>
+                    <a href="#" class="btn-secondary"><span class="btn-secondary__arrow"></span></a>
+                    <svg width="16" height="16">
+                      <use href="img/sprite.svg#angle-left-bottom"></use>
+                    </svg>
+                  </div>
+                </div>
+              </li>
               <li class="news-card news-card--trips swiper-slide" tabindex="0" id="trips">
                 <div class="news-card__wrapper">
                   <div class="news-card__date">
@@ -488,10 +514,10 @@
                   </div>
                 </div>
               </li>
-              <li class="news-card news-card--career swiper-slide" tabindex="0">
+              <li class="news-card news-card--secondary news-card--trips swiper-slide" tabindex="0">
                 <div class="news-card__wrapper">
                   <div class="news-card__date">
-                    <span>10/03/2023</span>
+                    <span>20/03/2023</span>
                     <svg class="news-card__date-svg-top" width="16" height="16">
                       <use href="img/sprite.svg#angle-left-bottom"></use>
                     </svg>
@@ -500,13 +526,13 @@
                     </svg>
                   </div>
                   <div class="news-card__header">
-                    <h3>Построй свою карьеру</h3>
+                    <h3>Путешествуем по&nbsp;Израилю</h3>
                     <svg width="16" height="16">
                       <use href="img/sprite.svg#angle-left-bottom"></use>
                     </svg>
                   </div>
                   <div class="news-card__info">
-                    <p>Ведущие компании готовы трудоустроить выпускников стажировки</p>
+                    <p>Какие места посещают наши студенты весной</p>
                     <a href="#" class="btn-secondary"><span class="btn-secondary__arrow"></span></a>
                     <svg width="16" height="16">
                       <use href="img/sprite.svg#angle-left-bottom"></use>
@@ -514,10 +540,10 @@
                   </div>
                 </div>
               </li>
-              <li class="news-card news-card--career swiper-slide" tabindex="0">
+              <li class="news-card news-card--secondary news-card--volunteer swiper-slide" tabindex="0">
                 <div class="news-card__wrapper">
                   <div class="news-card__date">
-                    <span>10/03/2023</span>
+                    <span>17/03/2023</span>
                     <svg class="news-card__date-svg-top" width="16" height="16">
                       <use href="img/sprite.svg#angle-left-bottom"></use>
                     </svg>
@@ -526,13 +552,13 @@
                     </svg>
                   </div>
                   <div class="news-card__header">
-                    <h3>Построй свою карьеру</h3>
+                    <h3>Новая программа волонтёрства</h3>
                     <svg width="16" height="16">
                       <use href="img/sprite.svg#angle-left-bottom"></use>
                     </svg>
                   </div>
                   <div class="news-card__info">
-                    <p>Ведущие компании готовы трудоустроить выпускников стажировки</p>
+                    <p>Программа помощи детям длительностью 4&nbsp;месяца</p>
                     <a href="#" class="btn-secondary"><span class="btn-secondary__arrow"></span></a>
                     <svg width="16" height="16">
                       <use href="img/sprite.svg#angle-left-bottom"></use>
@@ -540,33 +566,7 @@
                   </div>
                 </div>
               </li>
-              <li class="news-card news-card--career swiper-slide" tabindex="0">
-                <div class="news-card__wrapper">
-                  <div class="news-card__date">
-                    <span>10/03/2023</span>
-                    <svg class="news-card__date-svg-top" width="16" height="16">
-                      <use href="img/sprite.svg#angle-left-bottom"></use>
-                    </svg>
-                    <svg class="news-card__date-svg-right" width="16" height="16">
-                      <use href="img/sprite.svg#angle-left-bottom"></use>
-                    </svg>
-                  </div>
-                  <div class="news-card__header">
-                    <h3>Построй свою карьеру</h3>
-                    <svg width="16" height="16">
-                      <use href="img/sprite.svg#angle-left-bottom"></use>
-                    </svg>
-                  </div>
-                  <div class="news-card__info">
-                    <p>Ведущие компании готовы трудоустроить выпускников стажировки</p>
-                    <a href="#" class="btn-secondary"><span class="btn-secondary__arrow"></span></a>
-                    <svg width="16" height="16">
-                      <use href="img/sprite.svg#angle-left-bottom"></use>
-                    </svg>
-                  </div>
-                </div>
-              </li>
-              <li class="news-card news-card--career swiper-slide" tabindex="0" id="career">
+              <li class="news-card news-card--secondary news-card--career swiper-slide" tabindex="0">
                 <div class="news-card__wrapper">
                   <div class="news-card__date">
                     <span>10/03/2023</span>
@@ -617,10 +617,9 @@
                   </button>
                   <h3>Кто организатор? Какие сроки у&nbsp;программы?</h3>
                   <div class="question__content" data-accordion="content">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam vero suscipit facere, similique
-                      natus
-                      id voluptas! Explicabo dolorum esse, deserunt quas voluptas, nobis velit tempora similique quia
-                      repudiandae illum. Autem!</p>
+                    <p>Организатором программы является проект &laquo;Маса&raquo; в&nbsp;сотрудничестве
+                      с&nbsp;образовательными учреждениями. Сроки программы обмена могут варьироваться от&nbsp;одного
+                      семестра до&nbsp;года.</p>
                   </div>
                 </div>
               </li>
@@ -631,10 +630,8 @@
                   </button>
                   <h3>Что такое грант на&nbsp;обучение?</h3>
                   <div class="question__content" data-accordion="content">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam vero suscipit facere, similique
-                      natus
-                      id voluptas! Explicabo dolorum esse, deserunt quas voluptas, nobis velit tempora similique quia
-                      repudiandae illum. Autem!</p>
+                    <p>Грант на&nbsp;обучение&nbsp;&mdash; это финансовая поддержка, которую предоставляет организатор
+                      программы обмена студентами для оплаты учебных расходов.</p>
                   </div>
                 </div>
               </li>
@@ -658,9 +655,10 @@
                   </button>
                   <h3>Признаётся&nbsp;ли учеба в&nbsp;рамках проекта&nbsp;для дальнейшего обучения?</h3>
                   <div class="question__content" data-accordion="content">
-                    <p>Полная стоимость определяется организаторами в&nbsp;зависимости от&nbsp;направления.
-                      В&nbsp;большинстве случаев грант &laquo;Маса&raquo; не&nbsp;покрывает полную стоимость программы,
-                      и&nbsp;поэтому предусматривается определённая доля личного участия.</p>
+                    <p>Студенты, участвующие в&nbsp;проекте, могут использовать полученные знания и&nbsp;навыки
+                      в&nbsp;своей будущей профессиональной деятельности или продолжить обучение в&nbsp;высших учебных
+                      заведениях. Кроме того, многие университеты и&nbsp;колледжи предоставляют кредиты за&nbsp;участие
+                      в&nbsp;программе обмена студентами.</p>
                   </div>
                 </div>
               </li>
@@ -671,9 +669,11 @@
                   </button>
                   <h3>Как выглядит полный процесс регистрации на&nbsp;программу &laquo;Маса&raquo;?</h3>
                   <div class="question__content" data-accordion="content">
-                    <p>Полная стоимость определяется организаторами в&nbsp;зависимости от&nbsp;направления.
-                      В&nbsp;большинстве случаев грант &laquo;Маса&raquo; не&nbsp;покрывает полную стоимость программы,
-                      и&nbsp;поэтому предусматривается определённая доля личного участия.</p>
+                    <p>Процесс регистрации на&nbsp;программу обмена включает выбор университета-партнера
+                      и&nbsp;программы обмена, общение с&nbsp;координатором программы, заполнение заявления
+                      и&nbsp;предоставление необходимых документов, прохождение интервью, оформление визы, жилья
+                      и&nbsp;страховки, обучение по&nbsp;безопасности за&nbsp;границей и&nbsp;подписание договора
+                      об&nbsp;участии в&nbsp;программе. Подробнее можно узнать позвонив в&nbsp;центр.</p>
                   </div>
                 </div>
               </li>
@@ -681,7 +681,7 @@
           </div>
         </div>
       </section>
-      <section class="reviews">
+      <section class="reviews" id="reviews">
         <div class="reviews__wrapper">
           <div class="reviews__header">
             <h2>Отзывы</h2>
@@ -716,7 +716,7 @@
                   <h3>Я&nbsp;могу с&nbsp;уверенностью сказать, что это был один из&nbsp;самых незабываемых опытов&nbsp;в
                     жизни!</h3>
                   <p>Я&nbsp;рекомендую программу &laquo;Маса&raquo; всем израильским студентам, желающим получить
-                    незабываемые впечатления.&nbsp;Сочетание&nbsp;путешествий, общения и&nbsp;значимой работы
+                    незабываемые впечатления.&nbsp;Сочетание путешествий, общения и&nbsp;значимой работы
                     действительно
                     отличает её&nbsp;от&nbsp;других программ, и&nbsp;я&nbsp;чувствую огромную благодарность
                     за&nbsp;предоставленную мне возможность.</p>
@@ -807,7 +807,7 @@
           </div>
         </div>
       </section>
-      <section class="contacts">
+      <section class="contacts" id="contacts">
         <div class="container">
           <div class="contacts__wrapper">
             <div class="contacts__header">
@@ -816,7 +816,7 @@
             <ul class="contacts__list">
               <li class="contacts__item">
                 <h3>Центральный офис</h3>
-                <span>г. Новосибирск, ул. Щетинкина&nbsp;68,<br>культурный центр &laquo;Бейт Менахем&raquo;</span>
+                <span>г. Новосибирск, ул. Щетинкина&nbsp;68, культурный центр &laquo;Бейт Менахем&raquo;</span>
               </li>
               <li class="contacts__item">
                 <h3>Телефон</h3>
@@ -909,32 +909,32 @@
             <nav class="footer-header__nav">
               <ul class="footer-header__list">
                 <li class="footer-header__item">
-                  <a class="footer-header__link" href="#">
+                  <a class="footer-header__link" href="#about">
                     О проекте
                   </a>
                 </li>
                 <li class="footer-header__item">
-                  <a class="footer-header__link" href="#">
+                  <a class="footer-header__link" href="#programs">
                     Программы
                   </a>
                 </li>
                 <li class="footer-header__item">
-                  <a class="footer-header__link" href="#">
+                  <a class="footer-header__link" href="#grant">
                     Как поехать
                   </a>
                 </li>
                 <li class="footer-header__item">
-                  <a class="footer-header__link" href="#">
+                  <a class="footer-header__link" href="#reviews">
                     Отзывы
                   </a>
                 </li>
                 <li class="footer-header__item">
-                  <a class="footer-header__link" href="#">
+                  <a class="footer-header__link" href="#news">
                     Новости
                   </a>
                 </li>
                 <li class="footer-header__item">
-                  <a class="footer-header__link" href="#">
+                  <a class="footer-header__link" href="#contacts">
                     Контакты
                   </a>
                 </li>
