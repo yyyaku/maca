@@ -32,7 +32,8 @@
   }
 }
 
-.input-text__input {
+.input-text__item input,
+.input-text__item textarea {
   padding: 12px 25px;
   min-height: 50px;
   color: $color-default-white;
@@ -41,35 +42,44 @@
   border-radius: 8px;
   order: 2;
 
-  @include hover-focus-visible {
+  @include hover {
     border: 1px solid $color-default-white;
+  }
+
+  @include focus;
+
+  @include active-focus-visible {
+    border: 1px solid $color-default-white;
+  }
+
+  @include disabled {
+    background-color: $color-default-white-opacity20;
+    border: 1px solid $color-default-white-opacity40;
   }
 }
 
-.input-text__input:hover ~ .input-text__label {
+.input-text__item input:hover ~ .input-text__label,
+.input-text__item textarea:hover ~ .input-text__label {
   color: $color-timber-wolf;
 }
 
-.input-text__item.is-invalid .input-text__input {
-  background-color: $color-red-opacity20;
-  border: 1px solid $color-red;
+.input-text__item input:active ~ .input-text__label,
+.input-text__item textarea:active ~ .input-text__label {
+  color: $color-timber-wolf;
 }
 
-.input-text--modal {
-  .input-text__label {
-    color: $color-default-profect-opacity80;
-  }
+.input-text__item input:focus ~ .input-text__label,
+.input-text__item textarea:focus ~ .input-text__label {
+  color: $color-timber-wolf;
+}
 
-  .input-text__input {
-    color: $color-default-profect;
-    border: 1px solid $color-default-profect-opacity30;
+.input-text__item input:disabled ~ .input-text__label,
+.input-text__item textarea:disabled ~ .input-text__label {
+  color: $color-timber-wolf-opacity80;
+}
 
-    @include hover-focus-visible {
-      border: 1px solid $color-default-profect;
-    }
-  }
-
-  .input-text__input:hover ~ .input-text__label {
-    color: $color-default-profect;
-  }
+.input-text__item.is-invalid input,
+.input-text__item.is-invalid textarea {
+  background-color: $color-red-opacity20;
+  border: 1px solid $color-red;
 }
