@@ -3,14 +3,17 @@
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  padding: 0 0 123px;
+  margin: 0 auto;
+  padding: 0 100px 123px;
+  width: 100%;
+  max-width: 1440px;
 
   @include vp-1199 {
-    padding: 0 0 100px;
+    padding: 0 0 100px 45px;
   }
 
   @include vp-767 {
-    padding: 0 0 67px;
+    padding: 0 15px 67px;
   }
 }
 
@@ -39,6 +42,10 @@
 
 .programs__link {
   width: 232px;
+
+  @include vp-1199 {
+    margin: 0 45px 0 0;
+  }
 
   @include vp-767 {
     order: 5;
@@ -71,9 +78,14 @@
   grid-template-columns: 1fr auto;
   gap: 52px;
 
+  @include vp-1199 {
+    padding: 0 45px 0 0;
+  }
+
   @include vp-767 {
     flex-basis: auto;
     gap: 0;
+    padding: 0;
     order: 2;
   }
 }
