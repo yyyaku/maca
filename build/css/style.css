@@ -5141,12 +5141,7 @@ button,
 }
 
 .reviews-card {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: auto 1fr;
-  grid-template-columns: auto 1fr;
-  gap: 26px;
-  padding: 50px 50px 40px;
+  padding: 50px 30px 40px;
   height: auto;
   border: 1px solid #316dc2;
   border-radius: 16px;
@@ -5158,10 +5153,29 @@ button,
 }
 @media (max-width: 767px) {
   .reviews-card {
+    padding: 30px 13px 25px 15px;
+  }
+}
+
+.reviews-card__wrapper {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto 1fr;
+  grid-template-columns: auto 1fr;
+  gap: 26px;
+  margin: 0 auto;
+  max-width: 509px;
+}
+@media (max-width: 1199px) {
+  .reviews-card__wrapper {
+    max-width: 100%;
+  }
+}
+@media (max-width: 767px) {
+  .reviews-card__wrapper {
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
     gap: 0;
-    padding: 30px 13px 25px 15px;
   }
 }
 
@@ -6226,7 +6240,7 @@ button,
           flex-direction: column;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(13, 29, 51, 0.4);
   -webkit-transform: scale(1.2);
       -ms-transform: scale(1.2);
           transform: scale(1.2);
@@ -6276,7 +6290,7 @@ button,
 .modal__content {
   position: relative;
   width: 510px;
-  padding: 60px 80px;
+  padding: 54px 60px;
   border-radius: 16px;
   background-color: #ffffff;
 }
@@ -6349,13 +6363,12 @@ button,
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 20px;
   padding: 0 20px;
   margin: 0 0 30px;
 }
 
 .modal__header h2 {
-  margin: 0;
+  margin: 0 0 40px 0;
   color: #316dc2;
   font-size: 32px;
   font-weight: 400;

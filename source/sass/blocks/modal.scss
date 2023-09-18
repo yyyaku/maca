@@ -11,7 +11,7 @@
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
 
-  background-color: rgba($color-default-black, 0.8);
+  background-color: $color-gentian-blue-opacity40;
   transform: scale(1.2);
   visibility: hidden;
   opacity: 0;
@@ -59,7 +59,7 @@
   &__content {
     position: relative;
     width: 510px;
-    padding: 60px 80px;
+    padding: 54px 60px;
     border-radius: 16px;
 
     background-color: $color-default-white;
@@ -128,13 +128,12 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 20px;
   padding: 0 20px;
   margin: 0 0 30px;
 }
 
 .modal__header h2 {
-  margin: 0;
+  margin: 0 0 40px 0;
   color: $color-default-blue;
   font-size: 32px;
   font-weight: 400;
