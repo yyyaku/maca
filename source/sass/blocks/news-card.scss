@@ -40,10 +40,18 @@
 
 .swiper-slide {
   width: calc(25% - 24px);
+
+  @include vp-767 {
+    height: auto;
+  }
 }
 
 .swiper-slide:first-child {
   width: calc(50% - 16px);
+
+  @include vp-767 {
+    height: auto;
+  }
 }
 
 .swiper-slide .news-card__header {
@@ -122,6 +130,12 @@
 
   @include vp-767 {
     min-height: 330px;
+  }
+}
+
+.news-card--secondary .news-card__wrapper {
+  @include vp-767 {
+    min-height: 240px;
   }
 }
 

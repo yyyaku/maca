@@ -4438,9 +4438,19 @@ button,
 .swiper-slide {
   width: calc(25% - 24px);
 }
+@media (max-width: 767px) {
+  .swiper-slide {
+    height: auto;
+  }
+}
 
 .swiper-slide:first-child {
   width: calc(50% - 16px);
+}
+@media (max-width: 767px) {
+  .swiper-slide:first-child {
+    height: auto;
+  }
 }
 
 .swiper-slide .news-card__header {
@@ -4538,6 +4548,12 @@ button,
 @media (max-width: 767px) {
   .news-card__wrapper {
     min-height: 330px;
+  }
+}
+
+@media (max-width: 767px) {
+  .news-card--secondary .news-card__wrapper {
+    min-height: 240px;
   }
 }
 
