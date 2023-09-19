@@ -9,7 +9,7 @@
   align-items: center;
   flex-wrap: wrap;
   gap: 73px;
-  padding: 120px 0;
+  padding: 118px 0 120px;
 
   @include vp-1199 {
     padding: 100px 0;
@@ -30,7 +30,7 @@
   line-height: 50px;
 
   @include vp-1199 {
-    margin: 0 0 29px;
+    margin: 0 0 28px;
     font-size: 34px;
   }
 

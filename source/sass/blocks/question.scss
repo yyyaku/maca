@@ -15,6 +15,7 @@
   }
 
   @include vp-767 {
+    margin: 0 0 9px;
     padding: 20px 15px;
   }
 
@@ -28,6 +29,7 @@
     }
 
     .question__sign {
+
       &::after,
       &::before {
         background-color: $color-default-blue;
@@ -48,6 +50,7 @@
     }
 
     .question__sign {
+
       &::after,
       &::before {
         background-color: $color-default-white;
@@ -56,20 +59,34 @@
   }
 }
 
+.question:nth-child(4n) .question__wrapper,
+.question:nth-child(5n) .question__wrapper {
+  padding: 40px 40px 25px;
+
+  @include vp-1199 {
+    padding: 30px 30px 20px;
+  }
+
+  @include vp-767 {
+    padding: 25px 15px 14px 15px;
+  }
+}
+
 .question.is-active .question__wrapper {
-  gap: 10px 0;
+  gap: 12px 0;
   margin: 0 0 10px;
-  padding: 40px 40px 35px;
+  padding: 40px 40px 31px;
   color: $color-default-white;
   background-color: $color-default-blue;
 
   @include vp-1199 {
-    padding: 30px;
+    gap: 16px 0;
+    padding: 30px 30px 25px;
   }
 
   @include vp-767 {
-    gap: 20px 0;
-    padding: 20px 15px;
+    gap: 15px 0;
+    padding: 20px 15px 14px 15px;
   }
 
   @include hover-focus-visible {
@@ -188,19 +205,29 @@
 .question h3 {
   grid-column: 1/2;
   grid-row: 1/2;
+  align-self: center;
   margin: 0;
   font-size: 28px;
   font-weight: 400;
-  line-height: 27px;
+  line-height: 34px;
 
   @include vp-1199 {
     font-size: 22px;
-    line-height: 21px;
+    line-height: 26px;
   }
 
   @include vp-767 {
     font-size: 16px;
     line-height: 18px;
+  }
+}
+
+.question:nth-child(4n) h3,
+.question:nth-child(5n) h3 {
+  margin: -8px 0 8px;
+
+  @include vp-1199 {
+    margin: -5px 0 5px;
   }
 }
 
