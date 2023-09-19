@@ -58,6 +58,11 @@
   }
 }
 
+.question:nth-child(4n) .question__wrapper,
+.question:nth-child(5n) .question__wrapper {
+  padding: 40px 40px 25px;
+}
+
 .question.is-active .question__wrapper {
   gap: 12px 0;
   margin: 0 0 10px;
@@ -190,8 +195,8 @@
 .question h3 {
   grid-column: 1/2;
   grid-row: 1/2;
+  align-self: center;
   margin: 0;
-  max-height: 54px;
   font-size: 28px;
   font-weight: 400;
   line-height: 34px;

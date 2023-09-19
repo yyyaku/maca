@@ -4835,6 +4835,11 @@ button,
   background-color: #ffffff;
 }
 
+.question:nth-child(4n) .question__wrapper,
+.question:nth-child(5n) .question__wrapper {
+  padding: 40px 40px 25px;
+}
+
 .question.is-active .question__wrapper {
   gap: 12px 0;
   margin: 0 0 10px;
@@ -4968,8 +4973,9 @@ button,
   -ms-grid-row: 1;
   -ms-grid-row-span: 1;
   grid-row: 1/2;
+  -ms-grid-row-align: center;
+      align-self: center;
   margin: 0;
-  max-height: 54px;
   font-size: 28px;
   font-weight: 400;
   line-height: 34px;
@@ -5033,7 +5039,7 @@ button,
       -ms-flex-align: center;
           align-items: center;
   margin: 0 auto;
-  padding: 115px 100px 120px;
+  padding: 118px 100px 120px;
   width: 100%;
   max-width: 1440px;
 }
