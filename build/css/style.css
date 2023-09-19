@@ -2725,7 +2725,7 @@ button,
 }
 @media (max-width: 767px) {
   .hero__item {
-    min-height: 494px;
+    min-height: 496px;
   }
 }
 
@@ -2741,6 +2741,11 @@ button,
   }
   .hero__item--experience .hero-main__description p {
     margin: -5px 0 5px;
+  }
+}
+@media (max-width: 767px) {
+  .hero__item--experience .hero-main__info {
+    padding: 0;
   }
 }
 
@@ -3143,6 +3148,11 @@ button,
   margin: 0 0 60px;
   text-align: start;
 }
+@media (max-width: 767px) {
+  .hero-main {
+    margin: 0 0 20px;
+  }
+}
 
 .hero__swiper .swiper-pagination {
   position: absolute;
@@ -3297,7 +3307,7 @@ button,
 @media (max-width: 767px) {
   .hero-main__description {
     position: relative;
-    padding: 0 14px 10px;
+    padding: 0 14px 5px;
     background-color: #ffffff;
     border-radius: 0 0 14px 0;
   }
@@ -3338,7 +3348,7 @@ button,
   .hero-main__link {
     position: relative;
     margin: 0;
-    padding: 12px 17px;
+    padding: 10px 15px;
     min-width: 182px;
     background-color: #ffffff;
     border-radius: 0 0 14px 14px;
