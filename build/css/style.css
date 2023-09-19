@@ -4839,6 +4839,12 @@ button,
 .question:nth-child(5n) .question__wrapper {
   padding: 40px 40px 25px;
 }
+@media (max-width: 1199px) {
+  .question:nth-child(4n) .question__wrapper,
+.question:nth-child(5n) .question__wrapper {
+    padding: 30px 30px 20px;
+  }
+}
 
 .question.is-active .question__wrapper {
   gap: 12px 0;
@@ -4849,7 +4855,8 @@ button,
 }
 @media (max-width: 1199px) {
   .question.is-active .question__wrapper {
-    padding: 30px;
+    gap: 16px 0;
+    padding: 30px 30px 25px;
   }
 }
 @media (max-width: 767px) {
@@ -4996,6 +5003,12 @@ button,
 .question:nth-child(4n) h3,
 .question:nth-child(5n) h3 {
   margin: -8px 0 8px;
+}
+@media (max-width: 1199px) {
+  .question:nth-child(4n) h3,
+.question:nth-child(5n) h3 {
+    margin: -5px 0 5px;
+  }
 }
 
 .question__content {
@@ -5290,6 +5303,11 @@ button,
           flex-direction: column;
   gap: 11px;
 }
+@media (max-width: 1199px) {
+  .reviews-card__item {
+    gap: 5px;
+  }
+}
 @media (max-width: 767px) {
   .reviews-card__item {
     gap: 6px;
@@ -5418,7 +5436,7 @@ button,
 }
 @media (max-width: 1199px) {
   .contacts__header h2 {
-    margin: 0 0 29px;
+    margin: 0 0 28px;
     font-size: 34px;
   }
 }
