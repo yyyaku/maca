@@ -3564,6 +3564,7 @@ button,
   .about__item {
     gap: 5px;
     padding: 20px 17px 21px 19px;
+    max-width: 100%;
   }
 }
 
@@ -3575,6 +3576,13 @@ button,
 @media (max-width: 1199px) {
   .about__item:nth-child(2n+1) {
     margin: 0;
+  }
+}
+@media (max-width: 767px) {
+  .about__item:nth-child(2n+1) {
+    -ms-grid-column-align: stretch;
+        justify-self: stretch;
+    max-width: 100%;
   }
 }
 
@@ -5678,7 +5686,7 @@ button,
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: 20px;
+  gap: 18px;
   margin: 0 0 40px;
 }
 @media (max-width: 1199px) {
