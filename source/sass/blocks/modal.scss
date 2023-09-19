@@ -59,7 +59,7 @@
   &__content {
     position: relative;
     width: 510px;
-    padding: 53px 60px 60px;
+    padding: 55px 60px 60px;
     border-radius: 16px;
 
     background-color: $color-default-white;
@@ -130,6 +130,10 @@
   align-items: center;
   padding: 0 20px;
   margin: 0 0 18px;
+
+  @include vp-1199 {
+    margin: 0 0 22px;
+  }
 }
 
 .modal__header h2 {
@@ -140,6 +144,7 @@
   line-height: 36px;
 
   @include vp-1199 {
+    margin: 0 0 12px;
     font-size: 28px;
     line-height: 28px;
   }

@@ -6374,7 +6374,7 @@ button,
 .modal__content {
   position: relative;
   width: 510px;
-  padding: 53px 60px 60px;
+  padding: 55px 60px 60px;
   border-radius: 16px;
   background-color: #ffffff;
 }
@@ -6450,6 +6450,11 @@ button,
   padding: 0 20px;
   margin: 0 0 18px;
 }
+@media (max-width: 1199px) {
+  .modal__header {
+    margin: 0 0 22px;
+  }
+}
 
 .modal__header h2 {
   margin: 0 0 10px;
@@ -6460,6 +6465,7 @@ button,
 }
 @media (max-width: 1199px) {
   .modal__header h2 {
+    margin: 0 0 12px;
     font-size: 28px;
     line-height: 28px;
   }
