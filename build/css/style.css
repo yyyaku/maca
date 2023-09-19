@@ -2703,7 +2703,7 @@ button,
 }
 
 .hero__item {
-  padding: 365px 0 60px;
+  padding: 375px 0 60px;
 }
 @media (max-width: 1199px) {
   .hero__item {
@@ -2715,6 +2715,27 @@ button,
     margin: 0 0 -5px;
     padding: 188px 0 25px;
   }
+}
+
+.hero__item--experience {
+  padding: 365px 0 60px;
+}
+@media (max-width: 1199px) {
+  .hero__item--experience {
+    padding: 632px 0 60px;
+  }
+}
+@media (max-width: 767px) {
+  .hero__item--experience {
+    margin: 0 0 -5px;
+    padding: 188px 0 25px;
+  }
+}
+.hero__item--experience .hero-main__info {
+  padding: 5px 50px 15px;
+}
+.hero__item--experience .hero-main__description p {
+  margin: -10px 0 10px;
 }
 
 .hero-header {
@@ -3220,7 +3241,7 @@ button,
   display: -ms-flexbox;
   display: flex;
   gap: 30px;
-  padding: 0 50px 20px;
+  padding: 0 50px 35px;
   width: 62.26%;
   color: #484848;
   background-color: #ffffff;
@@ -3260,13 +3281,9 @@ button,
   }
 }
 
-.hero-main__description {
-  margin: -7px 0 7px;
-}
 @media (max-width: 767px) {
   .hero-main__description {
     position: relative;
-    margin: 0;
     padding: 0 14px 10px;
     background-color: #ffffff;
     border-radius: 0 0 14px 0;
@@ -3296,7 +3313,6 @@ button,
 }
 @media (max-width: 1199px) and (max-width: 767px) {
   .hero-main__description p {
-    margin: -5px 0 0;
     font-size: 14px;
   }
 }
@@ -3312,15 +3328,6 @@ button,
     min-width: 182px;
     background-color: #ffffff;
     border-radius: 0 0 14px 14px;
-  }
-}
-
-.hero-main__link a {
-  margin: 5px 0;
-}
-@media (max-width: 1199px) {
-  .hero-main__link a {
-    margin: -2px;
   }
 }
 

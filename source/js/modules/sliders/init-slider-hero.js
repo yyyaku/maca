@@ -12,9 +12,9 @@ const initSliderHero = () => {
       slidesPerView: 1,
       spaceBetween: 40,
       fadeSpeed: 300,
-      autoplay: {
-        delay: 3000,
-      },
+      // autoplay: {
+      //   delay: 3000,
+      // },
 
       pagination: {
         el: '.swiper-pagination',
