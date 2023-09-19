@@ -4659,7 +4659,7 @@ button,
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  gap: 20px;
+  gap: 18px;
   margin: 0 0 40px;
 }
 
@@ -6456,6 +6456,13 @@ button,
   .about__item {
     gap: 5px;
     padding: 20px 17px 21px 19px;
+    max-width: 100%;
+  }
+
+  .about__item:nth-child(2n+1) {
+    -ms-grid-column-align: stretch;
+    justify-self: stretch;
+    max-width: 100%;
   }
 
   .about__item svg {
