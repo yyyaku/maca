@@ -68,9 +68,9 @@
     }
   }
 
-  &__button:hover ~ &__label,
-  &__button:active ~ &__label,
-  &__button:focus ~ &__label {
+  &__button:hover~&__label,
+  &__button:active~&__label,
+  &__button:focus~&__label {
     color: $color-timber-wolf;
   }
 
@@ -184,10 +184,20 @@
 
   &__label--modal {
     color: $color-default-profect-opacity80;
+
+    @include vp-767 {
+      margin: 0 0 8px;
+      font-size: 14px;
+      line-height: 14px;
+    }
   }
 
   &__button--modal {
     border: 1px solid $color-default-profect-opacity30;
+
+    @include vp-767 {
+      height: 44px;
+    }
 
     @include hover-focus-visible {
       border: 1px solid $color-default-profect;
@@ -207,9 +217,9 @@
     }
   }
 
-  &__button--modal:hover ~ &__label,
-  &__button--modal:active ~ &__label,
-  &__button--modal:focus ~ &__label {
+  &__button--modal:hover~&__label,
+  &__button--modal:active~&__label,
+  &__button--modal:focus~&__label {
     color: $color-default-profect;
   }
 
@@ -223,5 +233,9 @@
 
   &__icon--modal {
     background-color: $color-default-profect;
+
+    @include vp-767 {
+      width: 15px;
+    }
   }
 }

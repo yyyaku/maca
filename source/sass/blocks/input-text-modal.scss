@@ -11,6 +11,10 @@
   margin: 0;
   padding: 0;
   list-style-type: none;
+
+  @include vp-767 {
+    gap: 15px;
+  }
 }
 
 .input-text-modal__item {
@@ -27,7 +31,6 @@
   line-height: 18px;
 
   @include vp-767 {
-    font-size: 12px;
     line-height: 14px;
   }
 }
@@ -40,6 +43,10 @@
   border: 1px solid $color-default-profect-opacity30;
   border-radius: 8px;
   order: 2;
+
+  @include vp-767 {
+    min-height: 42px;
+  }
 
   @include hover {
     border: 1px solid $color-default-profect;
@@ -57,19 +64,19 @@
   }
 }
 
-.input-text-modal__item input:hover ~ .input-text-modal__label {
+.input-text-modal__item input:hover~.input-text-modal__label {
   color: $color-default-profect;
 }
 
-.input-text-modal__item input:active ~ .input-text-modal__label {
+.input-text-modal__item input:active~.input-text-modal__label {
   color: $color-default-profect;
 }
 
-.input-text-modal__item input:focus ~ .input-text-modal__label {
+.input-text-modal__item input:focus~.input-text-modal__label {
   color: $color-default-profect;
 }
 
-.input-text-modal__item input:disabled ~ .input-text-modal__label {
+.input-text-modal__item input:disabled~.input-text-modal__label {
   color: $color-timber-wolf-opacity80;
 }
 
