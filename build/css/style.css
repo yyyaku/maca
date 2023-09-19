@@ -2175,6 +2175,10 @@ button,
   letter-spacing: 0.28px;
   text-transform: uppercase;
   cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 @media (max-width: 767px) {
   .btn {
