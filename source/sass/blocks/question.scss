@@ -15,6 +15,7 @@
   }
 
   @include vp-767 {
+    margin: 0 0 9px;
     padding: 20px 15px;
   }
 
@@ -65,6 +66,10 @@
   @include vp-1199 {
     padding: 30px 30px 20px;
   }
+
+  @include vp-767 {
+    padding: 25px 15px 14px 15px;
+  }
 }
 
 .question.is-active .question__wrapper {
@@ -80,8 +85,8 @@
   }
 
   @include vp-767 {
-    gap: 20px 0;
-    padding: 20px 15px;
+    gap: 15px 0;
+    padding: 20px 15px 14px 15px;
   }
 
   @include hover-focus-visible {

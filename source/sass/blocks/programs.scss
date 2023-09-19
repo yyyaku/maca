@@ -48,7 +48,15 @@
   }
 
   @include vp-767 {
+    margin: 0;
+    width: 100%;
     order: 5;
+  }
+}
+
+.programs__link a {
+  @include vp-767 {
+    padding: 16px 30px;
   }
 }
 

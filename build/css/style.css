@@ -3712,9 +3712,17 @@ button,
 }
 @media (max-width: 767px) {
   .programs__link {
+    margin: 0;
+    width: 100%;
     -webkit-box-ordinal-group: 6;
         -ms-flex-order: 5;
             order: 5;
+  }
+}
+
+@media (max-width: 767px) {
+  .programs__link a {
+    padding: 16px 30px;
   }
 }
 
@@ -4799,6 +4807,7 @@ button,
 }
 @media (max-width: 767px) {
   .question__wrapper {
+    margin: 0 0 9px;
     padding: 20px 15px;
   }
 }
@@ -4845,6 +4854,12 @@ button,
     padding: 30px 30px 20px;
   }
 }
+@media (max-width: 767px) {
+  .question:nth-child(4n) .question__wrapper,
+.question:nth-child(5n) .question__wrapper {
+    padding: 25px 15px 14px 15px;
+  }
+}
 
 .question.is-active .question__wrapper {
   gap: 12px 0;
@@ -4861,8 +4876,8 @@ button,
 }
 @media (max-width: 767px) {
   .question.is-active .question__wrapper {
-    gap: 20px 0;
-    padding: 20px 15px;
+    gap: 15px 0;
+    padding: 20px 15px 14px 15px;
   }
 }
 .question.is-active .question__wrapper:hover .question__button::before {
@@ -5063,7 +5078,7 @@ button,
 }
 @media (max-width: 767px) {
   .reviews__wrapper {
-    padding: 50px 15px 30px;
+    padding: 60px 15px 30px;
   }
 }
 
@@ -5224,7 +5239,7 @@ button,
 @media (max-width: 767px) {
   .reviews-card__header {
     gap: 10px;
-    margin: 0 0 15px;
+    margin: 0 0 14px;
   }
 }
 
