@@ -2720,7 +2720,7 @@ button,
 }
 @media (max-width: 1199px) {
   .hero__item {
-    min-height: 960px;
+    min-height: 941px;
   }
 }
 @media (max-width: 767px) {
@@ -2734,6 +2734,14 @@ button,
 }
 .hero__item--experience .hero-main__description p {
   margin: -10px 0 10px;
+}
+@media (max-width: 1199px) {
+  .hero__item--experience .hero-main__info {
+    padding: 0 40px 27px;
+  }
+  .hero__item--experience .hero-main__description p {
+    margin: -5px 0 5px;
+  }
 }
 
 .hero-header {
@@ -3254,7 +3262,7 @@ button,
 }
 @media (max-width: 1199px) {
   .hero-main__info {
-    padding: 3px 40px 25px;
+    padding: 0px 40px 28px;
     width: 87.2%;
   }
 }
@@ -3313,6 +3321,7 @@ button,
 }
 @media (max-width: 1199px) {
   .hero-main__description p {
+    margin: -5px 0 5px;
     line-height: 20px;
   }
 }

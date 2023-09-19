@@ -106,7 +106,7 @@
   border-radius: 0 0 30px 30px;
 
   @include vp-1199 {
-    padding: 3px 40px 25px;
+    padding: 0px 40px 28px;
     width: 87.2%;
   }
 
@@ -157,6 +157,7 @@
   margin: 0;
 
   @include vp-1199 {
+    margin: -5px 0 5px;
     line-height: 20px;
 
     @include vp-767 {
