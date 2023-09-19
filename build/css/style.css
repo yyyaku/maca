@@ -2643,7 +2643,7 @@ button,
     background-image: url("../img/hero/internship-tablet.jpg");
   }
 }
-@media (max-width: 767px) {
+@media (max-width: 374px) {
   .hero--internship {
     background-image: url("../img/hero/internship-mobile.jpg");
   }
@@ -2656,7 +2656,7 @@ button,
     background-image: url("../img/hero/volunteer-tablet.jpg");
   }
 }
-@media (max-width: 767px) {
+@media (max-width: 374px) {
   .hero--volunteer {
     background-image: url("../img/hero/volunteer-mobile.jpg");
   }
@@ -2669,7 +2669,7 @@ button,
     background-image: url("../img/hero/experience-tablet.jpg");
   }
 }
-@media (max-width: 767px) {
+@media (max-width: 374px) {
   .hero--experience {
     background-image: url("../img/hero/experience-mobile.jpg");
   }
@@ -3921,7 +3921,7 @@ button,
   padding: 13px 18px 1px;
   width: calc(100% - 158px);
   min-width: 194px;
-  background-color: #f0efe9;
+  background-color: #ffffff;
   border-radius: 12px 12px 0 0;
 }
 @media (max-width: 1199px) {
@@ -3979,7 +3979,7 @@ button,
   padding: 12px 18px 15px 18px;
   width: calc(100% - 31px);
   min-height: 79px;
-  background-color: #f0efe9;
+  background-color: #ffffff;
   border-radius: 0 12px 12px 12px;
 }
 @media (max-width: 1199px) {
