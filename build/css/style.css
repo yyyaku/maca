@@ -4274,7 +4274,7 @@ button,
 
 .news__wrapper {
   margin: 0 auto;
-  padding: 125px 100px;
+  padding: 125px 100px 122px;
   width: 100%;
   max-width: 1440px;
 }
@@ -4949,7 +4949,7 @@ button,
 }
 
 .question.is-active .question__wrapper {
-  gap: 12px 0;
+  gap: 14px 0;
   margin: 0 0 10px;
   padding: 40px 40px 31px;
   color: #ffffff;
@@ -5191,7 +5191,7 @@ button,
 }
 
 .reviews__header h2 {
-  margin: 0;
+  margin: 0 0 0 3px;
   color: #316dc2;
   font-size: 50px;
   font-style: normal;
@@ -5200,6 +5200,7 @@ button,
 }
 @media (max-width: 1199px) {
   .reviews__header h2 {
+    margin: 0;
     font-size: 34px;
   }
 }
@@ -5289,7 +5290,7 @@ button,
 }
 
 .reviews-card {
-  padding: 50px 30px 40px;
+  padding: 50px 30px 42px;
   height: auto;
   border: 1px solid #316dc2;
   border-radius: 16px;
@@ -5312,7 +5313,7 @@ button,
   grid-template-columns: auto 1fr;
   gap: 26px;
   margin: 0 auto;
-  max-width: 509px;
+  max-width: 504px;
 }
 @media (max-width: 1199px) {
   .reviews-card__wrapper {
@@ -5402,10 +5403,15 @@ button,
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 25px;
+  gap: 26px;
   margin: 0;
   padding: 0;
   list-style-type: none;
+}
+@media (max-width: 1199px) {
+  .reviews-card__list {
+    gap: 25px;
+  }
 }
 
 .reviews-card__item {
@@ -5416,7 +5422,7 @@ button,
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: 11px;
+  gap: 6px;
 }
 @media (max-width: 1199px) {
   .reviews-card__item {
@@ -5471,7 +5477,7 @@ button,
 }
 
 .reviews-card__content h3 {
-  margin: 0 0 15px;
+  margin: 0 0 13px;
   color: #316dc2;
   font-size: 24px;
   font-weight: 400;
@@ -5479,6 +5485,7 @@ button,
 }
 @media (max-width: 1199px) {
   .reviews-card__content h3 {
+    margin: 0 0 15px;
     font-size: 20px;
     line-height: 24px;
   }
@@ -5831,7 +5838,7 @@ button,
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: 20px;
+  gap: 19px;
   margin: 0 0 40px;
 }
 @media (max-width: 1199px) {
@@ -5847,10 +5854,11 @@ button,
 }
 
 .form__btn {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  padding: 18px 55px 18px 107px;
   width: 100%;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
 }
 
 .input-text {
