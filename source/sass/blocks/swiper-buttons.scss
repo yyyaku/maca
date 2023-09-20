@@ -13,18 +13,6 @@
   border: 1px solid transparent;
   cursor: pointer;
 
-  &::before {
-    position: absolute;
-    content: "";
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 10px;
-    height: 1px;
-    background-color: $color-default-blue;
-    z-index: 2;
-  }
-
   &::after {
     position: absolute;
     content: "";
@@ -51,13 +39,13 @@
       background-color: $color-default-white;
     }
 
-    &::before {
-      background-color: $color-default-blue-opacity70;
-    }
-
     .swiper-buttons__arrow {
       border-top: 1px solid $color-default-blue-opacity70;
       border-right: 1px solid $color-default-blue-opacity70;
+
+      &::before {
+        background-color: $color-default-blue-opacity70;
+      }
     }
   }
 
@@ -68,14 +56,14 @@
       background-color: transparent;
     }
 
-    &::before {
-      background-color: $color-grey;
-    }
-
     .swiper-buttons__arrow {
       border-top: 1px solid $color-grey;
       border-right: 1px solid $color-grey;
       cursor: not-allowed;
+
+      &::before {
+        background-color: $color-grey;
+      }
     }
   }
 }
@@ -91,13 +79,33 @@
   border-right: 1px solid $color-default-blue;
   z-index: 3;
 
+  &::before {
+    position: absolute;
+    content: "";
+    width: 10px;
+    height: 1px;
+    background-color: $color-default-blue;
+    z-index: 2;
+    transform: rotate(135deg);
+  }
+
   &--prev {
     left: 7px;
     transform: rotate(-135deg);
+
+    &::before {
+      top: 3px;
+      left: -1px;
+    }
   }
 
   &--next {
     right: 7px;
     transform: rotate(45deg);
+
+    &::before {
+      top: 3px;
+      right: -1px;
+    }
   }
 }
