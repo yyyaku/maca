@@ -2517,19 +2517,6 @@ button,
   border: 1px solid transparent;
   cursor: pointer;
 }
-.swiper-buttons__button::before {
-  position: absolute;
-  content: "";
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  width: 10px;
-  height: 1px;
-  background-color: #316dc2;
-  z-index: 2;
-}
 .swiper-buttons__button::after {
   position: absolute;
   content: "";
@@ -2559,12 +2546,12 @@ button,
 .swiper-buttons__button:active::after {
   background-color: #ffffff;
 }
-.swiper-buttons__button:active::before {
-  background-color: rgba(49, 109, 194, 0.7);
-}
 .swiper-buttons__button:active .swiper-buttons__arrow {
   border-top: 1px solid rgba(49, 109, 194, 0.7);
   border-right: 1px solid rgba(49, 109, 194, 0.7);
+}
+.swiper-buttons__button:active .swiper-buttons__arrow::before {
+  background-color: rgba(49, 109, 194, 0.7);
 }
 .swiper-buttons__button:disabled {
   cursor: not-allowed;
@@ -2572,13 +2559,13 @@ button,
 .swiper-buttons__button:disabled::after {
   background-color: transparent;
 }
-.swiper-buttons__button:disabled::before {
-  background-color: #a9afb7;
-}
 .swiper-buttons__button:disabled .swiper-buttons__arrow {
   border-top: 1px solid #a9afb7;
   border-right: 1px solid #a9afb7;
   cursor: not-allowed;
+}
+.swiper-buttons__button:disabled .swiper-buttons__arrow::before {
+  background-color: #a9afb7;
 }
 
 .swiper-buttons__arrow {
@@ -2594,17 +2581,36 @@ button,
   border-right: 1px solid #316dc2;
   z-index: 3;
 }
+.swiper-buttons__arrow::before {
+  position: absolute;
+  content: "";
+  width: 10px;
+  height: 1px;
+  background-color: #316dc2;
+  z-index: 2;
+  -webkit-transform: rotate(135deg);
+      -ms-transform: rotate(135deg);
+          transform: rotate(135deg);
+}
 .swiper-buttons__arrow--prev {
   left: 7px;
   -webkit-transform: rotate(-135deg);
       -ms-transform: rotate(-135deg);
           transform: rotate(-135deg);
 }
+.swiper-buttons__arrow--prev::before {
+  top: 3px;
+  left: -1px;
+}
 .swiper-buttons__arrow--next {
   right: 7px;
   -webkit-transform: rotate(45deg);
       -ms-transform: rotate(45deg);
           transform: rotate(45deg);
+}
+.swiper-buttons__arrow--next::before {
+  top: 3px;
+  right: -1px;
 }
 
 .logo {
@@ -5865,8 +5871,13 @@ button,
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  padding: 18px 55px 18px 109px;
+  padding: 18px 55px 18px 108px;
   width: 100%;
+}
+@media (max-width: 1199px) {
+  .form__btn {
+    padding: 18px 55px 18px 109px;
+  }
 }
 @media (max-width: 767px) {
   .form__btn {
