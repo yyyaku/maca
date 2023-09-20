@@ -2182,7 +2182,7 @@ button,
 }
 @media (max-width: 767px) {
   .btn {
-    padding: 16px 42px 16px 20px;
+    padding: 14px 42px 14px 20px;
     min-height: 42px;
     font-size: 12px;
     line-height: 12px;
@@ -2759,7 +2759,7 @@ button,
 }
 @media (max-width: 1199px) {
   .hero__item--experience .hero-main__info {
-    padding: 0 40px 27px;
+    padding: 0 41px 27px 40px;
   }
   .hero__item--experience .hero-main__description p {
     margin: -5px 0 5px;
@@ -3310,7 +3310,7 @@ button,
 }
 @media (max-width: 1199px) {
   .hero-main__info {
-    padding: 0px 40px 28px;
+    padding: 0 40px 28px;
     width: 87.2%;
   }
 }
@@ -3560,7 +3560,7 @@ button,
 }
 @media (max-width: 767px) {
   .about__info a {
-    width: 100%;
+    width: 76%;
   }
 }
 
@@ -3800,7 +3800,8 @@ button,
 
 @media (max-width: 767px) {
   .programs__link a {
-    padding: 16px 30px;
+    padding: 14px 30px;
+    width: 70%;
   }
 }
 
@@ -4280,7 +4281,7 @@ button,
 }
 @media (max-width: 1199px) {
   .news__wrapper {
-    padding: 98px 45px;
+    padding: 98px 45px 100px;
   }
 }
 @media (max-width: 767px) {
@@ -5173,12 +5174,12 @@ button,
 }
 @media (max-width: 1199px) {
   .reviews__wrapper {
-    padding: 92px 0 100px 45px;
+    padding: 90px 0 100px 45px;
   }
 }
 @media (max-width: 767px) {
   .reviews__wrapper {
-    padding: 60px 15px 30px;
+    padding: 60px 15px 32px;
   }
 }
 
@@ -5216,7 +5217,7 @@ button,
 }
 @media (max-width: 1199px) {
   .reviews__swiper {
-    margin: 40px 0 40px;
+    margin: 40px 0 39px;
   }
 }
 @media (max-width: 767px) {
@@ -5297,12 +5298,12 @@ button,
 }
 @media (max-width: 1199px) {
   .reviews-card {
-    padding: 50px 50px 45px;
+    padding: 50px 53px 46px 50px;
   }
 }
 @media (max-width: 767px) {
   .reviews-card {
-    padding: 30px 13px 25px 15px;
+    padding: 30px 13px 23px 15px;
   }
 }
 
@@ -5317,6 +5318,7 @@ button,
 }
 @media (max-width: 1199px) {
   .reviews-card__wrapper {
+    gap: 25px;
     max-width: 100%;
   }
 }
@@ -5485,13 +5487,14 @@ button,
 }
 @media (max-width: 1199px) {
   .reviews-card__content h3 {
-    margin: 0 0 15px;
+    margin: 0 0 16px;
     font-size: 20px;
     line-height: 24px;
   }
 }
 @media (max-width: 767px) {
   .reviews-card__content h3 {
+    margin: 0 0 15px;
     font-size: 16px;
     line-height: 18px;
   }
@@ -5617,6 +5620,11 @@ button,
   line-height: 12px;
   letter-spacing: 0.12px;
   text-transform: uppercase;
+}
+@media (max-width: 1199px) {
+  .contacts__item h3 {
+    margin: 0 0 18px;
+  }
 }
 @media (max-width: 767px) {
   .contacts__item h3 {
@@ -5859,6 +5867,11 @@ button,
           justify-content: flex-start;
   padding: 18px 55px 18px 107px;
   width: 100%;
+}
+@media (max-width: 1199px) {
+  .form__btn {
+    padding: 14px 55px 14px 74px;
+  }
 }
 
 .input-text {
@@ -6108,6 +6121,11 @@ button,
           justify-content: space-between;
   gap: 25px;
   padding: 5px 0 50px;
+}
+@media (max-width: 1199px) {
+  .footer__wrapper {
+    gap: 23px;
+  }
 }
 @media (max-width: 767px) {
   .footer__wrapper {
@@ -6991,7 +7009,7 @@ button,
 .custom-select__icon {
   -ms-flex-negative: 0;
       flex-shrink: 0;
-  width: 20px;
+  width: 16px;
   height: 10px;
   margin-left: auto;
   background-color: #ffffff;

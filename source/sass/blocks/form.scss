@@ -111,4 +111,8 @@
   justify-content: flex-start;
   padding: 18px 55px 18px 107px;
   width: 100%;
+
+  @include vp-1199 {
+    padding: 14px 55px 14px 74px;
+  }
 }
