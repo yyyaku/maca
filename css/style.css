@@ -4779,7 +4779,7 @@ button,
   -webkit-box-pack: start;
   -ms-flex-pack: start;
   justify-content: flex-start;
-  padding: 18px 55px 18px 107px;
+  padding: 18px 55px 18px 109px;
   width: 100%;
 }
 
@@ -6328,10 +6328,6 @@ button,
     gap: 17px;
   }
 
-  .form__btn {
-    padding: 14px 55px 14px 74px;
-  }
-
   .footer__wrapper {
     gap: 23px;
   }
@@ -7109,6 +7105,10 @@ button,
   .form form {
     gap: 21px;
     margin: 0 0 32px;
+  }
+
+  .form__btn {
+    padding: 14px 55px 14px 74px;
   }
 
   .input-text__list {
