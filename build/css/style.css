@@ -5865,10 +5865,10 @@ button,
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  padding: 18px 55px 18px 107px;
+  padding: 18px 55px 18px 109px;
   width: 100%;
 }
-@media (max-width: 1199px) {
+@media (max-width: 767px) {
   .form__btn {
     padding: 14px 55px 14px 74px;
   }
