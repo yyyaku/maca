@@ -4779,7 +4779,7 @@ button,
   -webkit-box-pack: start;
   -ms-flex-pack: start;
   justify-content: flex-start;
-  padding: 18px 55px 18px 109px;
+  padding: 18px 55px 18px 108px;
   width: 100%;
 }
 
@@ -6326,6 +6326,10 @@ button,
 
   .form form {
     gap: 17px;
+  }
+
+  .form__btn {
+    padding: 18px 55px 18px 109px;
   }
 
   .footer__wrapper {
