@@ -19,6 +19,24 @@
     padding: 20px 15px;
   }
 
+  &:focus-within {
+    background-color: $color-default-white;
+
+    .question__button {
+      &::before {
+        background-color: transparent;
+      }
+    }
+
+    .question__sign {
+
+      &::after,
+      &::before {
+        background-color: $color-default-blue;
+      }
+    }
+  }
+
   @include hover-focus-visible {
     background-color: $color-default-white;
 
@@ -73,7 +91,7 @@
 }
 
 .question.is-active .question__wrapper {
-  gap: 12px 0;
+  gap: 14px 0;
   margin: 0 0 10px;
   padding: 40px 40px 31px;
   color: $color-default-white;
@@ -87,6 +105,25 @@
   @include vp-767 {
     gap: 15px 0;
     padding: 20px 15px 14px 15px;
+  }
+
+  &:focus-within {
+    .question__button {
+      &::before {
+        background-color: transparent;
+        border: 1px solid $color-default-white;
+      }
+    }
+
+    .question__sign {
+      &::after {
+        background-color: transparent;
+      }
+
+      &::before {
+        background-color: $color-default-white;
+      }
+    }
   }
 
   @include hover-focus-visible {
@@ -162,6 +199,8 @@
   background: transparent;
   border: 1px solid transparent;
   cursor: pointer;
+
+  @include focus;
 
   // КРУГ КНОПКИ
   &::before {

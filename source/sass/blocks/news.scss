@@ -1,11 +1,11 @@
 .news__wrapper {
   margin: 0 auto;
-  padding: 125px 100px;
+  padding: 125px 100px 122px;
   width: 100%;
   max-width: 1440px;
 
   @include vp-1199 {
-    padding: 98px 45px;
+    padding: 98px 45px 100px;
   }
 
   @include vp-767 {

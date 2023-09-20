@@ -56,7 +56,8 @@
 
 .programs__link a {
   @include vp-767 {
-    padding: 16px 30px;
+    padding: 14px 30px;
+    width: 70%;
   }
 }
 

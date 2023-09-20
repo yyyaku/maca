@@ -2182,7 +2182,7 @@ button,
 }
 @media (max-width: 767px) {
   .btn {
-    padding: 16px 42px 16px 20px;
+    padding: 14px 42px 14px 20px;
     min-height: 42px;
     font-size: 12px;
     line-height: 12px;
@@ -2515,7 +2515,6 @@ button,
   height: 22px;
   background-color: transparent;
   border: 1px solid transparent;
-  border-radius: 50%;
   cursor: pointer;
 }
 .swiper-buttons__button::before {
@@ -2529,18 +2528,35 @@ button,
   width: 10px;
   height: 1px;
   background-color: #316dc2;
+  z-index: 2;
 }
-.swiper-buttons__button:hover {
+.swiper-buttons__button::after {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 50%;
+  width: 22px;
+  height: 22px;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background-color: transparent;
+  border-radius: 50%;
+  z-index: 1;
+}
+.swiper-buttons__button:hover::after {
   background-color: #ffffff;
 }
 .swiper-buttons__button:focus-visible {
-  background-color: #ffffff;
   outline: none;
+}
+.swiper-buttons__button:focus-visible::after {
+  background-color: #ffffff;
 }
 .swiper-buttons__button:focus {
   outline: none;
 }
-.swiper-buttons__button:active {
+.swiper-buttons__button:active::after {
   background-color: #ffffff;
 }
 .swiper-buttons__button:active::before {
@@ -2551,8 +2567,10 @@ button,
   border-right: 1px solid rgba(49, 109, 194, 0.7);
 }
 .swiper-buttons__button:disabled {
-  background-color: transparent;
   cursor: not-allowed;
+}
+.swiper-buttons__button:disabled::after {
+  background-color: transparent;
 }
 .swiper-buttons__button:disabled::before {
   background-color: #a9afb7;
@@ -2574,6 +2592,7 @@ button,
   cursor: pointer;
   border-top: 1px solid #316dc2;
   border-right: 1px solid #316dc2;
+  z-index: 3;
 }
 .swiper-buttons__arrow--prev {
   left: 7px;
@@ -2740,7 +2759,7 @@ button,
 }
 @media (max-width: 1199px) {
   .hero__item--experience .hero-main__info {
-    padding: 0 40px 27px;
+    padding: 0 41px 27px 40px;
   }
   .hero__item--experience .hero-main__description p {
     margin: -5px 0 5px;
@@ -3194,6 +3213,22 @@ button,
     height: 8px;
   }
 }
+.hero__pagination .swiper-pagination-bullet:hover {
+  background-color: transparent;
+  border: 1px solid #316dc2;
+}
+.hero__pagination .swiper-pagination-bullet:focus-visible {
+  background-color: transparent;
+  border: 1px solid #316dc2;
+  outline: none;
+}
+.hero__pagination .swiper-pagination-bullet:focus {
+  outline: none;
+}
+.hero__pagination .swiper-pagination-bullet:active {
+  background-color: #316dc2;
+  border: 1px solid #316dc2;
+}
 
 .hero__pagination .swiper-pagination-bullet-active {
   background-color: #316dc2;
@@ -3275,7 +3310,7 @@ button,
 }
 @media (max-width: 1199px) {
   .hero-main__info {
-    padding: 0px 40px 28px;
+    padding: 0 40px 28px;
     width: 87.2%;
   }
 }
@@ -3525,7 +3560,7 @@ button,
 }
 @media (max-width: 767px) {
   .about__info a {
-    width: 100%;
+    width: 76%;
   }
 }
 
@@ -3765,7 +3800,8 @@ button,
 
 @media (max-width: 767px) {
   .programs__link a {
-    padding: 16px 30px;
+    padding: 14px 30px;
+    width: 70%;
   }
 }
 
@@ -4239,13 +4275,13 @@ button,
 
 .news__wrapper {
   margin: 0 auto;
-  padding: 125px 100px;
+  padding: 125px 100px 122px;
   width: 100%;
   max-width: 1440px;
 }
 @media (max-width: 1199px) {
   .news__wrapper {
-    padding: 98px 45px;
+    padding: 98px 45px 100px;
   }
 }
 @media (max-width: 767px) {
@@ -4854,6 +4890,15 @@ button,
     padding: 20px 15px;
   }
 }
+.question__wrapper:focus-within {
+  background-color: #ffffff;
+}
+.question__wrapper:focus-within .question__button::before {
+  background-color: transparent;
+}
+.question__wrapper:focus-within .question__sign::after, .question__wrapper:focus-within .question__sign::before {
+  background-color: #316dc2;
+}
 .question__wrapper:hover {
   background-color: #ffffff;
 }
@@ -4905,7 +4950,7 @@ button,
 }
 
 .question.is-active .question__wrapper {
-  gap: 12px 0;
+  gap: 14px 0;
   margin: 0 0 10px;
   padding: 40px 40px 31px;
   color: #ffffff;
@@ -4922,6 +4967,16 @@ button,
     gap: 15px 0;
     padding: 20px 15px 14px 15px;
   }
+}
+.question.is-active .question__wrapper:focus-within .question__button::before {
+  background-color: transparent;
+  border: 1px solid #ffffff;
+}
+.question.is-active .question__wrapper:focus-within .question__sign::after {
+  background-color: transparent;
+}
+.question.is-active .question__wrapper:focus-within .question__sign::before {
+  background-color: #ffffff;
 }
 .question.is-active .question__wrapper:hover .question__button::before {
   background-color: transparent;
@@ -4994,6 +5049,9 @@ button,
   background: transparent;
   border: 1px solid transparent;
   cursor: pointer;
+}
+.question__button:focus {
+  outline: none;
 }
 .question__button::before {
   content: "";
@@ -5116,12 +5174,12 @@ button,
 }
 @media (max-width: 1199px) {
   .reviews__wrapper {
-    padding: 92px 0 100px 45px;
+    padding: 90px 0 100px 45px;
   }
 }
 @media (max-width: 767px) {
   .reviews__wrapper {
-    padding: 60px 15px 30px;
+    padding: 60px 15px 32px;
   }
 }
 
@@ -5134,7 +5192,7 @@ button,
 }
 
 .reviews__header h2 {
-  margin: 0;
+  margin: 0 0 0 3px;
   color: #316dc2;
   font-size: 50px;
   font-style: normal;
@@ -5143,6 +5201,7 @@ button,
 }
 @media (max-width: 1199px) {
   .reviews__header h2 {
+    margin: 0;
     font-size: 34px;
   }
 }
@@ -5158,7 +5217,7 @@ button,
 }
 @media (max-width: 1199px) {
   .reviews__swiper {
-    margin: 40px 0 40px;
+    margin: 40px 0 39px;
   }
 }
 @media (max-width: 767px) {
@@ -5232,19 +5291,19 @@ button,
 }
 
 .reviews-card {
-  padding: 50px 30px 40px;
+  padding: 50px 30px 42px;
   height: auto;
   border: 1px solid #316dc2;
   border-radius: 16px;
 }
 @media (max-width: 1199px) {
   .reviews-card {
-    padding: 50px 50px 45px;
+    padding: 50px 53px 46px 50px;
   }
 }
 @media (max-width: 767px) {
   .reviews-card {
-    padding: 30px 13px 25px 15px;
+    padding: 30px 13px 23px 15px;
   }
 }
 
@@ -5255,10 +5314,11 @@ button,
   grid-template-columns: auto 1fr;
   gap: 26px;
   margin: 0 auto;
-  max-width: 509px;
+  max-width: 504px;
 }
 @media (max-width: 1199px) {
   .reviews-card__wrapper {
+    gap: 25px;
     max-width: 100%;
   }
 }
@@ -5345,10 +5405,15 @@ button,
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 25px;
+  gap: 26px;
   margin: 0;
   padding: 0;
   list-style-type: none;
+}
+@media (max-width: 1199px) {
+  .reviews-card__list {
+    gap: 25px;
+  }
 }
 
 .reviews-card__item {
@@ -5359,7 +5424,7 @@ button,
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: 11px;
+  gap: 6px;
 }
 @media (max-width: 1199px) {
   .reviews-card__item {
@@ -5414,7 +5479,7 @@ button,
 }
 
 .reviews-card__content h3 {
-  margin: 0 0 15px;
+  margin: 0 0 13px;
   color: #316dc2;
   font-size: 24px;
   font-weight: 400;
@@ -5422,12 +5487,14 @@ button,
 }
 @media (max-width: 1199px) {
   .reviews-card__content h3 {
+    margin: 0 0 16px;
     font-size: 20px;
     line-height: 24px;
   }
 }
 @media (max-width: 767px) {
   .reviews-card__content h3 {
+    margin: 0 0 15px;
     font-size: 16px;
     line-height: 18px;
   }
@@ -5553,6 +5620,11 @@ button,
   line-height: 12px;
   letter-spacing: 0.12px;
   text-transform: uppercase;
+}
+@media (max-width: 1199px) {
+  .contacts__item h3 {
+    margin: 0 0 18px;
+  }
 }
 @media (max-width: 767px) {
   .contacts__item h3 {
@@ -5774,7 +5846,7 @@ button,
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: 20px;
+  gap: 19px;
   margin: 0 0 40px;
 }
 @media (max-width: 1199px) {
@@ -5790,10 +5862,16 @@ button,
 }
 
 .form__btn {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  padding: 18px 55px 18px 107px;
   width: 100%;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+}
+@media (max-width: 1199px) {
+  .form__btn {
+    padding: 14px 55px 14px 74px;
+  }
 }
 
 .input-text {
@@ -6043,6 +6121,11 @@ button,
           justify-content: space-between;
   gap: 25px;
   padding: 5px 0 50px;
+}
+@media (max-width: 1199px) {
+  .footer__wrapper {
+    gap: 23px;
+  }
 }
 @media (max-width: 767px) {
   .footer__wrapper {
@@ -6558,7 +6641,7 @@ button,
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    padding: 16px 40px 16px 0;
+    padding: 14px 40px 14px 0;
     width: 100%;
   }
 }
@@ -6926,7 +7009,7 @@ button,
 .custom-select__icon {
   -ms-flex-negative: 0;
       flex-shrink: 0;
-  width: 20px;
+  width: 16px;
   height: 10px;
   margin-left: auto;
   background-color: #ffffff;
