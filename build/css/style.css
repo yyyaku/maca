@@ -2163,8 +2163,8 @@ button,
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 22px 28px;
-  height: 54px;
+  padding: 18px 55px 18px 28px;
+  min-height: 54px;
   color: #316dc2;
   background-color: transparent;
   border: 1px solid #316dc2;
@@ -2175,11 +2175,15 @@ button,
   letter-spacing: 0.28px;
   text-transform: uppercase;
   cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 @media (max-width: 767px) {
   .btn {
-    padding: 16px 20px;
-    height: 42px;
+    padding: 16px 42px 16px 20px;
+    min-height: 42px;
     font-size: 12px;
     line-height: 12px;
   }
@@ -2213,9 +2217,9 @@ button,
 .btn:hover .btn__arrow {
   border-top: 1px solid #316dc2;
   border-right: 1px solid #316dc2;
-  -webkit-transform: rotate(45deg);
-      -ms-transform: rotate(45deg);
-          transform: rotate(45deg);
+  -webkit-transform: translateY(-50%) rotate(45deg);
+      -ms-transform: translateY(-50%) rotate(45deg);
+          transform: translateY(-50%) rotate(45deg);
 }
 .btn:hover .btn__arrow::before {
   background-color: #316dc2;
@@ -2231,9 +2235,9 @@ button,
 .btn:focus-visible .btn__arrow {
   border-top: 1px solid #316dc2;
   border-right: 1px solid #316dc2;
-  -webkit-transform: rotate(45deg);
-      -ms-transform: rotate(45deg);
-          transform: rotate(45deg);
+  -webkit-transform: translateY(-50%) rotate(45deg);
+      -ms-transform: translateY(-50%) rotate(45deg);
+          transform: translateY(-50%) rotate(45deg);
 }
 .btn:focus-visible .btn__arrow::before {
   background-color: #316dc2;
@@ -2251,9 +2255,9 @@ button,
 .btn:active .btn__arrow {
   border-top: 1px solid rgba(49, 109, 194, 0.7);
   border-right: 1px solid rgba(49, 109, 194, 0.7);
-  -webkit-transform: rotate(45deg);
-      -ms-transform: rotate(45deg);
-          transform: rotate(45deg);
+  -webkit-transform: translateY(-50%) rotate(45deg);
+      -ms-transform: translateY(-50%) rotate(45deg);
+          transform: translateY(-50%) rotate(45deg);
 }
 .btn:active .btn__arrow::before {
   background-color: rgba(49, 109, 194, 0.7);
@@ -2269,9 +2273,9 @@ button,
 .btn:disabled .btn__arrow {
   border-top: 1px solid #ffffff;
   border-right: 1px solid #ffffff;
-  -webkit-transform: rotate(45deg);
-      -ms-transform: rotate(45deg);
-          transform: rotate(45deg);
+  -webkit-transform: translateY(-50%) rotate(45deg);
+      -ms-transform: translateY(-50%) rotate(45deg);
+          transform: translateY(-50%) rotate(45deg);
   cursor: not-allowed;
 }
 .btn:disabled .btn__arrow::before {
@@ -2280,8 +2284,11 @@ button,
 
 .btn__arrow {
   position: absolute;
-  top: 22px;
+  top: 50%;
   right: 22px;
+  -webkit-transform: translateY(-50%) rotate(0deg);
+      -ms-transform: translateY(-50%) rotate(0deg);
+          transform: translateY(-50%) rotate(0deg);
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -2289,9 +2296,6 @@ button,
   height: 8px;
   border-top: 1px solid #ffffff;
   border-right: 1px solid #ffffff;
-  -webkit-transform: rotate(0deg);
-      -ms-transform: rotate(0deg);
-          transform: rotate(0deg);
 }
 .btn__arrow::before {
   content: "";
@@ -2307,7 +2311,6 @@ button,
 }
 @media (max-width: 767px) {
   .btn__arrow {
-    top: 16px;
     right: 16px;
   }
 }
@@ -3352,6 +3355,15 @@ button,
     min-width: 182px;
     background-color: #ffffff;
     border-radius: 0 0 14px 14px;
+  }
+}
+
+.hero-main__link a {
+  width: 196px;
+}
+@media (max-width: 767px) {
+  .hero-main__link a {
+    width: 152px;
   }
 }
 
@@ -6087,11 +6099,13 @@ button,
   gap: 30px;
   margin: 0;
   padding: 0;
+  max-width: 700px;
   list-style-type: none;
 }
 @media (max-width: 1199px) {
   .footer-header__list {
     gap: 15px;
+    max-width: 100%;
   }
 }
 @media (max-width: 767px) {
@@ -6140,10 +6154,12 @@ button,
   gap: 20px;
   margin: 0;
   padding: 0;
+  max-width: 148px;
   list-style-type: none;
 }
 @media (max-width: 1199px) {
   .social {
+    max-width: 100%;
     gap: 10px;
     -webkit-box-ordinal-group: 4;
         -ms-flex-order: 3;
