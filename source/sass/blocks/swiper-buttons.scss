@@ -11,7 +11,6 @@
   height: 22px;
   background-color: transparent;
   border: 1px solid transparent;
-  border-radius: 50%;
   cursor: pointer;
 
   &::before {
@@ -23,16 +22,34 @@
     width: 10px;
     height: 1px;
     background-color: $color-default-blue;
+    z-index: 2;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 50%;
+    width: 22px;
+    height: 22px;
+    transform: translate(-50%, -50%);
+    background-color: transparent;
+    border-radius: 50%;
+    z-index: 1;
   }
 
   @include hover-focus-visible {
-    background-color: $color-default-white;
+    &::after {
+      background-color: $color-default-white;
+    }
   }
 
   @include focus;
 
   @include active {
-    background-color: $color-default-white;
+    &::after {
+      background-color: $color-default-white;
+    }
 
     &::before {
       background-color: $color-default-blue-opacity70;
@@ -45,8 +62,11 @@
   }
 
   @include disabled {
-    background-color: transparent;
     cursor: not-allowed;
+
+    &::after {
+      background-color: transparent;
+    }
 
     &::before {
       background-color: $color-grey;
@@ -69,6 +89,7 @@
   cursor: pointer;
   border-top: 1px solid $color-default-blue;
   border-right: 1px solid $color-default-blue;
+  z-index: 3;
 
   &--prev {
     left: 7px;

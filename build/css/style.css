@@ -2515,7 +2515,6 @@ button,
   height: 22px;
   background-color: transparent;
   border: 1px solid transparent;
-  border-radius: 50%;
   cursor: pointer;
 }
 .swiper-buttons__button::before {
@@ -2529,18 +2528,35 @@ button,
   width: 10px;
   height: 1px;
   background-color: #316dc2;
+  z-index: 2;
 }
-.swiper-buttons__button:hover {
+.swiper-buttons__button::after {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 50%;
+  width: 22px;
+  height: 22px;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background-color: transparent;
+  border-radius: 50%;
+  z-index: 1;
+}
+.swiper-buttons__button:hover::after {
   background-color: #ffffff;
 }
 .swiper-buttons__button:focus-visible {
-  background-color: #ffffff;
   outline: none;
+}
+.swiper-buttons__button:focus-visible::after {
+  background-color: #ffffff;
 }
 .swiper-buttons__button:focus {
   outline: none;
 }
-.swiper-buttons__button:active {
+.swiper-buttons__button:active::after {
   background-color: #ffffff;
 }
 .swiper-buttons__button:active::before {
@@ -2551,8 +2567,10 @@ button,
   border-right: 1px solid rgba(49, 109, 194, 0.7);
 }
 .swiper-buttons__button:disabled {
-  background-color: transparent;
   cursor: not-allowed;
+}
+.swiper-buttons__button:disabled::after {
+  background-color: transparent;
 }
 .swiper-buttons__button:disabled::before {
   background-color: #a9afb7;
@@ -2574,6 +2592,7 @@ button,
   cursor: pointer;
   border-top: 1px solid #316dc2;
   border-right: 1px solid #316dc2;
+  z-index: 3;
 }
 .swiper-buttons__arrow--prev {
   left: 7px;
