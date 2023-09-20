@@ -40,6 +40,18 @@
     width: 8px;
     height: 8px;
   }
+
+  @include hover-focus-visible {
+    background-color: transparent;
+    border: 1px solid $color-default-blue;
+  }
+
+  @include focus;
+
+  @include active {
+    background-color: $color-default-blue;
+    border: 1px solid $color-default-blue;
+  }
 }
 
 .hero__pagination .swiper-pagination-bullet-active {
